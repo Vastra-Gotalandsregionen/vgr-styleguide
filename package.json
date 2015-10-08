@@ -1,0 +1,12 @@
+{
+  "name": "vgr-styleguide",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "license": "CC-BY-SA-4.0",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "vgr-base": "git+ssh://git@bitbucket.org:whitespace_se/vgr-base.git",
+    "vgr-build-base": "git+ssh://git@bitbucket.org:whitespace_se/vgr-build-base.git"
+  }
+}
