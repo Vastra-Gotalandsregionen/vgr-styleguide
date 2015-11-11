@@ -7,6 +7,9 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "vgr-base": "git+ssh://git@bitbucket.org:whitespace_se/vgr-base.git",
-    "vgr-build-base": "git+ssh://git@bitbucket.org:whitespace_se/vgr-build-base.git"
+    "vgr-build-base": "git+ssh://git@bitbucket.org:whitespace_se/vgr-build-base.git",
+    "gulp-file-include": "^0.13.7"
+  },
+  "dependencies": {
   }
 }
