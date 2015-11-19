@@ -1,6 +1,6 @@
 var build = require('vgr-build-base');
 var gulp = require('gulp');
-var fileinclude = require('gulp-file-include');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 build.config.shared.browsersync = true;
 
@@ -18,7 +18,9 @@ build.config.styleguide = {
 };
 
 gulp.task('styleguide', function() {
+	nunjucksRender.nunjucks.configure(['src/html/']);
+
 	return build.utils.srcFor('styleguide')
-		.pipe(fileinclude('@@'))
+		.pipe(nunjucksRender())
 		.pipe(build.utils.destFor('styleguide'));
 });
