@@ -1,8 +1,14 @@
-<html>
-<head>
-	<title>Test</title>
-</head>
-<body>
-	<h1>Test</h1>
-</body>
-</html>
+{% set isRoot = true %}
+{% set title = "Styleguide" %}
+{% set mainPage = "frontpage" %}
+
+{% extends "_templates/frontpage.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Start</h1>
+	<p>Our goal is to design for experiences that work together, work the same and work for our users.</p>
+	<p>In everything we do, we put our users first.</p>
+
+	<a href="/getting-started" class="vgr-button">Get started</a>
+
+{% endblock %}

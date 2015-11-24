@@ -1,0 +1,23 @@
+{% include "_templates/partials/head.html" %}
+{% include "_templates/partials/header.html" %}
+
+	<main class="sg-main" id="main" role="main">
+		<div class="container">
+			<div class="row">
+
+				{% include "_templates/partials/sidebar-navigation-base.html" %}
+
+				<article class="col-xs-12 col-md-8 col-lg-9" role="article">
+
+					{% block content %} {% endblock %}
+
+				</article>
+
+			</div>
+		</div>
+	</main>
+
+	{% include "_templates/partials/footer.html" %}
+
+</body>
+</html>

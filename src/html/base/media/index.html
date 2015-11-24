@@ -1,0 +1,74 @@
+{% set title = "Media" %}
+{% set mainPage = "base" %}
+{% set subPage = "media" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Media</h1>
+	<p>Only use images and other media of there is a clear user need for it.</p>
+
+	<h2 class="sg-header-2">Img</h2>
+
+	<div class="sg-section">
+
+		<img src="/temp/photo-640x425.jpg" alt="Photo of a sunset over the ocean with a cliff">
+
+	</div>
+
+	<h2 class="sg-header-2">Figure</h2>
+
+	<div class="sg-section">
+
+		<figure>
+			<img src="/temp/photo-640x425.jpg" alt="Photo of a sunset over the ocean with a cliff">
+			<figcaption>
+				This is a placeholder image, with supporting caption.
+			</figcaption>
+		</figure>
+
+	</div>
+
+	<h2 class="sg-header-2">Audio</h2>
+
+	<div class="sg-section">
+
+		<audio controls preload="none">
+			<source src="/temp/audio.mp3" type="audio/mpeg">
+			Your browser does not support the audio element. <a href="/temp/audio.mp3">Download the file</a>.
+		</audio>
+
+	</div>
+
+	<h2 class="sg-header-2">Video</h2>
+
+	<div class="sg-section">
+
+		<video controls preload="none" poster="/temp/video-poster.jpg" width="640" height="360">
+			<source src="/temp/video.mp4" type="video/mp4">
+		</video>
+
+	</div>
+
+	<h2 class="sg-header-2">YouTube</h2>
+	<p><em class="vgr-badge sg-badge-todo">TODO</em> This iframe should not be loaded by default. Let the user activate the iframe.</p>
+
+	<div class="sg-section">
+
+		<div class="vgr-embed-container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/YE7VzlLtp-4" allowfullscreen></iframe>
+		</div>
+
+	</div>
+
+	<h2 class="sg-header-2">Vimeo</h2>
+	<p><em class="vgr-badge sg-badge-todo">TODO</em> This iframe should not be loaded by default. Let the user activate the iframe.</p>
+
+	<div class="sg-section">
+
+		<div class="vgr-embed-container">
+			<iframe src="https://player.vimeo.com/video/1084537" width="500" height="281" allowfullscreen></iframe>
+		</div>
+
+	</div>
+
+{% endblock %}

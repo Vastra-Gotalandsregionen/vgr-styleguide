@@ -1,0 +1,11 @@
+{% set title = "Themes" %}
+{% set mainPage = "base" %}
+{% set subPage = "themes" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Themes</h1>
+
+	<p>Västra Götalandsregionen har fyra olika färgteman att använda sig av. Om du använder SASS kan du ändra tema genom att inkludera rätt tema-fil. <code>@import 'vgr-base/themes/theme-1.scss';</code> där theme-1 motsvarar blå. De övriga färgerna är röd (theme-2), grön (theme-3), gul (theme-4) och grå (theme-5).
+
+{% endblock %}

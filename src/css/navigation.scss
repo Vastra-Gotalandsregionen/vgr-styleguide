@@ -1,0 +1,168 @@
+.sg-primary__navigation {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		margin: 0 1rem 0 0;
+	}
+
+	[data-active] {
+		font-weight: 700;
+		color: $color-darkest;
+		text-decoration: underline;
+	}
+
+	a {
+		display: inline;
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	@media print {
+		display: none;
+	}
+}
+
+
+.sg-sub-navigation {
+	font-family: $secondary-font-stack;
+	background: $color-lightest;
+	background: linear-gradient(to bottom, #fff 0%, #fefefe 100%);
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+
+	div {
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		justify-content: center;
+	}
+
+	li {
+		margin: 0 .5rem;
+		float: left;
+		flex: 0 auto;
+	}
+
+	a {
+		display: block;
+		padding: 1rem;
+		position: relative;
+		text-decoration: none;
+		color: $color-darkest;
+		transition: color .1s ease-in;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			transition: height .1s ease-in;
+
+			@if variable-exists(theme-1-primary-color) {
+				$theme-color: $theme-1-primary-color;
+			}
+
+			@if variable-exists(theme-2-primary-color) {
+				$theme-color: $theme-2-primary-color;
+			}
+
+			@if variable-exists(theme-3-primary-color) {
+				$theme-color: $theme-3-primary-color;
+			}
+
+			@if variable-exists(theme-4-primary-color) {
+				$theme-color: $theme-4-primary-color;
+			}
+
+			@if variable-exists(theme-5-primary-color) {
+				$theme-color: $theme-5-primary-color;
+			}
+
+			color: $theme-color;
+			$theme-color: $primary-text-color !default;
+			background-color: $theme-color;
+		}
+
+		&:hover,
+		&[data-active] {
+			@if variable-exists(theme-1-primary-color) {
+				$theme-color: $theme-1-primary-color;
+			}
+
+			@if variable-exists(theme-2-primary-color) {
+				$theme-color: $theme-2-primary-color;
+			}
+
+			@if variable-exists(theme-3-primary-color) {
+				$theme-color: $theme-3-primary-color;
+			}
+
+			@if variable-exists(theme-4-primary-color) {
+				$theme-color: $theme-4-primary-color;
+			}
+
+			@if variable-exists(theme-5-primary-color) {
+				$theme-color: $theme-5-primary-color;
+			}
+
+			color: $theme-color;
+			$theme-color: $primary-text-color !default;
+
+			&:after,
+			&:active,
+			&:focus {
+				height: 4px;
+			}
+		}
+	}
+
+	@media print {
+		display: none;
+	}
+}
+
+
+.sg-sidebar-navigation {
+	font-family: $secondary-font-stack;
+	border-right: 1px solid #ddd;
+
+	.sg-sidebar-navigation__label {
+		font-size: 1rem;
+		margin: 0;
+	}
+
+	.sg-sidebar-navigation__label:not(:first-child) {
+		margin-top: 2rem;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	[data-active] {
+		font-weight: 700;
+		color: $color-darkest;
+		text-decoration: underline;
+	}
+
+	@media print {
+		display: none;
+	}
+}

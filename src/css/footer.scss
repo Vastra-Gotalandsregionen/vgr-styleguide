@@ -1,0 +1,43 @@
+.sg-footer {
+	text-align: center;
+	padding: 3rem 1rem;
+	background: lighten($primary-text-color, 100%);
+	font-family: $secondary-font-stack;
+	border-top: 1px solid #ddd;
+
+	&__navigation {
+		display: inline;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			display: inline;
+			margin: 0 1rem 0 0;
+		}
+
+		[data-active] {
+			font-weight: 700;
+			color: $color-darkest;
+			text-decoration: underline;
+		}
+
+		a {
+			display: inline;
+			text-decoration: none;
+
+			&:hover,
+			&:focus {
+				text-decoration: underline;
+			}
+		}
+
+		@media print {
+			display: none;
+		}
+	}
+
+	&__description {
+		margin: 1rem 0 0;
+	}
+}

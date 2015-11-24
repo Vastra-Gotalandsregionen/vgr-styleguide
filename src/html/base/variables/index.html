@@ -1,0 +1,85 @@
+{% set title = "Variables" %}
+{% set mainPage = "base" %}
+{% set subPage = "variables" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Variables</h1>
+
+	<p>List of predefined variables.</p>
+
+	<h2>Fonts</h2>
+
+	<table class="table--zebra table--bordered">
+		<thead>
+			<tr>
+				<th>Variable</th>
+				<th>Default value</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code class="sg-code">$primary-font-stack</code></td>
+				<td>Georgia, serif</td>
+			</tr>
+			<tr>
+				<td><code class="sg-code">$secondary-font-stack</code></td>
+				<td>Helvetica, sans-serif.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2>Sizes</h2>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$base-font-size</code> Defaults to 100%, (16px).</li>
+		<li><code class="sg-code">$base-line-height</code> Defaults to 150%, (24px).</li>
+		<li><code class="sg-code">$base-font-weight</code> Defaults to 400.</li>
+		<li><code class="sg-code">$leading</code> <em class="sg-badge-alpha">Alpha</em></li>
+	</ul>
+
+	<h2>Sizes</h2>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$base-font-size</code> Defaults to 100%, (16px).</li>
+		<li><code class="sg-code">$base-line-height</code> Defaults to 150%, (24px).</li>
+		<li><code class="sg-code">$small-font-size</code> Defaults to 87.5% (14px).</li>
+	</ul>
+
+	<h3>Colors</h3>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$primary-text-color</code> Defaults to #494746.</li>
+		<li><code class="sg-code">$color-lightest</code> Defaults to #fff.</li>
+		<li><code class="sg-code">$color-darkest</code> Defaults to #000.</li>
+	</ul>
+
+	<h2>Breakpoints</h2>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$tiny</code> 320px.</li>
+		<li><code class="sg-code">$small</code> 640px.</li>
+		<li><code class="sg-code">$medium</code> 768px.</li>
+		<li><code class="sg-code">$large</code> 1024px.</li>
+		<li><code class="sg-code">$extra-large</code> 1560px.</li>
+	</ul>
+
+	<h2>Grid Settings</h2>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$max-width</code> 1440px.</li>
+		<li><code class="sg-code">$gutter-width</code> 15px.</li>
+	</ul>
+
+	<h3>Column width</h3>
+	<ul class="sg-inline">
+		<li><code class="sg-code">$col-1</code> 8.333%.</li>
+		<li><code class="sg-code">$col-2</code> 16.667%.</li>
+		<li><code class="sg-code">$col-3</code> 25%.</li>
+		<li><code class="sg-code">$col-4</code> 33.333%.</li>
+		<li><code class="sg-code">$col-5</code> 41.667%.</li>
+		<li><code class="sg-code">$col-6</code> 50%.</li>
+		<li><code class="sg-code">$col-7</code> 58.333%.</li>
+		<li><code class="sg-code">$col-8</code> 66.667%.</li>
+		<li><code class="sg-code">$col-9</code> 75%.</li>
+		<li><code class="sg-code">$col-10</code> 83.333%.</li>
+		<li><code class="sg-code">$col-11</code> 91.667%.</li>
+		<li><code class="sg-code">$col-12</code> 100%.</li>
+	</ul>
+
+{% endblock %}

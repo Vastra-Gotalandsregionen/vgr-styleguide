@@ -1,0 +1,31 @@
+{% set title = "Mixins" %}
+{% set mainPage = "base" %}
+{% set subPage = "mixins" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Mixins</h1>
+
+	<p>List of predefined mixins.</p>
+
+	<h2>Clearfix</h2>
+	<p>Make an element visually hidden, but accessible to assistive technology. See <a href="http://blog.teamtreehouse.com/a-better-clearfix-with-sass">http://blog.teamtreehouse.com/a-better-clearfix-with-sass</a> for more information.</p>
+
+	<h3>Usage</h3>
+	<p>Include in your CSS using <code class="sg-code">@extend .clearfix;</code> or use in your HTML using the class <code class="sg-code">clearfix</code>.</p>
+
+	<hr>
+
+	<h2>Visually Hidden and Visually-hidden Focusable</h2>
+	<p>Make an element visually hidden, but accessible to assistive technology. See <a href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility">http://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a> for more information.</p>
+
+	<h3>Usage</h3>
+	<p>Include in your CSS using <code class="sg-code">@extend .visually-hidden;</code> or use in your HTML using the class <code class="sg-code">visually-hidden</code>.</p>
+	<p>Include in your CSS using <code class="sg-code">@extend .visually-hidden--focusable;</code> or use in your HTML using the class <code class="sg-code">visually-hidden--focusable</code>.</p>
+
+	<hr>
+
+	<h2>Print</h2>
+	<p>Include <code class="sg-code">@media print</code> to target style for printers.</p>
+
+{% endblock %}

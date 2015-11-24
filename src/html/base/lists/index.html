@@ -1,0 +1,65 @@
+{% set title = "Lists" %}
+{% set mainPage = "base" %}
+{% set subPage = "lists" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Lists</h1>
+
+	<h2 class="sg-header-2">Ordered Lists</h2>
+
+	<div class="sg-section">
+
+		<ol>
+			<li>Donec cursus justo sit amet viverra interdum</li>
+			<li>
+				Praesent aliquam posuere efficitur
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Ut consequat auctor lorem</li>
+				</ol>
+			</li>
+			<li>
+				Praesent aliquam posuere efficitur
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+				</ul>
+			</li>
+			<li>Proin vel nulla vel sapien ornare feugiat</li>
+		</ol>
+
+	</div>
+
+	<h2 class="sg-header-2">Unordered Lists</h2>
+
+	<div class="sg-section">
+
+		<ul>
+			<li>Proin gravida varius dui non elementum</li>
+			<li>
+				Aliquam mollis aliquet quam, vitae aliquet elit molestie eget
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+				</ul>
+			</li>
+			<li>Suspendisse placerat condimentum euismod</li>
+		</ul>
+
+	</div>
+
+	<h2 class="sg-header-2">Definition Lists</h2>
+
+	<div class="sg-section">
+
+		<dl>
+			<dt>Coffee</dt>
+			<dd>Black hot drink</dd>
+			<dt>Milk</dt>
+			<dd>White cold drink</dd>
+		</dl>
+
+	</div>
+
+{% endblock %}

@@ -1,4 +1,44 @@
-@import 'vgr-base/main.scss';
-@import '_other.scss';
+/* Import Theme */
+@import 'vgr-base/themes/theme-1.scss';
 
-body { background: green; }
+/* Import Base */
+@import 'vgr-base/base.scss';
+@import 'base';
+
+@import 'footer';
+
+@import 'topbar';
+@import 'billboard';
+@import 'navigation';
+@import 'grid';
+
+.vgr-badge {
+	display: inline-block;
+	padding: .25rem 1rem;
+	font-size: .8rem;
+	margin-right: .25rem;
+	border-radius: 3px;
+	line-height: 100%;
+	border: 1px solid #000;
+	background: black;
+	color: white;
+	font-family: $secondary-font-stack;
+}
+
+html {
+	font-family: $primary-font-stack;
+}
+
+h1 {
+	@extend .clearfix;
+
+	@media print {
+		display: none;
+	}
+}
+
+
+.sg-main {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}

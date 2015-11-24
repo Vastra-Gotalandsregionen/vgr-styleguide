@@ -1,0 +1,53 @@
+/* Styleguide - Topbar
+   ========================================================================== */
+
+.sg-topbar {
+	font-family: $secondary-font-stack;
+	font-size: .875rem;
+	background: $color-lightest;
+	background: linear-gradient(to bottom, #fff 0%, #fefefe 100%);
+	border-bottom: 1px solid #ddd;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	&__title {
+		text-decoration: none;
+		color: $primary-text-color;
+
+		span {
+			font-weight: 700;
+		}
+	}
+
+	&__title,
+	&__theme-selector {
+		margin: .5rem 0;
+		display: inline;
+	}
+
+	&__theme-selector {
+		@media print {
+			display: none;
+		}
+	}
+}
+
+
+/* Alpha Alert Message
+   ========================================================================== */
+.sg-alpha-message {
+	padding: .5rem 1rem;
+	background: $theme-1-theme-color-darkest;
+	color: $color-lightest;
+	text-align: center;
+	font-family: $secondary-font-stack;
+	font-size: $small-font-size;
+
+	p {
+		margin: 0;
+	}
+
+	a {
+		color: $color-lightest;
+	}
+}

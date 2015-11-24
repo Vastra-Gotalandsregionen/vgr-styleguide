@@ -1,0 +1,31 @@
+{% set title = "Messages" %}
+{% set mainPage = "base" %}
+{% set subPage = "messages" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Messages</h1>
+
+	<h2 class="sg-header-2">Default Messages</h2>
+
+	<div class="sg-section">
+
+		<div class="alert alert-warning">
+			<strong>Warning Message!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+		</div>
+
+		<div class="alert alert-error">
+			<strong>Error Message!</strong> Numquam quos fuga quam suscipit sapiente perferendis magnam.
+		</div>
+
+		<div class="alert alert-success">
+			<strong>Success Message!</strong> Totam officiis dolorum voluptatibus maxime molestiae iste.
+		</div>
+
+		<div class="alert alert-info">
+			<strong>Info Message!</strong> Consequatur facere deleniti cumque ducimus maiores nemo.
+		</div>
+
+	</div>
+
+{% endblock %}
