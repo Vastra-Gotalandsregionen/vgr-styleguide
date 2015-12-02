@@ -15,8 +15,11 @@ a:focus {
 }
 
 .sg-section {
-	background: #efefef;
-	padding: 2rem;
+	background: $color-lightest;
+	padding: 2em;
+	border: 1px solid $color-lightest-gray;
+	border-radius: 4px;
+	box-shadow: 0 0 2px $color-lightest-gray;
 }
 
 .sg-header-1,
@@ -94,11 +97,13 @@ audio {
 }
 
 
-.sg-color-holder {
+.sg-color-holder,
+.sg-icon-holder {
 	margin: 0 -1%;
 }
 
-.sg-color {
+.sg-color,
+.sg-icon {
 	width: 23%;
 	float: left;
 	border-radius: 10px;
@@ -122,6 +127,28 @@ audio {
 	}
 
 	.sg-color-value {
+		padding: 0 4px 4px;
+		font-size: 14px;
+		display: block;
+		text-align: center;
+		font-family: $secondary-font-stack;
+	}
+}
+
+
+.sg-icon {
+	box-sizing: border-box;
+	.vgr-icon {
+		margin: 0 auto;
+		display: block;
+	}
+	.sg-icon-wrapper {
+		padding: 1rem;
+	}
+
+	.sg-icon-name {
+		border-top: 1px solid $color-lightest-gray;
+
 		padding: 0 4px 4px;
 		font-size: 14px;
 		display: block;

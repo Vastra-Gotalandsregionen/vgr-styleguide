@@ -10,6 +10,7 @@
 @import 'billboard';
 @import 'navigation';
 @import 'grid';
+@import 'demo';
 
 .vgr-badge {
 	display: inline-block;
@@ -39,4 +40,9 @@ h1 {
 .sg-main {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
+}
+
+
+.vgr-button {
+	margin-bottom: 1rem;
 }

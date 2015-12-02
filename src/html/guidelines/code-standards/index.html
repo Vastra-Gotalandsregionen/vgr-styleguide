@@ -7,4 +7,37 @@
 	<h1 class="sg-header-1">Code Standards</h1>
 	<p class="sg-paragraph">Under development</p>
 
+	<h2>Naming</h2>
+	<p>Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores. Exceptions made for outside vendor libraries, such as bower components.</p>
+
+	<h3>No IDs</h3>
+	<p>ID selectors should never be used for the purposes of styling an element, as it leads to overly specific styles that aren't easily shared with other elements. IDs should only be used when absolutely needed by JavaScript, form elements, or WAI-ARIA roles.</p>
+
+	<h3>Classes</h3>
+	<p>The Styleguide follows the BEM syntax.</p>
+
+	<h3>Whitespace</h3>
+	<p>Make sure you are using <code class="sg-code">.editorconfig</code></p>
+	<ul>
+		<li>Use one tab for indentation. No spaces.</li>
+		<li>Insert a space after comma separated items in a list.</li>
+	</ul>
+
+	<h2>Comments</h2>
+	<p>Comments should be used to provide more information.</p>
+
+
+	<h2>Shorthand</h2>
+	<p>Prefer the shortest shorthand form possible for properties that support it (i.e margin, padding, border)</p>
+
+	<p>Omit unit lengths on zero values.</p>
+	<h3>Bad</h3>
+	<pre>margin: 0px;</pre>
+	<h3>Good</h3>
+	<pre>margin: 0;</pre>
+
+	<h2 class="sg-header-2">Mobile first</h2>
+
+
+
 {% endblock %}
