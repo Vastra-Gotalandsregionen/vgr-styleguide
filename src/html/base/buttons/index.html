@@ -1,0 +1,36 @@
+{% set title = "Buttons" %}
+{% set mainPage = "base" %}
+{% set subPage = "buttons" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Buttons</h1>
+
+	<p>To create a VGR styled button, add the <code>vgr-button</code> classname to any <code class="sg-code">&lt;a&gt;</code> or <code class="sg-code">&lt;button&gt;</code> element.</p>
+
+	<div>
+		<a class="vgr-button" href="#">Anchor button</a>
+		<button class="vgr-button">Button element</button>
+		<input  class="vgr-button" type="submit" value="submit input">
+		<input  class="vgr-button" type="button" value="button input">
+	</div>
+
+	<h2 class="sg-header-2">Button Size Variations</h2>
+
+	<h3 class="sg-header-3">Large</h3>
+	<div>
+		<a class="vgr-button vgr-button--large" href="#">Anchor button</a>
+		<button class="vgr-button vgr-button--large">Button element</button>
+		<input  class="vgr-button vgr-button--large" type="submit" value="submit input">
+		<input  class="vgr-button vgr-button--large" type="button" value="button input">
+	</div>
+
+	<h3 class="sg-header-3">Small</h3>
+	<div>
+		<a class="vgr-button vgr-button--small" href="#">Anchor button</a>
+		<button class="vgr-button vgr-button--small">Button element</button>
+		<input  class="vgr-button vgr-button--small" type="submit" value="submit input">
+		<input  class="vgr-button vgr-button--small" type="button" value="button input">
+	</div>
+
+{% endblock %}

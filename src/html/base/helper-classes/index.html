@@ -1,0 +1,74 @@
+{% set title = "Helper Classes" %}
+{% set mainPage = "base" %}
+{% set subPage = "helper-classes" %}
+{% extends "_templates/base.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">Helper Classes</h1>
+
+	<p>We include a bunch of helpful classes to add common positioning behaviors to elements.</p>
+
+	<h2 class="sg-header-2">Aligment Classes</h1>
+
+	<table class="vgr-table">
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code class="sg-code">.vgr-align-left</code></td>
+				<td>Floats the element left.</td>
+			</tr>
+			<tr>
+				<td><code class="sg-code">.vgr-align-right</code></td>
+				<td>Floats the element right.</td>
+			</tr>
+			<tr>
+				<td><code class="sg-code">.vgr-align-center</code></td>
+				<td>Aligns the element center.</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="sg-header-2">Visibility Classes</h1>
+
+	<table class="vgr-table">
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code class="sg-code">.vgr-visually-hidden</code></td>
+				<td>Hide for screen users, read for screen reader users</td>
+			</tr>
+			<tr>
+				<td><code class="sg-code">.vgr-visually-hidden--focusable</code></td>
+				<td>Show only for screen readers</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h2 class="sg-header-2">Clearfix</h1>
+
+	<table class="vgr-table">
+		<thead>
+			<tr>
+				<th>Class</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><code class="sg-code">.vgr-clearfix</code></td>
+				<td>Clear parent of floated children.</td>
+			</tr>
+		</tbody>
+	</table>
+
+{% endblock %}

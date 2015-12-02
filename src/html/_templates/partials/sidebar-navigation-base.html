@@ -3,35 +3,36 @@
 		<div>
 			<h2 class="sg-sidebar-navigation__label">Base</h2>
 			<ul>
-				<li><a href="/base/variables" {{ "data-active" if subPage == 'variables' }}>Variables</a></li>
-				<li><a href="/base/mixins" {{ "data-active" if subPage == 'mixins' }}>Mixins</a></li>
-				<li><a href="/base/reset" {{ "data-active" if subPage == 'reset' }}>Reset</a></li>
-				<li><a href="/base/colors" {{ "data-active" if subPage == 'colors' }}>Colors</a></li>
-				<li><a href="/base/themes" {{ "data-active" if subPage == 'themes' }}>Themes</a></li>
-				<li><a href="/base/print" {{ "data-active" if subPage == 'print' }}>Print</a></li>
+				<li><a href="{{ baseurl }}/base/variables" {{ "data-active" if subPage == 'variables' }}>Variables</a></li>
+				<li><a href="{{ baseurl }}/base/mixins" {{ "data-active" if subPage == 'mixins' }}>Mixins</a></li>
+				<li><a href="{{ baseurl }}/base/reset" {{ "data-active" if subPage == 'reset' }}>Reset</a></li>
+				<li><a href="{{ baseurl }}/base/colors" {{ "data-active" if subPage == 'colors' }}>Colors</a></li>
+				<li><a href="{{ baseurl }}/base/themes" {{ "data-active" if subPage == 'themes' }}>Themes</a></li>
+				<li><a href="{{ baseurl }}/base/print" {{ "data-active" if subPage == 'print' }}>Print</a></li>
 			</ul>
 			<h2 class="sg-sidebar-navigation__label">Elements</h2>
 			<ul>
-				<li><a href="/base/typography" {{ "data-active" if subPage == 'typography' }}>Typography</a></li>
-				<li><a href="/base/lists" {{ "data-active" if subPage == 'lists' }}>Lists</a></li>
-				<li><a href="/base/tables" {{ "data-active" if subPage == 'tables' }}>Tables</a></li>
-				<li><a href="/base/forms" {{ "data-active" if subPage == 'forms' }}>Forms</a></li>
-				<li><a href="/base/media" {{ "data-active" if subPage == 'media' }}>Media</a></li>
+				<li><a href="{{ baseurl }}/base/typography" {{ "data-active" if subPage == 'typography' }}>Typography</a></li>
+				<li><a href="{{ baseurl }}/base/lists" {{ "data-active" if subPage == 'lists' }}>Lists</a></li>
+				<li><a href="{{ baseurl }}/base/tables" {{ "data-active" if subPage == 'tables' }}>Tables</a></li>
+				<li><a href="{{ baseurl }}/base/forms" {{ "data-active" if subPage == 'forms' }}>Forms</a></li>
+				<li><a href="{{ baseurl }}/base/buttons" {{ "data-active" if subPage == 'buttons' }}>Buttons</a></li>
+				<li><a href="{{ baseurl }}/base/media" {{ "data-active" if subPage == 'media' }}>Media</a></li>
 			</ul>
 			<h2 class="sg-sidebar-navigation__label">Objects</h2>
 			<ul>
-				<li><a href="/base/icons" {{ "data-active" if subPage == 'icons' }}>Icons</a></li>
-				<li><a href="/">Badges</a></li>
-				<li><a href="/base/messages" {{ "data-active" if subPage == 'messages' }}>Messages</a></li>
+				<li><a href="{{ baseurl }}/base/icons" {{ "data-active" if subPage == 'icons' }}>Icons</a></li>
+				<li><a href="{{ baseurl }}/base/badges" {{ "data-active" if subPage == 'badges' }}>Badges</a></li>
+				<li><a href="{{ baseurl }}/base/messages" {{ "data-active" if subPage == 'messages' }}>Messages</a></li>
 			</ul>
 			<h2 class="sg-sidebar-navigation__label">Layout</h2>
 			<ul>
-				<li><a href="/">Grid</a></li>
-				<li><a href="/">Predefined Layouts</a></li>
+				<li><a href="{{ baseurl }}/base/grid" {{ "data-active" if subPage == 'grid' }}>Grid</a></li>
+				<li><a href="{{ baseurl }}/base/predefined-layouts" {{ "data-active" if subPage == 'predefined-layouts' }}>Predefined Layouts</a></li>
 			</ul>
 			<h2 class="sg-sidebar-navigation__label">Trumps</h2>
 			<ul>
-				<li><a href="/">Helper Classes</a></li>
+				<li><a href="{{ baseurl }}/base/helper-classes" {{ "data-active" if subPage == 'helper-classes' }}>Helper Classes</a></li>
 			</ul>
 		</div>
 	</nav>
