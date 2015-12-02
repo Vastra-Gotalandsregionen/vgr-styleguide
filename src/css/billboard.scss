@@ -1,5 +1,4 @@
 .sg-billboard {
-	color: $color-lightest;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 	font-family: $secondary-font-stack;
@@ -18,6 +17,7 @@
 
 	@if variable-exists(theme-4-primary-color) {
 		$background-color: $theme-4-primary-color;
+		$color: $color-darkest;
 	}
 
 	@if variable-exists(theme-5-primary-color) {
@@ -26,6 +26,9 @@
 
 	$background-color: $primary-text-color !default;
 	background-color: $background-color;
+
+	$color: $color-lightest !default;
+	color: $color;
 
 	&__introduction {
 		text-align: left;

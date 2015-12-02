@@ -138,21 +138,40 @@
 
 .sg-sidebar-navigation {
 	font-family: $secondary-font-stack;
-	border-right: 1px solid #ddd;
+	border: 1px solid #ddd;
+	background: $color-lightest;
+	font-size: .875rem;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
 	.sg-sidebar-navigation__label {
 		font-size: 1rem;
 		margin: 0;
+		padding: .9rem .5rem;
+		border-bottom: 1px solid #ddd;
+		background: rgba(0, 0, 0, 0.02);
+
 	}
 
 	.sg-sidebar-navigation__label:not(:first-child) {
-		margin-top: 2rem;
 	}
 
 	ul {
 		margin: 0;
 		padding: 0;
 		list-style: none;
+	}
+
+	li {
+		margin: 0;
+		border-bottom: 1px solid #ddd;
+	}
+
+	a {
+		line-height: 100%;
+		display: block;
+		padding: .7rem .5rem;
+		text-decoration: none;
 	}
 
 	[data-active] {
