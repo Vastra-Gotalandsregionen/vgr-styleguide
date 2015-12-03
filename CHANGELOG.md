@@ -1,4 +1,4 @@
-# Changelog
+# CHANGELOG
 
-### 1.0.0 (November 23, 2015)
-  - Initial Release
+All notable changes to this project will be documented in this file.
+VGR Styleguide is maintained under [Semantic Versioning](http://semver.org/).
