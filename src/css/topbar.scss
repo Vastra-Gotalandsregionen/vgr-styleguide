@@ -19,16 +19,8 @@
 		}
 	}
 
-	&__title,
-	&__theme-selector {
-		margin: .5rem 0;
-		display: inline;
-	}
-
-	&__theme-selector {
-		@media print {
-			display: none;
-		}
+	&__title {
+		display: block;
 	}
 }
 
