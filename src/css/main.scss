@@ -42,7 +42,20 @@ h1 {
 	color: darken($color-error, 60%);
 }
 
-
 .vgr-button {
 	margin-bottom: 1em;
+}
+
+
+.vgr-header,
+.vgr-footer {
+	background: $color-darkest;
+	text-align: center;
+	color: $color-lightest;
+	padding: 2rem;
+	font-family: $secondary-font-stack;
+}
+
+.vgr-header {
+	margin-bottom: 2rem;
 }
