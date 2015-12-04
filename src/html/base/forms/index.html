@@ -6,44 +6,101 @@
 
 	<h1 class="sg-header-1">Forms <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_forms.scss" class="sg-file">_forms.scss</a></h1>
 
-	<p>Keep forms as simple as possible – only ask what's needed to run your service.</p>
+	<p class="sg-paragraph">Keep forms as simple as possible – only ask what's needed to run your service.</p>
 
-	<div class="container">
+	<p class="sg-paragraph">Use the <code class="sg-code">.form-label</code> class to get default margins, layout and styling for form labels. Additionally, use the .vgr-form__label--required class around an asterisk to declare a field required. If a field needs to be marked as optional, wrap "(optional)" in .vgr-form__label--optional.</p>
 
-		<form class="vgr-forms row">
-			<fieldset>
-				<div class="col-xs-12 col-md-6">
-					<label class="vgr-label" for="firstname-1">Input Field</label>
-					<input class="vgr-input" id="firstname-1" type="text">
-				</div>
-			</fieldset>
-		</form>
 
-		<form class="vgr-forms row">
-			<fieldset>
-				<legend>Standardformulär</legend>
-				<div class="vgr-forms__item col-xs-12 col-sm-6">
-					<label class="vgr-label" for="firstname-2">Förnamn</label>
-					<input class="vgr-input" id="firstname-2" type="text">
-				</div>
-				<div class="col-xs-12 col-sm-6">
-					<label class="vgr-label" for="lastname-1">Efternamn</label>
-					<input class="vgr-input" id="lastname-1" type="text">
-				</div>
-				<div class="col-xs-12 col-sm-6">
-					<label class="vgr-label" for="lastname-2">Efternamn</label>
-					<input class="vgr-input" id="lastname-2" type="text">
-				</div>
-				<div class="col-xs-12 col-md-6">
-					<label class="vgr-label" for="area">Födelsedatum</label>
-					<select class="vgr-select" id="area" name="area">
-						<option value="1">1983</option>
-						<option value="12">2010</option>
-					</select>
-				</div>
-			</fieldset>
-		</form>
+	<h2 class="sg-header-2">Default Forms</h2>
+
+	<div class="sg-section">
+		<div class="container">
+
+			<form class="vgr-form row">
+				<fieldset>
+					<div class="col-xs-12 col-md-6 vgr-form__item">
+						<label class="vgr-form__label" for="field-1">Input Text</label>
+						<input class="vgr-form__input" id="field-1" type="text">
+					</div>
+					<div class="col-xs-12 col-md-6 vgr-form__item">
+						<label class="vgr-form__label" for="field-2">Input Password</label>
+						<input class="vgr-form__input" id="field-2" type="password">
+					</div>
+					<div class="col-xs-12 col-md-6 vgr-form__item">
+						<label class="vgr-form__label" for="field-3">Input Search</label>
+						<input class="vgr-form__input" id="field-3" type="search" placeholder="Search on the website">
+					</div>
+					<div class="col-xs-12 col-md-6 vgr-form__item">
+						<label class="vgr-form__label" for="field-4">Input URL</label>
+						<input class="vgr-form__input" id="field-4" type="search" placeholder="http://">
+					</div>
+					<div class="col-xs-12 vgr-form__item">
+						<label class="vgr-form__label" for="field-5">Textarea</label>
+						<textarea class="vgr-form__textarea" id="field-5"></textarea>
+					</div>
+				</fieldset>
+			</form>
+		</div>
 	</div>
 
+	<h2 class="sg-header-2">Helper Text</h2>
+
+	<div class="sg-section">
+		<div class="container">
+
+			<form class="vgr-form row">
+				<fieldset>
+					<div class="col-xs-12 col-md-6 vgr-form__item">
+						<label class="vgr-form__label" for="field-5">Name</label>
+						<input class="vgr-form__input" id="field-5" type="text" aria-describedby="helper-text">
+						<small class="vgr-form__helper"  id="helper-text">Please include your full name</small>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+
+	<h2 class="sg-header-2">Form Warning</h2>
+
+	<div class="sg-section">
+		<div class="container">
+
+			<form class="vgr-form row">
+				<div class="col-xs-12 col-md-6 vgr-form__item vgr-form__item--warning">
+					<label class="vgr-form__label" for="field-5">Name</label>
+					<input class="vgr-form__input" id="field-5" type="text" aria-describedby="helper-text">
+					<small class="vgr-form__helper"  id="helper-text">Please include your full name</small>
+				</div>
+			</form>
+		</div>
+	</div>
+
+		<h2 class="sg-header-2">Form Error</h2>
+
+		<div class="sg-section">
+			<div class="container">
+				<form class="vgr-form row">
+					<div class="col-xs-12 col-md-6 vgr-form__item vgr-form__item--error">
+						<label class="vgr-form__label" for="field-5">Name</label>
+						<input class="vgr-form__input" id="field-5" type="text" aria-describedby="helper-text">
+						<small class="vgr-form__helper"  id="helper-text">Please include your full name</small>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<h2 class="sg-header-2">Form Success</h2>
+
+		<div class="sg-section">
+			<div class="container">
+				<form class="vgr-form row">
+					<div class="col-xs-12 col-md-6 vgr-form__item vgr-form__item--success">
+						<label class="vgr-form__label" for="field-5">Name</label>
+						<input class="vgr-form__input" id="field-5" type="text" aria-describedby="helper-text">
+						<small class="vgr-form__helper"  id="helper-text">Please include your full name</small>
+					</div>
+				</form>
+			</div>
+		</div>
 
 {% endblock %}
