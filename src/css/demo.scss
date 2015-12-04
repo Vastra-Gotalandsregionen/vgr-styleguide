@@ -1,12 +1,9 @@
 .sg-grid-demo {
-	.box {
-		font-family: $secondary-font-stack;
-		font-size: 14px;
-		color: blue;
-	}
+	font-family: $secondary-font-stack;
+	font-size: 14px;
 
-	.box-large {
-		padding: 40px !important;
+	.demo-box {
+		overflow: hidden;
 	}
 
 	.row {

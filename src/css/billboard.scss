@@ -1,6 +1,6 @@
 .sg-billboard {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 	font-family: $secondary-font-stack;
 
 	@if variable-exists(theme-1-primary-color) {
@@ -36,5 +36,9 @@
 
 	&__lead {
 		margin: 0;
+	}
+
+	&__button {
+		margin-top: 1em;
 	}
 }

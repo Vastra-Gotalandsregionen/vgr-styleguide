@@ -12,19 +12,6 @@
 @import 'grid';
 @import 'demo';
 
-.vgr-badge {
-	display: inline-block;
-	padding: .25rem 1rem;
-	font-size: .8rem;
-	margin-right: .25rem;
-	border-radius: 3px;
-	line-height: 100%;
-	border: 1px solid #000;
-	background: black;
-	color: white;
-	font-family: $secondary-font-stack;
-}
-
 html {
 	font-family: $primary-font-stack;
 }
@@ -42,7 +29,20 @@ h1 {
 	margin-bottom: 2rem;
 }
 
+.sg-ok,
+.sg-no {
+	display: block;
+	text-align: center;
+}
+
+.sg-ok {
+	color: darken($color-success, 60%);
+}
+.sg-no {
+	color: darken($color-error, 60%);
+}
+
 
 .vgr-button {
-	margin-bottom: 1rem;
+	margin-bottom: 1em;
 }
