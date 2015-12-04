@@ -6,7 +6,18 @@
 		<div class="container">
 			<div class="row">
 
-				{% include "_templates/partials/sidebar-navigation-guidelines.html" %}
+				<div class="col-xs-12 col-md-4 col-lg-3">
+					<nav class="sg-sidebar-navigation" role="navigation">
+						<div>
+							<h2 class="sg-sidebar-navigation__label">Guidelines</h2>
+							<ul>
+								<li><a href="{{ baseurl }}/guidelines/code-standards" {{ "data-active" if subPage == 'code-standards' }}>Code Standards</a></li>
+								<li><a href="{{ baseurl }}/guidelines/prestandabudget" hreflang="sv" {{ "data-active" if subPage == 'prestandabudget' }}>Performance</a></li>
+								<li><a href="{{ baseurl }}/guidelines/accessibility" {{ "data-active" if subPage == 'accessibility' }}>Accessibility</a></li>
+							</ul>
+						</div>
+					</nav>
+				</div>
 
 				<article class="col-xs-12 col-md-8 col-lg-9" role="article">
 
