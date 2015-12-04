@@ -4,6 +4,40 @@
 {% extends "_templates/base.html" %}
 {% block content %}
 
-	<h1 class="sg-header-1">Badges</h1>
+	<h1 class="sg-header-1">Badges <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_badges.scss" class="sg-file">_badges.scss</a></h1>
+
+	<em class="vgr-badge vgr-badge--default">Default</em>
+	<em class="vgr-badge vgr-badge--primary">Primary</em>
+	<em class="vgr-badge vgr-badge--success">Success</em>
+	<em class="vgr-badge vgr-badge--info">Info</em>
+	<em class="vgr-badge vgr-badge--warning">Warning</em>
+	<em class="vgr-badge vgr-badge--error">Error</em>
+
+	<h1 class="sg-header-1">Badges with icons</h1>
+
+	<em class="vgr-badge vgr-badge--default">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#success"></use></svg>
+		Default
+	</em>
+	<em class="vgr-badge vgr-badge--primary">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#success"></use></svg>
+		Primary
+	</em>
+	<em class="vgr-badge vgr-badge--success">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#success"></use></svg>
+		Success
+	</em>
+	<em class="vgr-badge vgr-badge--info">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#info"></use></svg>
+		Info
+	</em>
+	<em class="vgr-badge vgr-badge--warning">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#warning"></use></svg>
+		Warning
+	</em>
+	<em class="vgr-badge vgr-badge--error">
+		<svg class="vgr-badge__icon"><use xlink:href="/icons/icons.svg#error"></use></svg>
+		Error
+	</em>
 
 {% endblock %}

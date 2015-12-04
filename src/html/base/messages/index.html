@@ -4,10 +4,11 @@
 {% extends "_templates/base.html" %}
 {% block content %}
 
-	<h1 class="sg-header-1">Messages</h1>
+	<h1 class="sg-header-1">Messages <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_messages.scss" class="sg-file">_messages.scss</a></h1>
 
-	<p class="sg-paragraph">Alerts messages keep users informed of important and sometimes time-sensitive changes.</p>
+	<p class="sg-paragraph">Alert messages keep users informed of important and sometimes time-sensitive changes.</p>
 
+	<h2 class="sg-header-2">Alert messages</h2>
 	<div class="sg-section">
 
 		<div class="vgr-message vgr-message--success">
@@ -32,6 +33,43 @@
 		</div>
 
 		<div class="vgr-message vgr-message--info">
+			<p class="vgr-message__description">
+				<strong class="vgr-message__title">Information message</strong>
+				Totam officiis dolorum voluptatibus maxime molestiae iste.
+			</p>
+		</div>
+
+	</div>
+
+	<h2 class="sg-header-2">Alert messages with icons</h2>
+	<div class="sg-section">
+
+		<div class="vgr-message vgr-message--success">
+			<svg class="vgr-icon vgr-message__icon"><use xlink:href="/icons/icons.svg#success"></use></svg>
+			<p class="vgr-message__description">
+				<strong class="vgr-message__title">Success message</strong>
+				Totam officiis dolorum voluptatibus maxime molestiae iste.
+			</p>
+		</div>
+
+		<div class="vgr-message vgr-message--warning">
+			<svg class="vgr-icon vgr-message__icon"><use xlink:href="/icons/icons.svg#warning"></use></svg>
+			<p class="vgr-message__description">
+				<strong class="vgr-message__title">Warning message</strong>
+				Totam officiis dolorum voluptatibus maxime molestiae iste.
+			</p>
+		</div>
+
+		<div class="vgr-message vgr-message--error">
+			<svg class="vgr-icon vgr-message__icon"><use xlink:href="/icons/icons.svg#error"></use></svg>
+			<p class="vgr-message__description">
+				<strong class="vgr-message__title">Error message</strong>
+				Totam officiis dolorum <a href="/">voluptatibus</a> maxime molestiae iste.
+			</p>
+		</div>
+
+		<div class="vgr-message vgr-message--info">
+			<svg class="vgr-icon vgr-message__icon"><use xlink:href="/icons/icons.svg#info"></use></svg>
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Information message</strong>
 				Totam officiis dolorum voluptatibus maxime molestiae iste.
