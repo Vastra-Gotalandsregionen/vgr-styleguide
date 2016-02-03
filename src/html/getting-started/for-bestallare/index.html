@@ -1,0 +1,28 @@
+{% set title = "Starter Project" %}
+{% set mainPage = "getting-started" %}
+{% set subPage = "for-bestallare" %}
+{% extends "_templates/base-getting-started.html" %}
+{% block content %}
+
+	<h1 class="sg-header-1">För beställare</h1>
+	<p class="sg-paragraph">Här följer information, instruktioner och tips för dig som beställer webbsystem.</p>
+	<p>Har du inte ännu tagit kontakt med arkitekturledningen inom VGR IT så bör du eller någon i projektet göra det, detta för att få rådgivning så systemet kan tas i drift och lever upp till tekniska riktlinjer.</p>
+	<h2>Stilguiden är VGRs dokumenterade webbstandard</h2>
+	<p>Stilguiden med dess bilagor och innehåll är ett initiativ till att börja standardisera hur en regionens externa webbplatser ska fungera, se ut och samspela med våra användare. </p>
+	<p>Stilguiden består av ett flertal olika delar. Dels instruktioner och riktlinjer som denna text du läser just nu, men också dokumenterade krav och klargöranden som i prestandabudgeten vi förväntar oss att alla externa webbplatser lever upp till. Utöver det finns det ett antal dokumenterade förväntningar som har med det formgivning att göra, exempelvis typografi och designmönster.</p>
+	<p>Bara för att ett krav inte återfinns i stilguiden betyder inte det att man som beställare, utvecklare eller leverantör slipper göra ett gott hantverk. Se stilguiden som klargöranden, för det som saknas hänvisar vi till god praxis för webben</p>
+	<h2>Checklista för ett projekt som landar på webben</h2>
+	<p>Det finns förstås massor att tänka på, men nedan är i grova drag vad som behöver göras.</p>
+	<ol>
+		<li>Ha tagit kontakt med arkitekturledningen inom VGR IT.</li>
+		<li>Gjort klart för leverantören/utvecklarna att externt åtkomliga webbplatser <em>skall</em> leva upp till prestandabudgeten krav, värderingar och mätbarhet.</li>
+		<li>Återanvänd så många designkomponenter som möjligt. Titta under <a href="/vgr-styleguide/components/">components</a>.</li>
+		<li>Design som tas fram ska följa designkonventionen som finns i VGR:s stilguide. Titta under <a href="/vgr-styleguide/components/">components</a>.</li>
+		<li>De färger, kombinationer av färger och teman som är godkända finns under <a href="/vgr-styleguide/base/colors/">colors</a>.</li>
+		<li>Typografi är <em>inte</em> ett beslut inom projektet, det som vid projektets start anges i <a href="/vgr-styleguide/base/typography/">base/typography</a> <em>skall</em> följas.</li>
+	</ol>
+	<h2>Bidra till stilguiden när ditt projekt är klart</h2>
+	<p>Stilguidens ständiga förvaltande och omvårdnad är allas vårt ansvar - vi som jobbar med webb. Har ditt projekt tagit fram nya designmönster eller annan klokskap så är det till nytta för resten av regionen om det tas upp i stilguiden. Kontakta objektet Digitala medier för mer info om detta.</p>
+	<p>Frågor specifika till stilguiden, prestandabudgeten och designkomponenter kan ställas till objektet Digitala medier. Tills vidare kan man ta direktkontakt med marcus.osterberg(a)vgregion.se för webbfrågor och kenny.stolpe(a)vgregion.se för designfrågor.<br>
+	IT-frågor kan ställas till <a href="http://vastra-gotalandsregionen.github.io/oppna-program/">arkitekturledningen - kontaktpersoner VGR IT finns på Öppna program</a>.</p>
+{% endblock %}
