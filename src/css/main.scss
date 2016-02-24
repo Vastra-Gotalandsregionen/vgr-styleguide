@@ -1,16 +1,16 @@
 /* Import Theme */
-@import 'vgr-base/themes/theme-1.scss';
+@import "vgr-base/themes/theme-1.scss";
 
 /* Import Base */
-@import 'vgr-base/base.scss';
-@import 'base';
+@import "vgr-base/base.scss";
+@import "base";
 
-@import 'footer';
-@import 'topbar';
-@import 'billboard';
-@import 'navigation';
-@import 'grid';
-@import 'demo';
+@import "footer";
+@import "topbar";
+@import "billboard";
+@import "navigation";
+@import "grid";
+@import "demo";
 
 html {
 	font-family: $primary-font-stack;
@@ -42,17 +42,12 @@ h1 {
 	color: darken($color-error, 60%);
 }
 
-.vgr-button {
-	margin-bottom: 1em;
-}
-
-
 .vgr-header,
 .vgr-footer {
-	background: $color-darkest;
-	text-align: center;
-	color: $color-lightest;
 	padding: 2rem;
+	background: $color-darkest;
+	color: $color-lightest;
+	text-align: center;
 	font-family: $secondary-font-stack;
 }
 

@@ -1,18 +1,18 @@
 /* Styleguide - Topbar
-   ========================================================================== */
+	 ========================================================================== */
 
 .sg-topbar {
-	font-family: $secondary-font-stack;
-	font-size: .875rem;
-	background: $color-lightest;
-	background: linear-gradient(to bottom, #fff 0%, #fefefe 100%);
-	border-bottom: 1px solid #ddd;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
+	border-bottom: 1px solid #ddd;
+	background: $color-lightest;
+	background: linear-gradient(to bottom, #fff 0%, #fefefe 100%);
+	font-size: .875rem;
+	font-family: $secondary-font-stack;
 
 	&__title {
-		text-decoration: none;
 		color: $primary-text-color;
+		text-decoration: none;
 
 		span {
 			font-weight: 700;
@@ -26,12 +26,15 @@
 
 
 /* Alpha Alert Message
-   ========================================================================== */
+	 ========================================================================== */
 .sg-alpha-message {
 	padding: .5rem 1rem;
 	text-align: center;
-	font-family: $secondary-font-stack;
 	font-size: $small-font-size;
+	font-family: $secondary-font-stack;
+
+	$color: $color-lightest !default;
+	$background-color: $primary-text-color !default;
 
 	@if variable-exists(theme-1-primary-color) {
 		$background-color: $theme-1-theme-color-darkest;
@@ -50,11 +53,8 @@
 		$color: $color-darkest;
 	}
 
-	$color: $color-lightest !default;
-	color: $color;
-
-	$background-color: $primary-text-color !default;
 	background-color: $background-color;
+	color: $color;
 
 	p {
 		margin: 0;

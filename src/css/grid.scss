@@ -1,8 +1,8 @@
 .grid-demo {
 	.box {
-		font-family: $secondary-font-stack;
-		font-size: 14px;
 		color: blue;
+		font-size: 14px;
+		font-family: $secondary-font-stack;
 	}
 
 	.box-large {
@@ -10,16 +10,16 @@
 	}
 
 	.row {
-		background: rgba(213, 238, 251, 0.8);
+		background: rgba(213, 238, 251, .8);
 	}
 
-	.row [class^='col-'] {
+	.row [class^="col-"] {
 		padding: $gutter-width;
 	}
-	.row [class^='col-'] div {
-		background: rgba(168, 203, 221, 0.8);
+	.row [class^="col-"] div {
 		padding: 5px;
-		text-align: center;
 		border: 1px solid blue;
+		background: rgba(168, 203, 221, .8);
+		text-align: center;
 	}
 }

@@ -1,9 +1,9 @@
 .sg-footer {
-	text-align: center;
 	padding: 3rem 1rem;
-	background: lighten($primary-text-color, 100%);
-	font-family: $secondary-font-stack;
 	border-top: 1px solid #ddd;
+	background: lighten($primary-text-color, 100%);
+	text-align: center;
+	font-family: $secondary-font-stack;
 
 	&__navigation {
 		display: inline;
@@ -17,9 +17,9 @@
 		}
 
 		[data-active] {
-			font-weight: 700;
 			color: $color-darkest;
 			text-decoration: underline;
+			font-weight: 700;
 		}
 
 		a {
