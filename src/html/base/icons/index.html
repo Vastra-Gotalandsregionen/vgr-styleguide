@@ -1,3 +1,6 @@
+{% include "base/icons/icon-sg-template.nunjucks" %}
+
+
 {% set title = "Icons" %}
 {% set mainPage = "base" %}
 {% set subPage = "icons" %}
@@ -13,118 +16,35 @@
 
 	<div class="sg-icon-holder vgr-clearfix">
 
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#accessible"></use></svg>
-			</div>
-			<span class="sg-icon-name">accessibility</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#error"></use></svg>
-			</div>
-			<span class="sg-icon-name">error</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#info"></use></svg>
-			</div>
-			<span class="sg-icon-name">info</span>
-		</div>
-
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg>
-			</div>
-			<span class="sg-icon-name">success</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#warning"></use></svg>
-			</div>
-			<span class="sg-icon-name">warning</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_subject_black_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_subject_black_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_search_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_search_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_public_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_public_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_phone_iphone_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_phone_iphone_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_menu_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_menu_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_list_black_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_list_black_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_info_outline_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_list_black_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_home_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_home_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_hearing_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_hearing_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_close_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_close_white_24px</span>
-		</div>
-
-		<div class="sg-icon">
-			<div class="sg-icon-wrapper">
-				<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#ic_brightness_medium_white_24px"></use></svg>
-			</div>
-			<span class="sg-icon-name">ic_brightness_medium_white_24px</span>
-		</div>
+		{{ icon("accessible") }}
+		{{ icon("chevron-down") }}
+		{{ icon("error") }}
+		{{ icon("ic_add_circle_outline") }}
+		{{ icon("ic_brightness_medium") }}
+		{{ icon("ic_close") }}
+		{{ icon("ic_content_paste") }}
+		{{ icon("ic_event_note") }}
+		{{ icon("ic_format_list_numbered") }}
+		{{ icon("ic_hearing") }}
+		{{ icon("ic_home") }}
+		{{ icon("ic_info_outline") }}
+		{{ icon("ic_list") }}
+		{{ icon("ic_mail_outline") }}
+		{{ icon("ic_menu") }}
+		{{ icon("ic_open_in_browser") }}
+		{{ icon("ic_phone_iphone") }}
+		{{ icon("ic_phone") }}
+		{{ icon("ic_picture_in_picture") }}
+		{{ icon("ic_public") }}
+		{{ icon("ic_remove_circle_outline") }}
+		{{ icon("ic_search") }}
+		{{ icon("ic_subject") }}
+		{{ icon("ic_view_comfy") }}
+		{{ icon("info") }}
+		{{ icon("map-pin") }}
+		{{ icon("rss-updates-subscription") }}
+		{{ icon("success") }}
+		{{ icon("warning") }}
 
 	</div>
 

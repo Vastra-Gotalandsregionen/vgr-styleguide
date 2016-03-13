@@ -1,0 +1,8 @@
+{% macro icon(name, class='') %}
+<div class="sg-icon">
+	<div class="sg-icon-wrapper">
+		<svg {% if class != '' %}class="vgr-icon {{ class }}"{% else %}class="vgr-icon"{% endif %}class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#{{ name }}"></use></svg>
+	</div>
+	<span class="sg-icon-name">{{ name }}</span>
+</div>
+{% endmacro %}
