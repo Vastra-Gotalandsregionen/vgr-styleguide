@@ -1,3 +1,5 @@
+{% include "base/icons/icon-template.nunjucks" %}
+
 {% set title = "Buttons" %}
 {% set mainPage = "base" %}
 {% set subPage = "buttons" %}
@@ -13,7 +15,9 @@
 		<button class="vgr-button">Button element</button>
 		<input  class="vgr-button" type="submit" value="Submit input">
 		<input  class="vgr-button" type="button" value="Button input">
-		<a class="vgr-button vgr-button__icon" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button__icon" href="#">
+			{{ icon("success") }}
+			Icon button</a>
 	</div>
 
 	<h2 class="sg-header-2">Button Size Variations</h2>
@@ -24,7 +28,9 @@
 		<button class="vgr-button vgr-button--large">Button element</button>
 		<input  class="vgr-button vgr-button--large" type="submit" value="Submit input">
 		<input  class="vgr-button vgr-button--large" type="button" value="Button input">
-		<a class="vgr-button vgr-button__icon vgr-button--large" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button__icon vgr-button--large" href="#">
+			{{ icon("success") }}
+			Icon button</a>
 	</div>
 
 	<h3 class="sg-header-3">Small</h3>
@@ -33,7 +39,9 @@
 		<button class="vgr-button vgr-button--small">Button element</button>
 		<input  class="vgr-button vgr-button--small" type="submit" value="Submit input">
 		<input  class="vgr-button vgr-button--small" type="button" value="Button input">
-		<a class="vgr-button vgr-button__icon vgr-button--small" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button__icon vgr-button--small" href="#">
+			{{ icon("success") }}
+			Icon button</a>
 	</div>
 
 	<h1 class="sg-header-1">Secondary Buttons</h1>
@@ -45,7 +53,10 @@
 		<button class="vgr-button vgr-button--secondary">Button element</button>
 		<input  class="vgr-button vgr-button--secondary" type="submit" value="Submit input">
 		<input  class="vgr-button vgr-button--secondary" type="button" value="Button input">
-		<a class="vgr-button vgr-button--secondary vgr-button__icon" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button--secondary vgr-button__icon" href="#">
+			{{ icon("success") }}
+			Icon button
+		</a>
 	</div>
 
 	<h2 class="sg-header-2">Button Size Variations</h2>
@@ -56,7 +67,10 @@
 		<button class="vgr-button vgr-button--secondary vgr-button--large">Button element</button>
 		<input  class="vgr-button vgr-button--secondary vgr-button--large" type="submit" value="Submit input">
 		<input  class="vgr-button vgr-button--secondary vgr-button--large" type="button" value="Button input">
-		<a class="vgr-button vgr-button--secondary vgr-button__icon vgr-button--large" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button--secondary vgr-button__icon vgr-button--large" href="#">
+			{{ icon("success") }}
+			Icon button
+		</a>
 	</div>
 
 	<h3 class="sg-header-3">Small</h3>
@@ -65,7 +79,10 @@
 		<button class="vgr-button vgr-button--secondary vgr-button--small">Button element</button>
 		<input  class="vgr-button vgr-button--secondary vgr-button--small" type="submit" value="Submit input">
 		<input  class="vgr-button vgr-button--secondary vgr-button--small" type="button" value="Button input">
-		<a class="vgr-button vgr-button--secondary vgr-button__icon vgr-button--small" href="#"><svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg> Icon button</a>
+		<a class="vgr-button vgr-button--secondary vgr-button__icon vgr-button--small" href="#">
+			{{ icon("success") }}
+			Icon button
+		</a>
 	</div>
 
 {% endblock %}

@@ -1,3 +1,5 @@
+{% include "base/icons/icon-template.nunjucks" %}
+
 {% set title = "Messages" %}
 {% set mainPage = "base" %}
 {% set subPage = "messages" %}
@@ -45,7 +47,7 @@
 	<div class="sg-section">
 
 		<div class="vgr-message vgr-message--success">
-			<svg class="vgr-icon vgr-message__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg>
+			{{ icon("success", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Success message</strong>
 				Totam officiis dolorum voluptatibus maxime molestiae iste.
@@ -53,7 +55,7 @@
 		</div>
 
 		<div class="vgr-message vgr-message--warning">
-			<svg class="vgr-icon vgr-message__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#warning"></use></svg>
+			{{ icon("warning", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Warning message</strong>
 				Totam officiis dolorum voluptatibus maxime molestiae iste.
@@ -61,7 +63,7 @@
 		</div>
 
 		<div class="vgr-message vgr-message--error">
-			<svg class="vgr-icon vgr-message__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#error"></use></svg>
+			{{ icon("error", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Error message</strong>
 				Totam officiis dolorum <a href="/">voluptatibus</a> maxime molestiae iste.
@@ -69,7 +71,7 @@
 		</div>
 
 		<div class="vgr-message vgr-message--info">
-			<svg class="vgr-icon vgr-message__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#info"></use></svg>
+			{{ icon("info", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Information message</strong>
 				Totam officiis dolorum voluptatibus maxime molestiae iste.

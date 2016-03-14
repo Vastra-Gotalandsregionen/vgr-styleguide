@@ -1,3 +1,5 @@
+{% include "base/icons/icon-template.nunjucks" %}
+
 {% set title = "Badges" %}
 {% set mainPage = "base" %}
 {% set subPage = "badges" %}
@@ -16,27 +18,27 @@
 	<h1 class="sg-header-1">Badges with icons</h1>
 
 	<em class="vgr-badge vgr-badge--default">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg>
+		{{ icon("success", class="vgr-badge__icon") }}
 		Default
 	</em>
 	<em class="vgr-badge vgr-badge--primary">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg>
+		{{ icon("success", class="vgr-badge__icon") }}
 		Primary
 	</em>
 	<em class="vgr-badge vgr-badge--success">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#success"></use></svg>
+		{{ icon("success", class="vgr-badge__icon") }}
 		Success
 	</em>
 	<em class="vgr-badge vgr-badge--info">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#info"></use></svg>
+		{{ icon("info", class="vgr-badge__icon") }}
 		Info
 	</em>
 	<em class="vgr-badge vgr-badge--warning">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#warning"></use></svg>
+		{{ icon("warning", class="vgr-badge__icon") }}
 		Warning
 	</em>
 	<em class="vgr-badge vgr-badge--error">
-		<svg class="vgr-badge__icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#error"></use></svg>
+		{{ icon("error", class="vgr-badge__icon") }}
 		Error
 	</em>
 
