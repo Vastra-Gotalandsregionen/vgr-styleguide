@@ -1,7 +1,12 @@
 {% set title = "Standard Block" %}
 {% set mainPage = "components" %}
 {% set subPage = "standard-block" %}
-{% extends "_templates/base-components.html" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "components/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Standard Block <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/components/_block.scss" class="sg-file">_block.scss</a></h1>

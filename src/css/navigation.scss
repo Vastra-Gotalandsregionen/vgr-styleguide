@@ -1,36 +1,37 @@
-.sg-primary__navigation {
-	display: inline;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.main-navigation {
+	background: $theme-color-dark;
+	color: $theme-on-color;
+	font-size: .9rem;
 
-	li {
-		display: inline-block;
-		margin: 0 1rem 0 0;
+	&__item {
+		float: left;
+		margin: 0;
+		font-family: $secondary-font-stack;
 	}
 
-	[data-active] {
-		color: $color-darkest;
-		text-decoration: underline;
-	}
-
-	a {
-		display: inline;
+	&__link {
+		display: block;
+		padding: $default-whitespace;
+		color: $theme-on-color;
 		text-decoration: none;
 
-		&:hover {
+		&[data-selected] {
+			background: $theme-color-darkest;
+		}
+
+		&:hover,
+		&:focus {
+			background: $theme-on-color;
 			text-decoration: underline;
 		}
 	}
-
-	@media print {
-		display: none;
-	}
 }
+
+
 
 .sg-sub-navigation {
 	border-bottom: 1px solid #ddd;
-	background: $color-lightest;
+	background: $color-white;
 	background: linear-gradient(to bottom, #fff 0%, #fefefe 100%);
 	text-align: center;
 	font-family: $secondary-font-stack;
@@ -60,7 +61,7 @@
 		position: relative;
 		display: block;
 		padding: 1rem;
-		color: $color-darkest;
+		color: $color-black;
 		text-decoration: none;
 		transition: color .1s ease-in;
 
@@ -73,7 +74,7 @@
 			content: "";
 			transition: height .1s ease-in;
 
-			$theme-color: $primary-text-color !default;
+			$theme-color: $text-color !default;
 
 			@if variable-exists(theme-1-primary-color) {
 				$theme-color: $theme-1-primary-color;
@@ -100,9 +101,9 @@
 		}
 
 		&:hover,
-		&[data-active] {
+		&[data-selected] {
 
-			$theme-color: $primary-text-color !default;
+			$theme-color: $text-color !default;
 			@if variable-exists(theme-1-primary-color) {
 				$theme-color: $theme-1-primary-color;
 			}
@@ -143,18 +144,20 @@
 	margin-bottom: $default-whitespace*2;
 	border: 1px solid #ddd;
 	border-radius: 3px;
-	background: $color-lightest;
+	background: $color-white;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
 	font-size: .875rem;
 	font-family: $secondary-font-stack;
 
 	.sg-sidebar-navigation__label {
 		margin: 0;
-		padding: .9rem .5rem;
+		padding: 1rem;
 		border-bottom: 1px solid #ddd;
-		background: rgba(0, 0, 0, .02);
-		color: #767473;
-		font-size: 1rem;
+		background: $theme-color;
+		color: $theme-on-color;
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 1.5;
 	}
 
 
@@ -177,8 +180,8 @@
 		line-height: 100%;
 	}
 
-	[data-active] {
-		color: $color-darkest;
+	[data-selected] {
+		color: $color-black;
 		text-decoration: underline;
 		font-weight: 700;
 	}

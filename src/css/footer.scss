@@ -1,9 +1,21 @@
 .sg-footer {
 	padding: 3rem 1rem;
 	border-top: 1px solid #ddd;
-	background: lighten($primary-text-color, 100%);
+	background: $theme-color;
+	color: $theme-on-color;
 	text-align: center;
 	font-family: $secondary-font-stack;
+
+	a {
+		display: inline;
+		text-decoration: underline;
+		color: $theme-on-color;
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
 
 	&__navigation {
 		display: inline;
@@ -16,20 +28,10 @@
 			margin: 0 1rem 0 0;
 		}
 
-		[data-active] {
-			color: $color-darkest;
+		[data-selected] {
+			color: $color-black;
 			text-decoration: underline;
 			font-weight: 700;
-		}
-
-		a {
-			display: inline;
-			text-decoration: none;
-
-			&:hover,
-			&:focus {
-				text-decoration: underline;
-			}
 		}
 
 		@media print {

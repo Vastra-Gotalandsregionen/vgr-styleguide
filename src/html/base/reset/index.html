@@ -2,9 +2,14 @@
 {% set mainPage = "base" %}
 {% set subPage = "reset" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Normalize <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/base/_reset.scss" class="sg-file">_reset.scss</a></h1>
-	<p class="sg-paragraph">For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize v3.0.2s</a>, a project by <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal">Jonathan Neal</a>. Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements.</p>
+	<p class="sg-paragraph">For improved cross-browser rendering, we use <a href="http://necolas.github.io/normalize.css/">Normalize v4.0.0s</a>, a project by <a href="https://twitter.com/necolas">Nicolas Gallagher</a> and <a href="https://twitter.com/jon_neal">Jonathan Neal</a>. Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements.</p>
 	<p class="sg-paragraph">Normalize.css contain styles that apply globally to all native HTML elements.</p>
 {% endblock %}

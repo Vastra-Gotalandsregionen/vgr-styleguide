@@ -1,5 +1,6 @@
 body {
-	background: $color-lightest;
+	background: $color-gray-light;
+	-webkit-font-smoothing: antialiased;
 }
 
 a:focus {
@@ -16,10 +17,10 @@ a:focus {
 
 .sg-section {
 	padding: 2em;
-	border: 1px solid $color-lightest-gray;
+	border: 1px solid $color-gray-lightest;
 	border-radius: 4px;
-	background: $color-lightest;
-	box-shadow: 0 0 2px $color-lightest-gray;
+	background: $color-white;
+	box-shadow: 0 0 2px $color-gray-lightest;
 }
 
 .sg-header-1,
@@ -27,7 +28,7 @@ a:focus {
 	position: relative;
 	margin-bottom: 1rem;
 	padding-bottom: 14px;
-	border-bottom: 1px solid $color-lightest-gray;
+	border-bottom: 1px solid $color-gray-lightest;
 	font-weight: 100;
 }
 
@@ -168,7 +169,7 @@ audio {
 	.sg-icon-name {
 		display: block;
 		padding: 0 4px 4px;
-		border-top: 1px solid $color-lightest-gray;
+		border-top: 1px solid $color-gray-lightest;
 		text-align: center;
 		font-size: 14px;
 		font-family: $secondary-font-stack;

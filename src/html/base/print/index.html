@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "print" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Print <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/base/_print.scss" class="sg-file">_print.scss</a></h1>

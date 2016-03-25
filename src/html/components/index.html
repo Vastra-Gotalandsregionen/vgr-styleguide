@@ -1,6 +1,11 @@
 {% set title = "Components" %}
 {% set mainPage = "components" %}
-{% extends "_templates/base-components.html" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "components/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Components</h1>

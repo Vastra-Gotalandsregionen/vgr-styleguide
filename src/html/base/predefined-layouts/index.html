@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "predefined-layouts" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Predefined Layouts</h1>

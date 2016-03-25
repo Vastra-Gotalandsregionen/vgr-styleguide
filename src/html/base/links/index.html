@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "links" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Links <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/elements/_links.scss" class="sg-file">_links.scss</a></h1>

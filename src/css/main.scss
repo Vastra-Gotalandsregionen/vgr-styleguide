@@ -1,4 +1,4 @@
-/* Import Theme */
+/* Set Theme */
 @import "vgr-base/themes/theme-1.scss";
 
 /* Import Base */
@@ -11,6 +11,11 @@
 @import "navigation";
 @import "grid";
 @import "demo";
+
+/* Include Search until it's in its own module */
+@import "search";
+@import "leaflet";
+
 
 html {
 	font-family: $primary-font-stack;
@@ -45,8 +50,8 @@ h1 {
 .vgr-header,
 .vgr-footer {
 	padding: 2rem;
-	background: $color-darkest;
-	color: $color-lightest;
+	background: $color-black;
+	color: $color-white;
 	text-align: center;
 	font-family: $secondary-font-stack;
 }

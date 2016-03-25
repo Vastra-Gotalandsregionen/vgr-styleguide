@@ -2,13 +2,18 @@
 {% set mainPage = "base" %}
 {% set subPage = "forms" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Forms <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_forms.scss" class="sg-file">_forms.scss</a></h1>
 
 	<p class="sg-paragraph">Keep forms as simple as possible – only ask what's needed to run your service.</p>
 
-	<p class="sg-paragraph">Use the <code class="sg-code">.form-label</code> class to get default margins, layout and styling for form labels. Additionally, use the .vgr-form__label--required class around an asterisk to declare a field required. If a field needs to be marked as optional, wrap "(optional)" in .vgr-form__label--optional.</p>
+	<p class="sg-paragraph">Use the <code class="sg-code">.vgr-form-label</code> class to get default margins, layout and styling for form labels. Additionally, use the <code class="sg-code">.vgr-form__label--required</code> class around an asterisk to declare a field required. If a field needs to be marked as optional, wrap "(optional)" in <code class="sg-code">.vgr-form__label--optional</code>.</p>
 
 
 	<h2 class="sg-header-2">Default Forms</h2>

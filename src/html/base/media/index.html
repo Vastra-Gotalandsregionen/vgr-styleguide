@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "media" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Media <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_media.scss" class="sg-file">_media.scss</a></h1>

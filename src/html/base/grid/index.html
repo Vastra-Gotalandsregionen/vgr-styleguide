@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "grid" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Grid <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_layout-classes.scss" class="sg-file">_layout-classes.scss</a></h1>

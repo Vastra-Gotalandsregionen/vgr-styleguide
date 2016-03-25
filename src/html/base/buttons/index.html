@@ -1,9 +1,15 @@
-{% include "base/icons/icon-template.nunjucks" %}
+{% include "_templates/icon-template.nunjucks" %}
+{% include "_templates/button-template.nunjucks" %}
 
 {% set title = "Buttons" %}
 {% set mainPage = "base" %}
 {% set subPage = "buttons" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Buttons <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_buttons.scss" class="sg-file">_buttons.scss</a></h1>
@@ -11,35 +17,15 @@
 	<p>To create a VGR styled button, add the <code>vgr-button</code> classname to any <code class="sg-code">&lt;a&gt;</code> or <code class="sg-code">&lt;button&gt;</code> element.</p>
 
 	<div>
+		{{ button("Normal") }}
+		{{ button("Normal", class="complementary", id="mo") }}
+		{{ linkButton("Normal", class="vgr-button--complementary vgr-button--large", href="mooo") }}
+
 		<a class="vgr-button" href="#">Anchor button</a>
 		<button class="vgr-button">Button element</button>
 		<input  class="vgr-button" type="submit" value="Submit input">
 		<input  class="vgr-button" type="button" value="Button input">
 		<a class="vgr-button vgr-button__icon" href="#">
-			{{ icon("success") }}
-			Icon button</a>
-	</div>
-
-	<h2 class="sg-header-2">Button Size Variations</h2>
-
-	<h3 class="sg-header-3">Large</h3>
-	<div>
-		<a class="vgr-button vgr-button--large" href="#">Anchor button</a>
-		<button class="vgr-button vgr-button--large">Button element</button>
-		<input  class="vgr-button vgr-button--large" type="submit" value="Submit input">
-		<input  class="vgr-button vgr-button--large" type="button" value="Button input">
-		<a class="vgr-button vgr-button__icon vgr-button--large" href="#">
-			{{ icon("success") }}
-			Icon button</a>
-	</div>
-
-	<h3 class="sg-header-3">Small</h3>
-	<div>
-		<a class="vgr-button vgr-button--small" href="#">Anchor button</a>
-		<button class="vgr-button vgr-button--small">Button element</button>
-		<input  class="vgr-button vgr-button--small" type="submit" value="Submit input">
-		<input  class="vgr-button vgr-button--small" type="button" value="Button input">
-		<a class="vgr-button vgr-button__icon vgr-button--small" href="#">
 			{{ icon("success") }}
 			Icon button</a>
 	</div>

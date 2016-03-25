@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "mixins" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Mixins <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/base/_mixins.scss" class="sg-file">_mixins.scss</a></h1>

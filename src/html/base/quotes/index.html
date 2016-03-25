@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "quotes" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Quotes <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/elements/_quotes.scss" class="sg-file">_quotes.scss</a></h1>

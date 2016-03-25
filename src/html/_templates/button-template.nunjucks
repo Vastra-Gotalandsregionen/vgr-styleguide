@@ -1,0 +1,3 @@
+{% macro button(title, class='', id='') %}<button {% if class != '' %}class="vgr-button vgr-button--{{ class }}"{% else %}class="vgr-button"{% endif %}{% if id != '' %} id="{{ id }}"{% endif %}>{{ title }}</button>{% endmacro %}
+
+{% macro linkButton(title, class='', id='', href='') %}<a href="{{ href }}" {% if class != '' %}class="vgr-button {{ class }}"{% else %}class="vgr-button"{% endif %}{% if id != '' %} id="{{ id }}"{% endif %}>{{ title }}</a>{% endmacro %}

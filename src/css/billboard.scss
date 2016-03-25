@@ -1,44 +1,14 @@
 .sg-billboard {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+	padding-top: $default-whitespace*4;
+	padding-bottom: $default-whitespace*4;
 	font-family: $secondary-font-stack;
+	background-color: $theme-color;
+	color: $theme-on-color;
 
-	$background-color: $primary-text-color !default;
-	$color: $color-lightest !default;
-
-	@if variable-exists(theme-1-primary-color) {
-		$background-color: $theme-1-primary-color;
-	}
-
-	@if variable-exists(theme-2-primary-color) {
-		$background-color: $theme-2-primary-color;
-	}
-
-	@if variable-exists(theme-3-primary-color) {
-		$background-color: $theme-3-primary-color;
-	}
-
-	@if variable-exists(theme-4-primary-color) {
-		$background-color: $theme-4-primary-color;
-		$color: $color-darkest;
-	}
-
-	@if variable-exists(theme-5-primary-color) {
-		$background-color: $theme-5-primary-color;
-	}
-
-	background-color: $background-color;
-	color: $color;
-
-	&__introduction {
-		text-align: left;
-	}
-
-	&__lead {
-		margin: 0;
-	}
-
-	&__button {
-		margin-top: 1em;
+	@media screen and (min-width: $medium) {
+		background-size: 75%;
+		background-repeat: no-repeat;
+		background-position: 125% 50%;
+		background-image: url(/img/decorative.svg);
 	}
 }

@@ -1,7 +1,12 @@
 {% set title = "Design Principles" %}
 {% set mainPage = "getting-started" %}
 {% set subPage = "design-principles" %}
-{% extends "_templates/base-getting-started.html" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "getting-started/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Design Principles</h1>

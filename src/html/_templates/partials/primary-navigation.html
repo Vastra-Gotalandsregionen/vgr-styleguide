@@ -1,7 +1,20 @@
-<ul class="sg-primary__navigation">
-	<li><a href="{{ baseurl }}/getting-started" {{ "data-active" if mainPage == 'getting-started' }}>Getting started</a></li>
-	<li><a href="{{ baseurl }}/guidelines" {{ "data-active" if mainPage == 'guidelines' }}>Guidelines</a></li>
-	<li><a href="{{ baseurl }}/base" {{ "data-active" if mainPage == 'base' }}>Base</a></li>
-	<li><a href="{{ baseurl }}/components" {{ "data-active" if mainPage == 'components' }}>Components</a></li>
-	<li><a href="https://github.com/Vastra-Gotalandsregionen/vgr-base" class="vgr-button">GitHub</a></li>
-</ul>
+<div class="main-navigation">
+	<div class="vgr-wrapper">
+		<nav role="navigation">
+			<ul class="vgr-list-reset vgr-clearfix">
+				<li class="main-navigation__item">
+					<a href="{{ baseurl }}/getting-started" class="main-navigation__link" {{ "data-selected" if mainPage == 'getting-started' }}>Getting started</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="{{ baseurl }}/guidelines" class="main-navigation__link" {{ "data-selected" if mainPage == 'guidelines' }}>Guidelines</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="{{ baseurl }}/base" class="main-navigation__link" {{ "data-selected" if mainPage == 'base' }}>Base</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="{{ baseurl }}/components" class="main-navigation__link" {{ "data-selected" if mainPage == 'components' }}>Components</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>

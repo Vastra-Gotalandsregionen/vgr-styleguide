@@ -1,7 +1,12 @@
 {% set title = "Accessibility" %}
 {% set mainPage = "guidelines" %}
 {% set subPage = "accessibility" %}
-{% extends "_templates/base-guidelines.html" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "guidelines/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Accessibility</h1>

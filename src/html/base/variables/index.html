@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "variables" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Variables <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/base/_variables.scss" class="sg-file">_variables.scss</a></h1>

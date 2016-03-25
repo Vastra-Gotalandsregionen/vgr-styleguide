@@ -1,9 +1,14 @@
-{% include "base/icons/icon-template.nunjucks" %}
+{% include "_templates/icon-template.nunjucks" %}
 
 {% set title = "Messages" %}
 {% set mainPage = "base" %}
 {% set subPage = "messages" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Messages <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_messages.scss" class="sg-file">_messages.scss</a></h1>

@@ -2,6 +2,11 @@
 {% set mainPage = "base" %}
 {% set subPage = "helper-classes" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Helper Classes <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/trumps/_helpers.scss" class="sg-file">_helpers.scss</a></h1>

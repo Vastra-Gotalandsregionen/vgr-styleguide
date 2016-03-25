@@ -1,7 +1,12 @@
 {% set title = "Code Standards" %}
 {% set mainPage = "guidelines" %}
 {% set subPage = "code-standards" %}
-{% extends "_templates/base-guidelines.html" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "guidelines/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Code Standards</h1>

@@ -1,9 +1,14 @@
-{% include "base/icons/icon-template.nunjucks" %}
+{% include "_templates/icon-template.nunjucks" %}
 
 {% set title = "Badges" %}
 {% set mainPage = "base" %}
 {% set subPage = "badges" %}
 {% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "base/navigation.html" %}
+{% endblock %}
+
 {% block content %}
 
 	<h1 class="sg-header-1">Badges <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_badges.scss" class="sg-file">_badges.scss</a></h1>
