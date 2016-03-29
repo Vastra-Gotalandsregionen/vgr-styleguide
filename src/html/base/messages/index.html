@@ -25,13 +25,35 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--success">
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Success message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
 		<div class="vgr-message vgr-message--warning">
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Warning message</strong>
 				Totam officiis dolorum voluptatibus maxime molestiae iste.
 			</p>
 		</div>
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--warning">
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Warning message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
 
+	<div class="sg-section">
 		<div class="vgr-message vgr-message--error">
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Error message</strong>
@@ -39,6 +61,17 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--error">
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Error message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
 		<div class="vgr-message vgr-message--info">
 			<p class="vgr-message__description">
 				<strong class="vgr-message__title">Information message</strong>
@@ -46,6 +79,14 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--info">
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Information message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
 	</div>
 
 	<h2 class="sg-header-2">Alert messages with icons</h2>
@@ -59,6 +100,18 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--success">
+	{{ icon("success", class="vgr-message__icon") }}
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Success message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
 		<div class="vgr-message vgr-message--warning">
 			{{ icon("warning", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
@@ -67,6 +120,18 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--warning">
+	{{ icon("warning", class="vgr-message__icon") }}
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Warning message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
 		<div class="vgr-message vgr-message--error">
 			{{ icon("error", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
@@ -75,6 +140,18 @@
 			</p>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--error">
+	{{ icon("error", class="vgr-message__icon") }}
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Error message</strong>
+		Totam officiis dolorum <a href="/">voluptatibus</a> maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
 		<div class="vgr-message vgr-message--info">
 			{{ icon("info", class="vgr-message__icon") }}
 			<p class="vgr-message__description">
@@ -82,6 +159,16 @@
 				Totam officiis dolorum voluptatibus maxime molestiae iste.
 			</p>
 		</div>
+
+{% call pattern('Pattern') %}
+<div class="vgr-message vgr-message--info">
+	{{ icon("info", class="vgr-message__icon") }}
+	<p class="vgr-message__description">
+		<strong class="vgr-message__title">Information message</strong>
+		Totam officiis dolorum voluptatibus maxime molestiae iste.
+	</p>
+</div>
+{% endcall %}
 
 	</div>
 

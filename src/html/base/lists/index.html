@@ -34,6 +34,27 @@
 			<li>Proin vel nulla vel sapien ornare feugiat</li>
 		</ol>
 
+{% call pattern('Pattern') %}
+<ol>
+	<li>Donec cursus justo sit amet viverra interdum</li>
+	<li>
+		Praesent aliquam posuere efficitur
+		<ol>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Ut consequat auctor lorem</li>
+		</ol>
+	</li>
+	<li>
+		Praesent aliquam posuere efficitur
+		<ul>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+		</ul>
+	</li>
+	<li>Proin vel nulla vel sapien ornare feugiat</li>
+</ol>
+{% endcall %}
+
 	</div>
 
 	<h2 class="sg-header-2">Unordered Lists</h2>
@@ -52,6 +73,20 @@
 			<li>Suspendisse placerat condimentum euismod</li>
 		</ul>
 
+{% call pattern('Pattern') %}
+<ul>
+	<li>Proin gravida varius dui non elementum</li>
+	<li>
+		Aliquam mollis aliquet quam, vitae aliquet elit molestie eget
+		<ul>
+			<li>Lorem ipsum dolor sit amet</li>
+			<li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+		</ul>
+	</li>
+	<li>Suspendisse placerat condimentum euismod</li>
+</ul>
+{% endcall %}
+
 	</div>
 
 	<h2 class="sg-header-2">Definition Lists</h2>
@@ -64,6 +99,15 @@
 			<dt>Milk</dt>
 			<dd>White cold drink</dd>
 		</dl>
+
+{% call pattern('Pattern') %}
+<dl>
+	<dt>Coffee</dt>
+	<dd>Black hot drink</dd>
+	<dt>Milk</dt>
+	<dd>White cold drink</dd>
+</dl>
+{% endcall %}
 
 	</div>
 

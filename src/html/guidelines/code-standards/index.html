@@ -9,40 +9,458 @@
 
 {% block content %}
 
-	<h1 class="sg-header-1">Code Standards</h1>
-	<p class="sg-paragraph">Under development</p>
+	<h1 class="sg-header-1">Code Guide for Västra Götalands&shy;regionen</h1>
+	<div class="sg-section">
+		<div class="vgr-lead">
+			<p>Standards for developing flexible, durable, and sustainable HTML and CSS.</p>
+		</div>
+	<p>This is Västra Götalandsregionen's take on <a href="https://twitter.com/mdo">@mdo'</a>s <a href="http://mdo.github.io/code-guide/">Code Guide</a>.</p>
+	<blockquote>
+		<p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+	</blockquote>
 
-	<h2>Naming</h2>
-	<p>Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores. Exceptions made for outside vendor libraries, such as bower components.</p>
+	<div class="toc">
+		<ul>
+			<li>
+				<a href="#header-code-guide-for-vgr">Code Guide for Västra Götalandsregionen</a>
+				<ul>
+					<li><a href="#header-golden-rule">Golden rule</a></li>
+					<li><a href="#header-html">HTML</a>
+						<ul>
+							<li><a href="#header-syntax">Syntax</a></li>
+							<li><a href="#header-html5-doctype">HTML5 doctype</a></li>
+							<li><a href="#header-language-attribute">Language attribute</a></li>
+							<li><a href="#header-internet-explorer-compatibility-mode">Internet Explorer compatibility mode</a></li>
+							<li><a href="#header-character-encoding">Character encoding</a></li>
+							<li><a href="#header-css-and-javascript-includes">CSS and JavaScript includes</a></li>
+							<li><a href="#header-practicality-over-purity">Practicality over purity</a></li>
+							<li><a href="#header-attribute-order">Attribute order</a></li>
+							<li><a href="#header-boolean-attributes">Boolean attributes</a></li>
+							<li><a href="#header-reducing-markup">Reducing markup</a></li>
+							<li><a href="#header-javascript-generated-markup">JavaScript generated markup</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#header-css">CSS</a>
+						<ul>
+							<li><a href="#header-css-syntax">Syntax</a></li>
+							<li><a href="#header-declaration-order">Declaration order</a></li>
+							<li><a href="#header-dont-use-import">Don't use @import</a></li>
+							<li><a href="#header-media-query-placement">Media query placement</a></li>
+							<li><a href="#header-prefixed-properties">Prefixed properties</a></li>
+							<li><a href="#header-single-declarations">Single declarations</a></li>
+							<li><a href="#header-shorthand-notation">Shorthand notation</a></li>
+							<li><a href="#header-nesting-in-sass">Nesting in Sass</a></li>
+							<li><a href="#header-comments">Comments</a></li>
+							<li><a href="#header-classes">Classes</a></li>
+							<li><a href="#header-selectors">Selectors</a></li>
+							<li><a href="#header-organization">Organization</a></li>
+						</ul>
+					</li>
+					<li><a href="#header-editor-preferences">Editor preferences</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 
-	<h3>No IDs</h3>
-	<p>ID selectors should never be used for the purposes of styling an element, as it leads to overly specific styles that aren't easily shared with other elements. IDs should only be used when absolutely needed by JavaScript, form elements, or WAI-ARIA roles.</p>
+<h2 id="header-golden-rule">Golden rule</h2>
+<p>Enforce these agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, <a href="https://github.com/Vastra-Gotalandsregionen/vgr-styleguide/issues">please open an issue on Github</a>.</p>
+<hr />
+<h2 id="header-html">HTML</h2>
+<p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+<h3 id="header-syntax">Syntax</h3>
+<ul>
+<li>Use hard tabs to indent code.</li>
+<li>Nested elements should be indented once (one hard tab).</li>
+<li>Always use double quotes, never single quotes, on attributes.</li>
+<li>Don't include a trailing slash in self-closing elements — the HTML5 spec says they're optional.</li>
+<li>Don’t omit optional closing tags (e.g. <code class="sg-code">&lt;/li&gt;</code> or <code class="sg-code">&lt;/body&gt;</code>).</li>
+</ul>
+<pre><code class="language-markup">&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+&#x9;&#x3C;head&#x3E;
+&#x9;&#x9;&#x3C;title&#x3E;Page title&#x3C;/title&#x3E;
+&#x9;&#x3C;/head&#x3E;
+&#x9;&#x3C;body&#x3E;
+&#x9;&#x9;&#x3C;img src=&#x22;images/company-logo.svg&#x22; alt=&#x22;Company&#x22;&#x3E;
+&#x9;&#x9;&#x3C;h1 class=&#x22;hello-world&#x22;&#x3E;Hello, world!&#x3C;/h1&#x3E;
+&#x9;&#x3C;/body&#x3E;
+&#x3C;/html&#x3E;
+</code></pre>
 
-	<h3>Classes</h3>
-	<p>The Styleguide follows the BEM syntax.</p>
 
-	<h3>Whitespace</h3>
-	<p>Make sure you are using <code class="sg-code">.editorconfig</code></p>
+<h3 id="header-html5-doctype">HTML5 doctype</h3>
+<p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+<pre><code class="language-markup">&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html&#x3E;
+    &#x3C;head&#x3E;
+    &#x3C;/head&#x3E;
+&#x3C;/html&#x3E;
+</code></pre>
+
+<h3 id="header-language-attribute">Language attribute</h3>
+<p>From the HTML5 spec:</p>
+<blockquote>
+<p>Authors are encouraged to specify a lang attribute on the root html element, giving the document's language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+</blockquote>
+<p>Read more about the <code class="sg-code">lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
+<p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
+<pre><code class="language-markup">&#x3C;html lang=&#x22;en-us&#x22;&#x3E;
+    &#x3C;!-- ... --&#x3E;
+&#x3C;/html&#x3E;</code></pre>
+
+<h3 id="header-internet-explorer-compatibility-mode">Internet Explorer compatibility mode</h3>
+<p>Internet Explorer supports the use of a document compatibility <code class="sg-code">&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it's most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
+<p>For more information, <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">read this Stack Overflow article</a>.</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=Edge&#x22;&#x3E;</code></pre>
+
+<h3 id="header-character-encoding">Character encoding</h3>
+<p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;UTF-8&#x22;&#x3E;
+&#x3C;/head&#x3E;</code></pre>
+
+
+<h3 id="header-css-and-javascript-includes">CSS and JavaScript includes</h3>
+<p>Per HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as <code class="sg-code">text/css</code> and <code class="sg-code">text/javascript</code> are their respective defaults.</p>
+<p><strong>HTML5 spec links</strong></p>
 	<ul>
-		<li>Use one tab for indentation. No spaces.</li>
-		<li>Insert a space after comma separated items in a list.</li>
+		<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Using link</a></li>
+		<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Using style</a></li>
+		<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Using script</a></li>
 	</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;!-- External CSS --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;main.css&#x22;&#x3E;</code></pre>
 
-	<h2>Comments</h2>
-	<p>Comments should be used to provide more information.</p>
+<p><strong>Example:</strong></p>
+
+<pre><code class="language-markup">&#x3C;!-- In-document CSS --&#x3E;
+&#x3C;style&#x3E;
+    /* ... */
+&#x3C;/style&#x3E;</code></pre>
+
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;!-- JavaScript --&#x3E;
+&#x3C;script src=&#x22;main.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+
+<h3 id="header-practicality-over-purity">Practicality over purity</h3>
+<p>Strive to maintain HTML standards and semantics. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+<h3 id="header-attribute-order">Attribute order</h3>
+<p>HTML attributes should come in this particular order for easier reading of code.</p>
+<p>Classes make for great reusable components, so they come first. <code class="sg-code">Id</code>s are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+<ul>
+<li><code class="sg-code">class</code></li>
+<li><code class="sg-code">id</code>, <code class="sg-code">name</code></li>
+<li><code class="sg-code">data-*</code></li>
+<li><code class="sg-code">src</code>, <code class="sg-code">for</code>, <code class="sg-code">type</code>, <code class="sg-code">href</code>, <code class="sg-code">value</code></li>
+<li><code class="sg-code">title</code>, <code class="sg-code">alt</code></li>
+<li><code class="sg-code">role</code>, <code class="sg-code">aria-*</code></li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;a class=&#x22;...&#x22; id=&#x22;...&#x22; data-toggle=&#x22;modal&#x22; href=&#x22;/&#x22;&#x3E;Example link&#x3C;/a&#x3E;
+
+&#x3C;input class=&#x22;form-control&#x22; type=&#x22;text&#x22;&#x3E;
+
+&#x3C;img src=&#x22;...&#x22; alt=&#x22;...&#x22;&#x3E;</code></pre>
 
 
-	<h2>Shorthand</h2>
-	<p>Prefer the shortest shorthand form possible for properties that support it (i.e margin, padding, border)</p>
+<h3 id="header-boolean-attributes">Boolean attributes</h3>
+<p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
+<p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
+<blockquote>
+<p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+</blockquote>
+<p>If you <em>must</em> include the attribute's value, and <strong>you don't need to</strong>, follow this WhatWG guideline:</p>
+<blockquote>
+<p>If the attribute is present, its value must either be the empty string or [...] the attribute's canonical name, with no leading or trailing whitespace.</p>
+</blockquote>
+<p><strong>In short, don't add a value.</strong></p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;input type=&#x22;text&#x22; disabled&#x3E;
 
-	<p>Omit unit lengths on zero values.</p>
-	<h3>Bad</h3>
-	<pre>margin: 0px;</pre>
-	<h3>Good</h3>
-	<pre>margin: 0;</pre>
+&#x3C;input type=&#x22;checkbox&#x22; value=&#x22;1&#x22; checked&#x3E;
 
-	<h2 class="sg-header-2">Mobile first</h2>
+&#x3C;select&#x3E;
+    &#x3C;option value=&#x22;1&#x22; selected&#x3E;1&#x3C;/option&#x3E;
+&#x3C;/select&#x3E;</code></pre>
+
+<h3 id="header-reducing-markup">Reducing markup</h3>
+<p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+<p><strong>Example:</strong></p>
+<pre><code class="language-markup">&#x3C;!-- Not so great --&#x3E;
+&#x3C;span class=&#x22;avatar&#x22;&#x3E;
+  &#x3C;img src=&#x22;...&#x22;&#x3E;
+&#x3C;/span&#x3E;
+
+&#x3C;!-- Better --&#x3E;
+&#x3C;img class=&#x22;avatar&#x22; src=&#x22;...&#x22;&#x3E;</code></pre>
+
+
+<h3 id="header-javascript-generated-markup">JavaScript generated markup</h3>
+<p>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.</p>
+<hr />
+<h2 id="header-css">CSS</h2>
+<h3 id="header-css-syntax">Syntax</h3>
+<ul>
+<li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
+<li>When grouping selectors, keep individual selectors to a single line.</li>
+<li>Include one space before the opening brace of declaration blocks for legibility.</li>
+<li>Place closing braces of declaration blocks on a new line.</li>
+<li>Include one space after <code class="sg-code">:</code> for each declaration.</li>
+<li>Each declaration should appear on its own line for more accurate error reporting.</li>
+<li>End all declarations with a semi-colon. The last declaration's is not optional.</li>
+<li>Comma-separated property values should include a space after each comma (e.g., <code class="sg-code">box-shadow</code>).</li>
+<li>Don't include spaces after commas within <code class="sg-code">rgb()</code>, <code class="sg-code">rgba()</code>, <code class="sg-code">hsl()</code>, <code class="sg-code">hsla()</code>, or <code class="sg-code">rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
+<li>Don't prefix property values or color parameters with a leading zero (e.g., <code class="sg-code">.5</code> instead of <code class="sg-code">0.5</code> and <code class="sg-code">-.5px</code> instead of <code class="sg-code">-0.5px</code>).</li>
+<li>Lowercase all hex values, e.g., <code class="sg-code">#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
+<li>Use shorthand hex values where available, e.g., <code class="sg-code">#fff</code> instead of <code class="sg-code">#ffffff</code>.</li>
+<li>Quote attribute values in selectors, e.g., <code class="sg-code">input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
+<li>Avoid specifying units for zero values, e.g., <code class="sg-code">margin: 0;</code> instead of <code class="sg-code">margin: 0px;</code>.</li>
+</ul>
+<p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+<pre><code class="language-css">/* Bad CSS */
+.selector, .selector-secondary, .selector[type=text] {
+    padding:15px;
+    margin:0px 0px 15px;
+    background-color:rgba(0, 0, 0, 0.5);
+    box-shadow:0px 1px 2px #CCC,inset 0 1px 0 #FFFFFF
+}
+
+/* Good CSS */
+.selector,
+.selector-secondary,
+.selector[type="text"] {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: rgba(0,0,0,.5);
+    box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;
+}
+</code></pre>
+
+<h3 id="header-declaration-order">Declaration order</h3>
+<p>Related property declarations should be grouped together following the order:</p>
+<ol>
+<li>Positioning</li>
+<li>Box model</li>
+<li>Visual</li>
+<li>Typographic</li>
+<li>Misc</li>
+</ol>
+<p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component's dimensions and placement.</p>
+<p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
+<p>For a complete list of properties and their order, please see our <a href="/">.csscomb.json</a>.</p>
+<p>For all new projects use our <a href="/">.csscomb.json file</a>. Learn more <a href="http://csscomb.com/">about CSScomb</a>.</p>
+<pre><code class="language-css">.declaration-order {
+/* Positioning */
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: 100;
+
+/* Box-model */
+display: block;
+float: right;
+width: 100px;
+height: 100px;
+
+/* Visual */
+border: 1px solid #e5e5e5;
+border-radius: 3px;
+background-color: #f5f5f5;
+
+/* Typography */
+color: #333;
+text-align: center;
+font: normal 13px "Helvetica Neue", sans-serif;
+line-height: 1.5;
+
+/* Misc */
+opacity: 1;
+}</code></pre>
+
+
+<h3 id="header-dont-use-import">Don't use <code class="sg-code">@import</code></h3>
+<p>Compared to <code class="sg-code">&lt;link&gt;</code>s, <code class="sg-code">@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
+<ul>
+<li>Use multiple <code class="sg-code">&lt;link&gt;</code> elements</li>
+<li>Compile your CSS with a preprocessor like Sass into a single file</li>
+<li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
+</ul>
+<p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+<pre><code class="language-css">&#x3C;!-- Use link elements --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;core.css&#x22;&#x3E;
+
+&#x3C;!-- Avoid @imports --&#x3E;
+&#x3C;style&#x3E;
+  @import url(&#x22;more.css&#x22;);
+&#x3C;/style&#x3E;</code></pre>
 
 
 
+<h3 id="header-media-query-placement">Media query placement</h3>
+<p>Place media queries as close to their relevant rule sets whenever possible. Don't bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here's a typical setup.</p>
+<pre><code class="language-css">.element { ... }
+.element-avatar { ... }
+.element-selected { ... }
+
+@media (min-width: 480px) {
+  .element { ...}
+  .element-avatar { ... }
+  .element-selected { ... }
+}</code></pre>
+
+<h3 id="header-prefixed-properties">Prefixed properties</h3>
+<p>When using vendor prefixed properties, don't indent each property.</p>
+<pre><code class="language-css">/* Prefixed properties */
+.selector {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.15);
+    box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}</code></pre>
+
+
+<h3 id="header-single-declarations">Single declarations</h3>
+<p>In instances where a rule set includes <strong>only one declaration</strong>, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.</p>
+<p>The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there's no missing it. With multiple declarations, separate lines is a must for your sanity.</p>
+<pre><code class="language-css">/* Single declarations on one line */
+.span1 { width: 60px; }
+.span2 { width: 140px; }
+.span3 { width: 220px; }
+
+/* Multiple declarations, one per line */
+.sprite {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background-image: url(../img/sprite.png);
+}
+.icon           { background-position: 0 0; }
+.icon-home      { background-position: 0 -20px; }
+.icon-account   { background-position: 0 -40px; }</code></pre>
+
+<h3 id="header-shorthand-notation">Shorthand notation</h3>
+<p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
+<ul>
+<li><code class="sg-code">padding</code></li>
+<li><code class="sg-code">margin</code></li>
+<li><code class="sg-code">font</code></li>
+<li><code class="sg-code">background</code></li>
+<li><code class="sg-code">border</code></li>
+<li><code class="sg-code">border-radius</code></li>
+</ul>
+<p>Often times we don't need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
+<p>The Mozilla Developer Network has a great article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> for those unfamiliar with notation and behavior.</p>
+<pre><code class="language-css">/* Bad example */
+.element {
+    margin: 0 0 10px;
+    background: red;
+    background: url(&#x22;image.jpg&#x22;);
+    border-radius: 3px 3px 0 0;
+}</code></pre>
+
+<pre><code class="language-css">/* Good example */
+.element {
+    margin-bottom: 10px;
+    background-color: red;
+    background-image: url(&#x22;image.jpg&#x22;);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}</code></pre>
+
+<h3 id="header-nesting-in-sass">Nesting in Sass</h3>
+<p>Avoid unnecessary nesting. Just because you can nest, doesn't mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.</p>
+<pre><code class="language-css">// Without nesting
+.table &#x3E; thead &#x3E; tr &#x3E; th { &#x2026; }
+.table &#x3E; thead &#x3E; tr &#x3E; td { &#x2026; }
+
+// With nesting
+.table &#x3E; thead &#x3E; tr {
+    &#x3E; th { &#x2026; }
+    &#x3E; td { &#x2026; }
+}</code></pre>
+
+
+<h3 id="header-comments">Comments</h3>
+<p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
+<p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+<ul>
+<li>Place comments on a new line above their subject.</li>
+<li>Keep line-length to a sensible maximum, e.g., 80 columns.</li>
+<li>Make liberal use of comments to break CSS code into discrete sections.</li>
+<li>Use "sentence case" comments and consistent text indentation.</li>
+</ul>
+<p>Use <a href="https://github.com/necolas/idiomatic-css#comments">Idomatic CSS</a> style for comments.</p>
+<p>Use editor snippets to easier maintain comment standards. There are plugins for both <a href="https://github.com/chrisborrowdale/Idiomatic-CSS-Comments-Snippets">Sublime Text</a> and <a href="https://github.com/james2doyle/sublime-to-atom-snippets">Atom</a>.</p>
+<p><strong>Basic comment</strong></p>
+<pre><code class="language-css">/* comment */</code></pre>
+
+<p><strong>Sub comment</strong></p>
+<pre><code class="language-css">/*
+   Comment
+   ========================================================================== */
+</code></pre>
+
+<p><strong>TODO comment</strong></p>
+<pre><code class="language-css">/*
+/**
+ * @TODO
+ */</code></pre>
+
+<p><strong>Section comment</strong></p>
+<pre><code class="language-css">/* ==========================================================================
+   Comment
+   ========================================================================== */
+</code></pre>
+
+<p><strong>Long comment</strong></p>
+<pre><code class="language-css">/**
+ * Comment
+ */</code></pre>
+
+<h3 id="header-classes">Classes</h3>
+<ul>
+<li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code class="sg-code">.button</code> and <code class="sg-code">.button-danger</code>).</li>
+<li>Avoid excessive and arbitrary shorthand notation. <code class="sg-code">.btn</code> is useful for button, but <code class="sg-code">.s</code> doesn't mean anything.</li>
+<li>Keep classes as short and succinct as possible.</li>
+<li>Use meaningful names; use structural or purposeful names over presentational.</li>
+<li>Prefix classes based on the closest parent or base class.</li>
+<li><code class="sg-code">.js-*</code> classes to denote behavior (as opposed to style), but keep these classes out of your CSS.</li>
+</ul>
+<p>It's also useful to apply many of these same rules when creating Sass and Less variable names.</p>
+<h3 id="header-selectors">Selectors</h3>
+<ul>
+<li>Use classes over generic element tag for optimum rendering performance.</li>
+<li>Avoid using several attribute selectors (e.g., <code class="sg-code">[class^="..."])</code> on commonly occuring components. Browser performance is known to be impacted by these.</li>
+<li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
+<li>Scope classes to the closest parent <strong>only</strong> when necessary (e.g., when not using prefixed classes).</li>
+</ul>
+<p>Additional reading:</p>
+<ul>
+<li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
+<li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
+</ul>
+<h3 id="header-organization">Organization</h3>
+<ul>
+<li>Organize sections of code by component.</li>
+<li>Develop a consistent commenting hierarchy.</li>
+<li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
+<li>When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.</li>
+</ul>
+<h2 id="header-editor-preferences">Editor preferences</h2>
+<p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+<ul>
+<li>Use hard-tab.</li>
+<li>Trim trailing white space on save.</li>
+<li>Set encoding to <code class="sg-code">UTF-8</code>.</li>
+<li>Add new line at end of files.</li>
+</ul>
+<p>For all new projects use our <a href="/">.editorconfig file</a>. Learn more <a href="http://editorconfig.org/">about EditorConfig</a>.</p>
+<hr />
+<p><a href="https://opensource.org/licenses/MIT">MIT License</a>. Copyright 2015 <a href="https://twitter.com/mdo">@mdo</a>. <a href="http://codeguide.co/">Original version</a>.</p>
+
+</div>
 {% endblock %}

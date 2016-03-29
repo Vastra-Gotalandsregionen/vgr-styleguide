@@ -18,7 +18,11 @@
 		<p>An <a href="/" class="prototype-random">unvisited link</a> and a <a href="">visited link</a>.</p>
 		<p>An <a href="/" class="prototype-random" target="_blank">external link</a> and another <a href="/" class="prototype-random" target="_blank" aria-label="opens in a new window">external link</a>.</p>
 		<p>A <a href="temp/test.pdf">link to a PDF</a>.</p>
-
+{% call pattern('Pattern') %}
+<p>An <a href="/" class="prototype-random">unvisited link</a> and a <a href="">visited link</a>.</p>
+<p>An <a href="/" class="prototype-random" target="_blank">external link</a> and another <a href="/" class="prototype-random" target="_blank" aria-label="opens in a new window">external link</a>.</p>
+<p>A <a href="temp/test.pdf">link to a PDF</a>.</p>
+{% endcall %}
 	</div>
 
 	<!-- Generate random link for this Styleguide -->

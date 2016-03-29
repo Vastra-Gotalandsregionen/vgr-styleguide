@@ -9,6 +9,30 @@
 
 {% block content %}
 
-	<h1 class="sg-header-1">Footer</h1>
+	<h1 class="sg-header-1">Footer <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/components/_footer.scss" class="sg-file">_footer.scss</a></h1>
+
+	<div class="sg-section">
+
+		<footer class="vgr-footer" role="contentinfo">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						Footer
+					</div>
+				</div>
+			</div>
+		</footer>
+
+{% call pattern('Pattern') %}
+<footer class="vgr-footer" role="contentinfo">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				Footer
+			</div>
+		</div>
+	</div>
+</footer>
+{% endcall %}
 
 {% endblock %}

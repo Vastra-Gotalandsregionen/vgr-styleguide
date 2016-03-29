@@ -11,24 +11,49 @@
 
 	<h1 class="sg-header-1">Breadcrumbs <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/components/_breadcrumbs.scss" class="sg-file">_breadcrumbs.scss</a></h1>
 
-	<div class="vgr-breadcrumbs">
-		<div class="vgr-breadcrumbs_inner">
-			<p id="breadcrumblabel-${id}" class="vgr-breadcrumbs__description vgr-visually-hidden">Du är här:</p>
-			<ol class="vgr-breadcrumbs__list vgr-list-reset" aria-labelledby="breadcrumblabel-${id}" itemscope itemtype="http://schema.org/BreadcrumbList">
-				<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-					<a href="/" class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1">Startsida</a>
-					<meta itemprop="position" content="1">
-				</li>
-				<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-					<a href="/" class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1/level-2">Landningssida</a>
-					<meta itemprop="position" content="2">
-				</li>
-				<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-					<span class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1/level-2">Informationssida</span>
-					<meta itemprop="position" content="3">
-				</li>
-			</ol>
+	<div class="sg-section">
+		<div class="vgr-breadcrumbs">
+			<div class="vgr-breadcrumbs_inner">
+				<p id="breadcrumblabel-${id}" class="vgr-breadcrumbs__description vgr-visually-hidden">Du är här:</p>
+				<ol class="vgr-breadcrumbs__list vgr-list-reset" aria-labelledby="breadcrumblabel-${id}" itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1">Startsida</a>
+						<meta itemprop="position" content="1">
+					</li>
+					<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1/level-2">Landningssida</a>
+						<meta itemprop="position" content="2">
+					</li>
+					<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<span class="vgr-breadcrumbs__list-link" itemprop="item">Informationssida</span>
+						<meta itemprop="position" content="3">
+					</li>
+				</ol>
+			</div>
 		</div>
+
+{% call pattern('Pattern') %}
+<div class="vgr-breadcrumbs">
+	<div class="vgr-breadcrumbs_inner">
+		<p id="breadcrumblabel-${id}" class="vgr-breadcrumbs__description vgr-visually-hidden">Du är här:</p>
+		<ol class="vgr-breadcrumbs__list vgr-list-reset" aria-labelledby="breadcrumblabel-${id}" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/" class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1">Startsida</a>
+				<meta itemprop="position" content="1">
+			</li>
+			<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<a href="/" class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1/level-2">Landningssida</a>
+				<meta itemprop="position" content="2">
+			</li>
+			<li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+				<span class="vgr-breadcrumbs__list-link" itemprop="item" href="/level-1/level-2">Informationssida</span>
+				<meta itemprop="position" content="3">
+			</li>
+		</ol>
+	</div>
+</div>
+{% endcall %}
+
 	</div>
 
 {% endblock %}

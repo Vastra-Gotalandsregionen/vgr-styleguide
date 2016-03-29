@@ -1,0 +1,6 @@
+{% macro pattern(name) %}
+<details>
+	<summary>Code</summary>
+	<pre><code class="language-markup">{{ caller() | escape }}</code></pre>
+</details>
+{% endmacro %}

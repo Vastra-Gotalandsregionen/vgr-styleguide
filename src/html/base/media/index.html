@@ -18,6 +18,9 @@
 
 		<img src="{{ baseurl }}/temp/photo-640x425.jpg" alt="Photo of a sunset over the ocean with a cliff">
 
+{% call pattern('Pattern') %}
+<img src="{{ baseurl }}/temp/photo-640x425.jpg" alt="Photo of a sunset over the ocean with a cliff">
+{% endcall %}
 	</div>
 
 	<h2 class="sg-header-2">Figure</h2>
@@ -31,6 +34,14 @@
 			</figcaption>
 		</figure>
 
+{% call pattern('Pattern') %}
+<figure class="vgr-figure">
+	<img src="{{ baseurl }}/temp/photo-640x425.jpg" alt="Photo of a sunset over the ocean with a cliff">
+	<figcaption>
+		This is a placeholder image, with supporting caption.
+	</figcaption>
+</figure>
+{% endcall %}
 	</div>
 
 	<h2 class="sg-header-2">Audio</h2>
@@ -42,6 +53,13 @@
 			Your browser does not support the audio element. <a href="{{ baseurl }}/temp/audio.mp3">Download the file</a>.
 		</audio>
 
+{% call pattern('Pattern') %}
+<audio controls preload="none">
+	<source src="{{ baseurl }}/temp/audio.mp3" type="audio/mpeg">
+	Your browser does not support the audio element. <a href="{{ baseurl }}/temp/audio.mp3">Download the file</a>.
+</audio>
+{% endcall %}
+
 	</div>
 
 	<h2 class="sg-header-2">Video</h2>
@@ -51,6 +69,12 @@
 		<video controls preload="none" poster="{{ baseurl }}/temp/video-poster.jpg" width="640" height="360">
 			<source src="{{ baseurl }}/temp/video.mp4" type="video/mp4">
 		</video>
+
+{% call pattern('Pattern') %}
+<video controls preload="none" poster="{{ baseurl }}/temp/video-poster.jpg" width="640" height="360">
+	<source src="{{ baseurl }}/temp/video.mp4" type="video/mp4">
+</video>
+{% endcall %}
 
 	</div>
 
@@ -63,6 +87,12 @@
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/YE7VzlLtp-4" allowfullscreen title="Video"></iframe>
 		</div>
 
+{% call pattern('Pattern') %}
+<div class="vgr-embed-container">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/YE7VzlLtp-4" allowfullscreen title="Video"></iframe>
+</div>
+{% endcall %}
+
 	</div>
 
 	<h2 class="sg-header-2">Vimeo</h2>
@@ -73,6 +103,12 @@
 		<div class="vgr-embed-container">
 			<iframe src="https://player.vimeo.com/video/1084537" width="500" height="281" allowfullscreen title="Video"></iframe>
 		</div>
+
+{% call pattern('Pattern') %}
+<div class="vgr-embed-container">
+	<iframe src="https://player.vimeo.com/video/1084537" width="500" height="281" allowfullscreen title="Video"></iframe>
+</div>
+{% endcall %}
 
 	</div>
 

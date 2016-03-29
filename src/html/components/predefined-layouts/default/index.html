@@ -1,16 +1,20 @@
-{% set title = "News Article" %}
+{% set title = "Default" %}
 {% set subPage = "predefined-layouts" %}
 {% extends "_templates/predefind.html" %}
-
 {% block content %}
 
 	<main class="vgr-main" id="main" role="main">
-		<div class="vgr-layout-2">
+		<div class="vgr-layout-1">
 
-			<article class="vgr-article col-sm-offset-1 col-md-offset-2" role="article">
-				<h1>News Article</h1>
+			<div class="vgr-sidebar">
+				<nav role="navigation">
+					Secondary Navigation
+				</nav>
+			</div>
 
-				<time datetime="">2016-01-01</time>
+			<article class="vgr-article" role="article">
+
+				<h1>Default</h1>
 
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
 
@@ -56,6 +60,8 @@
 				<p>Duis sit amet velit at lectus luctus aliquet id vel elit. Pellentesque eu enim eu odio congue luctus pellentesque sit amet risus. Donec imperdiet urna non erat auctor placerat. Praesent quis blandit augue. Mauris a nisi sit amet libero suscipit bibendum. Aliquam sagittis tincidunt tincidunt. </p>
 
 				<p>Sed pellentesque velit sed arcu tempus sagittis eget sit amet urna. Etiam ullamcorper nunc placerat erat porttitor dignissim. Nulla facilisis tempor odio, vel vulputate sem convallis eget. Aliquam erat volutpat. Sed dapibus fringilla nulla, ut luctus ligula porta sed. Praesent ac sodales nibh. Curabitur consequat condimentum odio, ultricies blandit nisi hendrerit eu. </p>
+
+
 
 			</article>
 		</div>

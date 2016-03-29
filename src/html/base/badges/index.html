@@ -13,38 +13,131 @@
 
 	<h1 class="sg-header-1">Badges <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/objects/_badges.scss" class="sg-file">_badges.scss</a></h1>
 
-	<em class="vgr-badge vgr-badge--default">Default</em>
-	<em class="vgr-badge vgr-badge--primary">Primary</em>
-	<em class="vgr-badge vgr-badge--success">Success</em>
-	<em class="vgr-badge vgr-badge--info">Info</em>
-	<em class="vgr-badge vgr-badge--warning">Warning</em>
-	<em class="vgr-badge vgr-badge--error">Error</em>
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--default">Default</em>
+		<em class="vgr-badge vgr-badge--primary">Primary</em>
+		<em class="vgr-badge vgr-badge--success">Success</em>
+		<em class="vgr-badge vgr-badge--info">Info</em>
+		<em class="vgr-badge vgr-badge--warning">Warning</em>
+		<em class="vgr-badge vgr-badge--error">Error</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--default">Default</em>
+<em class="vgr-badge vgr-badge--primary">Primary</em>
+<em class="vgr-badge vgr-badge--success">Success</em>
+<em class="vgr-badge vgr-badge--info">Info</em>
+<em class="vgr-badge vgr-badge--warning">Warning</em>
+<em class="vgr-badge vgr-badge--error">Error</em>
+{% endcall %}
+
+	</div>
 
 	<h1 class="sg-header-1">Badges with icons</h1>
 
-	<em class="vgr-badge vgr-badge--default">
-		{{ icon("success", class="vgr-badge__icon") }}
-		Default
-	</em>
-	<em class="vgr-badge vgr-badge--primary">
-		{{ icon("success", class="vgr-badge__icon") }}
-		Primary
-	</em>
-	<em class="vgr-badge vgr-badge--success">
-		{{ icon("success", class="vgr-badge__icon") }}
-		Success
-	</em>
-	<em class="vgr-badge vgr-badge--info">
-		{{ icon("info", class="vgr-badge__icon") }}
-		Info
-	</em>
-	<em class="vgr-badge vgr-badge--warning">
-		{{ icon("warning", class="vgr-badge__icon") }}
-		Warning
-	</em>
-	<em class="vgr-badge vgr-badge--error">
-		{{ icon("error", class="vgr-badge__icon") }}
-		Error
-	</em>
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--default">
+			{{ icon("success", class="vgr-badge__icon") }}
+			Default
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--default">
+	{{ icon("success", class="vgr-badge__icon") }}
+	Default
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--primary">
+			{{ icon("success", class="vgr-badge__icon") }}
+			Primary
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--primary">
+	{{ icon("success", class="vgr-badge__icon") }}
+	Primary
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--success">
+			{{ icon("success", class="vgr-badge__icon") }}
+			Success
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--success">
+	{{ icon("success", class="vgr-badge__icon") }}
+	Success
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--info">
+			{{ icon("info", class="vgr-badge__icon") }}
+			Info
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--info">
+	{{ icon("info", class="vgr-badge__icon") }}
+	Info
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--warning">
+			{{ icon("warning", class="vgr-badge__icon") }}
+			Warning
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--warning">
+	{{ icon("warning", class="vgr-badge__icon") }}
+	Warning
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--warning">
+			{{ icon("warning", class="vgr-badge__icon") }}
+			Warning
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--warning">
+	{{ icon("warning", class="vgr-badge__icon") }}
+	Warning
+</em>
+{% endcall %}
+	</div>
+
+	<div class="sg-section">
+
+		<em class="vgr-badge vgr-badge--error">
+			{{ icon("error", class="vgr-badge__icon") }}
+			Error
+		</em>
+
+{% call pattern('Pattern') %}
+<em class="vgr-badge vgr-badge--error">
+	{{ icon("error", class="vgr-badge__icon") }}
+	Error
+</em>
+{% endcall %}
+	</div>
 
 {% endblock %}

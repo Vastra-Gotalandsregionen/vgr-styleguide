@@ -1,0 +1,43 @@
+{% set title = "Predefined Layouts" %}
+{% set mainPage = "components" %}
+{% set subPage = "predefined-layouts" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "components/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+
+	<h1 class="sg-header-1">Predefined Layouts</h1>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<div class="card">
+				<div class="card__generic-body">
+					<div class="card__inner-row">
+						<div class="card__header">
+							<h2 class="card__heading">Default Template</h2>
+						</div>
+						<p>Basic article structure with header, footer, left hand navigation and main content</p>
+						<a href="{{ baseurl }}/components/predefined-layouts/default/" class="vgr-button">Download News Article Template</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<div class="card">
+				<div class="card__generic-body">
+					<div class="card__inner-row">
+						<div class="card__header">
+							<h2 class="card__heading">News Article Template</h2>
+						</div>
+						<p>Basic news article structure with header, footer and main content</p>
+						<a href="{{ baseurl }}/components/predefined-layouts/news-article/" class="vgr-button">Download News Article Template</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

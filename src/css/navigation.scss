@@ -1,34 +1,3 @@
-.main-navigation {
-	background: $theme-color-dark;
-	color: $theme-on-color;
-	font-size: .9rem;
-
-	&__item {
-		float: left;
-		margin: 0;
-		font-family: $secondary-font-stack;
-	}
-
-	&__link {
-		display: block;
-		padding: $default-whitespace;
-		color: $theme-on-color;
-		text-decoration: none;
-
-		&[data-selected] {
-			background: $theme-color-darkest;
-		}
-
-		&:hover,
-		&:focus {
-			background: $theme-on-color;
-			text-decoration: underline;
-		}
-	}
-}
-
-
-
 .sg-sub-navigation {
 	border-bottom: 1px solid #ddd;
 	background: $color-white;

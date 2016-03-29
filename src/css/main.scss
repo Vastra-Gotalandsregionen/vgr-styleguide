@@ -3,59 +3,17 @@
 
 /* Import Base */
 @import "vgr-base/base.scss";
-@import "base";
 
+/* Styleguide Specific Styles */
+@import "base";
 @import "footer";
 @import "topbar";
 @import "billboard";
 @import "navigation";
 @import "grid";
 @import "demo";
+@import "prism";
 
 /* Include Search until it's in its own module */
 @import "search";
 @import "leaflet";
-
-
-html {
-	font-family: $primary-font-stack;
-}
-
-h1 {
-	@extend .clearfix;
-
-	@media print {
-		display: none;
-	}
-}
-
-.sg-main {
-	margin-top: 2rem;
-	margin-bottom: 2rem;
-}
-
-.sg-ok,
-.sg-no {
-	display: block;
-	text-align: center;
-}
-
-.sg-ok {
-	color: darken($color-success, 60%);
-}
-.sg-no {
-	color: darken($color-error, 60%);
-}
-
-.vgr-header,
-.vgr-footer {
-	padding: 2rem;
-	background: $color-black;
-	color: $color-white;
-	text-align: center;
-	font-family: $secondary-font-stack;
-}
-
-.vgr-header {
-	margin-bottom: 2rem;
-}

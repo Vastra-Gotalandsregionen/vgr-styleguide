@@ -1,0 +1,60 @@
+{% set title = "Main Navigation" %}
+{% set mainPage = "components" %}
+{% set subPage = "main-navigation" %}
+{% extends "_templates/base.html" %}
+
+{% block navigation %}
+	{% include "components/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+
+	<h1 class="sg-header-1">Main Navigation <a href="https://github.com/Vastra-Gotalandsregionen/vgr-base/blob/master/src/css/components/_main-navigation.scss" class="sg-file">_main-navigation.scss</a></h1>
+
+	<div class="sg-section">
+
+		<div class="main-navigation">
+			<div class="vgr-wrapper">
+				<nav role="navigation">
+					<ul class="vgr-list-reset vgr-clearfix">
+						<li class="main-navigation__item">
+							<a href="/" class="main-navigation__link" data-selected>Link 1</a>
+						</li>
+						<li class="main-navigation__item">
+							<a href="/" class="main-navigation__link">Link 2</a>
+						</li>
+						<li class="main-navigation__item">
+							<a href="/" class="main-navigation__link">Link 3</a>
+						</li>
+						<li class="main-navigation__item">
+							<a href="/" class="main-navigation__link">Link 4</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+{% call pattern('Pattern') %}
+<div class="main-navigation">
+	<div class="vgr-wrapper">
+		<nav role="navigation">
+			<ul class="vgr-list-reset vgr-clearfix">
+				<li class="main-navigation__item">
+					<a href="/" class="main-navigation__link" data-selected>Link 1</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="/" class="main-navigation__link">Link 2</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="/" class="main-navigation__link">Link 3</a>
+				</li>
+				<li class="main-navigation__item">
+					<a href="/" class="main-navigation__link">Link 4</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</div>
+{% endcall %}
+
+{% endblock %}

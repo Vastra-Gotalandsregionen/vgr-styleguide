@@ -1,21 +1,4 @@
 .sg-footer {
-	padding: 3rem 1rem;
-	border-top: 1px solid #ddd;
-	background: $theme-color;
-	color: $theme-on-color;
-	text-align: center;
-	font-family: $secondary-font-stack;
-
-	a {
-		display: inline;
-		text-decoration: underline;
-		color: $theme-on-color;
-
-		&:hover,
-		&:focus {
-			text-decoration: underline;
-		}
-	}
 
 	&__navigation {
 		display: inline;
