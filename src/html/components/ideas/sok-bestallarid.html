@@ -1,0 +1,694 @@
+
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Map - Västra Götalandsregionen</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://stilguiden.vgregion.se/css/main.css" type="text/css">
+		<link rel="shortcut icon" href="http://stilguiden.vgregion.se/img/favicon.ico" type="image/x-icon">
+		<script>document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');</script>
+	</head>
+	<body>
+		<h1>Hitta klinik</h1>
+	<p class="sg-paragraph">Här listas alla våra kliniker. Hitta din klinik genom att söka efter namn, adress, postnummer eller utifrån nuvarande position. Du kan även filtrera på olika vårdtyper eller specialistkliniker.</p>
+
+	<div id="vgr-location" class="vgr-message vgr-message--info vgr-message--fixed">
+		<p class="vgr-message__description">
+			<strong class="vgr-message__title">Hitta närmsta tandläkare</strong> Tillåt att vi hämtar din nuvarande position via webbläsaren för att visa närmsta klinik.
+		</p>
+		<button class="vgr-button vgr-button--subtle vgr-button--small vgr-hide-message">Nej tack</button>
+		<button class="vgr-button vgr-button--small vgr-get-position">Tillåt</button>
+	</div>
+
+	<div class="vgr-search">
+		<form action="/">
+			<label for="s" class="vgr-visually-hidden">Hitta klinik</label>
+			<input class="vgr-search__field typeahead" id="s" type="search" value="" placeholder="Sök på namn, ort, adress eller postnummer">
+			<button class="vgr-button" type="submit" name="button">Sök</button>
+
+			<div class="vgr-search-filter">
+				<fieldset>
+					<legend>Välj kommun:</legend>
+					<select aria-label="Välj kommun">
+						<option selected>Välj kommun</option>
+						<option value="">Ale</option>
+						<option value="">Alingsås</option>
+						<option value="">Bengtsfors</option>
+						<option value="">Bollebygd</option>
+						<option value="">Borås</option>
+						<option value="">Dals-Ed</option>
+						<option value="">Essunga</option>
+						<option value="">Falköping</option>
+						<option value="">Färgelanda</option>
+						<option value="">Grästorp</option>
+						<option value="">Gullspång</option>
+						<option value="">Göteborg</option>
+						<option value="">Götene</option>
+						<option value="">Herrljunga</option>
+						<option value="">Hjo</option>
+						<option value="">Härryda</option>
+						<option value="">Karlsborg</option>
+						<option value="">Kungälv</option>
+						<option value="">Lerum</option>
+						<option value="">Lidköping</option>
+						<option value="">LillaEdet</option>
+						<option value="">Lysekil</option>
+						<option value="">Mariestad</option>
+						<option value="">Mark</option>
+						<option value="">Mellerud</option>
+						<option value="">Munkedal</option>
+						<option value="">Mölndal</option>
+						<option value="">Orust</option>
+						<option value="">Partille</option>
+						<option value="">Skara</option>
+						<option value="">Skövde</option>
+						<option value="">Svenljunga</option>
+						<option value="">Strömstad</option>
+						<option value="">Sotenäs</option>
+						<option value="">Stenungsund</option>
+						<option value="">Tanum</option>
+						<option value="">Tibro</option>
+						<option value="">Tidaholm</option>
+						<option value="">Tjörn</option>
+						<option value="">Tranemo</option>
+						<option value="">Trollhättan</option>
+						<option value="">Töreboda</option>
+						<option value="">Uddevalla</option>
+						<option value="">Ulricehamn</option>
+						<option value="">Vara</option>
+						<option value="">Vårgårda</option>
+						<option value="">Vänersborg</option>
+						<option value="">Åmål</option>
+						<option value="">Öckerö</option>
+					</select>
+					<input id="offer-location-1" type="checkbox" value="">
+					<label for="offer-location-1">Visa angränsnade kommuner</label>
+				</fieldset>
+				<fieldset class="vgr-search-filter__type">
+					<legend>Visa endast kliniker som har:</legend>
+					<ul>
+						<li>
+							<input id="type-check-1" type="checkbox" value="">
+							<label for="type-check-1">Öppet nu</label>
+						</li>
+						<li>
+							<input id="type-check-2" type="checkbox" value="">
+							<label for="type-check-2">Akutvård</label>
+						</li>
+						<li>
+							<input id="type-check-3" type="checkbox">
+							<label for="type-check-3">Jour-tid</label>
+						</li>
+						<li>
+							<input id="type-check-4" type="checkbox">
+							<label for="type-check-4">Helg-öppet</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Vårdtyp:</legend>
+					<li>
+						<input id="offer-check-1" type="checkbox" value="">
+						<label for="offer-check-1">Allmäntandvård</label>
+					</li>
+					<li>
+						<input id="offer-check-2" type="checkbox">
+						<label for="offer-check-2">Bettfysiologi</label>
+					</li>
+					<li>
+						<input id="offer-check-3" type="checkbox">
+						<label for="offer-check-3">Endodonti</label>
+					</li>
+					<li>
+						<input id="offer-check-4" type="checkbox">
+						<label for="offer-check-4">Cariologi</label>
+					</li>
+					<li>
+						<input id="offer-check-5" type="checkbox">
+						<label for="offer-check-5">Käkkirurgi</label>
+					</li>
+					<li>
+						<input id="offer-check-6" type="checkbox">
+						<label for="offer-check-6">Odontologisk radiologi</label>
+					</li>
+					<li>
+						<input id="offer-check-7" type="checkbox">
+						<label for="offer-check-7">Oral protetik</label>
+					</li>
+					<li>
+						<input id="offer-check-8" type="checkbox">
+						<label for="offer-check-8">Ortodonti och ortodontilab</label>
+					</li>
+					<li>
+						<input id="offer-check-9" type="checkbox">
+						<label for="offer-check-9">Parodontologi</label>
+					</li>
+					<li>
+						<input id="offer-check-10" type="checkbox" value="">
+						<label for="offer-check-10">Pedodonti</label>
+					</li>
+				</fieldset>
+				<!--
+				<button class="vgr-button vgr-button--small">Uppdatera</button>
+			-->
+			</div>
+		</form>
+	</div>
+
+	<div class="vgr-tab-bar">
+		<ul class="vgr-clearfix">
+			<li><a href="{{ baseurl }}/components/search" class="vgr-tab-bar__list" data-selected>Lista</a></li>
+			<li><a href="{{ baseurl }}/components/search/map" class="vgr-tab-bar__map">Karta</a></li>
+		</ul>
+	</div>
+
+	<div class="vgr-search-details vgr-clearfix">
+		<h2 class="vgr-search-details__heading">Visar <strong>10</strong> av <strong>164</strong> kliniker</h2>
+		<div class="vgr-sort-results">
+			<p class="vgr-sort-results__headline">Sortera på:</p>
+			<ul class="vgr-sort-results__list">
+				<li class="vgr-sort-results__item" data-selected aria-label="Aktiv">Avstånd</li>
+				<li class="vgr-sort-results__item"><a href="{{ baseurl }}/components/search/index-name.html" class="vgr-sort-results__link">Namn</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<ul class="vgr-search-list">
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Akuttandvården Göteborg</a></h3>
+			<p class="vgr-visually-hidden">Tillhandahåller:</p>
+			<ul class="vgr-search-list__types">
+				<li>Akutvård</li>
+			</ul>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Odinsgatan 10</span>,
+					<span itemprop="postalCode">411 03</span>
+					<span itemprop="addressLocality">Göteborg</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					250 <abbr title="meter">m</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>Stängt</dd>
+						<dt>Fredag</dt>
+						<dd>Stängt</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Angered</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Angereds Torg 5</span>,
+					<span itemprop="postalCode">424 65</span>
+					<span itemprop="addressLocality">Angered</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					1 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 74 50</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					<span class="vgr-search-list__closed">
+						Stängt
+					</span>
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 16.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 16.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 16.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 16.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 16.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Bergsjön</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Askims Torg 5</span>,
+					<span itemprop="postalCode">436 43</span>
+					<span itemprop="addressLocality">Askim</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					1,5 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					<span class="vgr-search-list__closing-soon">
+						Öppet till 17.00
+					</span>
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 17.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 17.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 17.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 17.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 17.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Biskopsgården</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Askims Torg 5</span>,
+					<span itemprop="postalCode">436 43</span>
+					<span itemprop="addressLocality">Askim</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					2 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Frölunda Kulturhus</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Valthornsgatan 3</span>,
+					<span itemprop="postalCode">421 51</span>
+					<span itemprop="addressLocality">Västra Frölunda</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					3,5 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 96 10</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Gamlestaden Kulan</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Rullagergatan 6</span>,
+					<span itemprop="postalCode">415 26</span>
+					<span itemprop="addressLocality">Göteborg</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					5 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Kortedala</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Kortedala torg 9</span>,
+					<span itemprop="postalCode">436 43</span>
+					<span itemprop="addressLocality">Askim</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					10	<abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Guldheden</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Dr Fries Torg 6</span>,
+					<span itemprop="postalCode">413 23</span>
+					<span itemprop="addressLocality">Göteborg</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					11	<abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 97 50</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Askim</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Askims Torg 5</span>,
+					<span itemprop="postalCode">436 43</span>
+					<span itemprop="addressLocality">Askim</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					15 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 98 80</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 17.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>07.20 - 17.00</dd>
+						<dt>Tisdag</dt>
+						<dd>07.20 - 17.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">07.20 - 16.00</dd>
+						<dt>Torsdag</dt>
+						<dd>07.20 - 17.00</dd>
+						<dt>Fredag</dt>
+						<dd>07.20 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+		<li class="vgr-search-list__item" itemscope itemtype="http://schema.org/LocalBusiness">
+			<h3 class="vgr-search-list__headline"><a href="/" itemprop="name">Folktandvården Bohus</a></h3>
+			<div class="vgr-search-list__meta" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<p>
+					<span class="vgr-search-list__meta-label">Adress:</span>
+					<span itemprop="streetAddress">Bohus centrum</span>,
+					<span itemprop="postalCode">445 37</span>
+					<span itemprop="addressLocality">Bohus</span>
+				</p>
+				<p class="vgr-search-list__distance">
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#map-pin"></use></svg>
+					20 <abbr title="kilometer">km</abbr></p>
+				<p>
+					<span class="vgr-search-list__meta-label">Telefon:</span>
+					<a href="tel:+460104419880" itemprop="telephone">010-441 95 15</a>
+				</p>
+				<p class="vgr-search-list__current">
+					<span class="vgr-search-list__meta-label">Öppettider:</span>
+					Öppet till 19.00
+					<svg class="vgr-icon"><use xlink:href="{{ baseurl }}/icons/icons.svg#chevron-down"></use></svg>
+				</p>
+				<div class="vgr-search-list__hours">
+					<dl class="vgr-clearfix">
+						<dt>Måndag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Tisdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt class="vgr-search-list__hours--today">Onsdag</dt>
+						<dd class="vgr-search-list__hours--today">09.00 - 19.00</dd>
+						<dt>Torsdag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Fredag</dt>
+						<dd>09.00 - 19.00</dd>
+						<dt>Lördag</dt>
+						<dd>10.00 - 14.00</dd>
+					</dl>
+				</div>
+			</div>
+		</li>
+
+	</ul>
+
+	<button class="vgr-button vgr-button--block vgr-get-position">Ladda in fler kliniker</button>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	<script src="{{ baseurl }}/js/typeahead.js"></script>
+	<script>
+		// All of the JavaScript below is just for prototyping.
+		var substringMatcher = function(strs) {
+		  return function findMatches(q, cb) {
+		    var matches, substringRegex;
+		    // an array that will be populated with substring matches
+		    matches = [];
+		    // regex used to determine if a string contains the substring `q`
+		    substrRegex = new RegExp(q, 'i');
+		    // iterate through the pool of strings and for any string that
+		    // contains the substring `q`, add it to the `matches` array
+		    $.each(strs, function(i, str) {
+		      if (substrRegex.test(str)) {
+		        matches.push(str);
+		      }
+		    });
+		    cb(matches);
+		  };
+		};
+		var states = ['Ale',
+		'Alingsås',
+		'Bengtsfors',
+		'Bollebygd',
+		'Borås',
+		'Dals-Ed',
+		'Essunga',
+		'Falköping',
+		'Färgelanda',
+		'Grästorp',
+		'Gullspång',
+		'Göteborg',
+		'Götene',
+		'Herrljunga',
+		'Hjo',
+		'Härryda',
+		'Karlsborg',
+		'Kungälv',
+		'Lerum',
+		'Lidköping',
+		'LillaEdet',
+		'Lysekil',
+		'Mariestad',
+		'Mark',
+		'Mellerud',
+		'Munkedal',
+		'Mölndal',
+		'Orust',
+		'Partille',
+		'Skara',
+		'Skövde',
+		'Svenljunga',
+		'Strömstad',
+		'Sotenäs',
+		'Stenungsund',
+		'Tanum',
+		'Tibro',
+		'Tidaholm',
+		'Tjörn',
+		'Tranemo',
+		'Trollhättan',
+		'Töreboda',
+		'Uddevalla',
+		'Ulricehamn',
+		'Vara',
+		'Vårgårda',
+		'Vänersborg',
+		'Åmål',
+		'Öckerö'
+		];
+		$('.typeahead').typeahead({
+		  hint: true,
+		  highlight: true,
+		  minLength: 2
+		},
+		{
+		  name: 'states',
+		  source: substringMatcher(states)
+		});
+		$(".vgr-search-list__current").click(function() {
+			$(this).toggleClass("selected");
+			$(this).next(".vgr-search-list__hours").slideToggle();
+		});
+		if (navigator.geolocation) {
+			$('#vgr-location').show();
+		} else {
+			//
+		}
+		$(".vgr-hide-message").click(function() {
+			$('#vgr-location').hide();
+		});
+		function getPosition(position) {
+			user_lat	= position.coords.latitude;
+			user_long = position.coords.longitude;
+			console.log(user_lat);
+			console.log(user_long);
+		}
+		$(".vgr-get-position").click(function() {
+			$('#vgr-location').hide();
+			navigator.geolocation.getCurrentPosition(getPosition);
+		});
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.4.1/prism.min.js"></script>
+
+</body>
+</html>
