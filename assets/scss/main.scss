@@ -1,1 +1,12 @@
 /*! vgr-styleguide | MIT License */
+
+/* Basic styles
+   ========================================================================== */
+
+@import "settings/settings.main";        // Global variables and site wide settings
+@import "tools/tools.main";              // Global functions and mixins
+@import "generic/generic.main";          // Low-specificity, far-reaching rulesets
+@import "elements/elements.main";        // Unclassed HTML elements
+@import "objects/objects.main";          // Design-free objects, abstractions and patterns
+@import "utilities/utilities.main";      // Helper classes and overrides
+@import "components/components.main";    // Components and widgets
