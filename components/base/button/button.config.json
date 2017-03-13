@@ -1,36 +1,44 @@
 {
   "collated": true,
-  "title": "Button",
-  "status": "ready",
+  "title": "Buttons",
+  "status": "prototype",
   "context": {
-    "text": "Button",
+    "buttonText": "Button",
     "modifier": "primary"
   },
   "variants": [
     {
-      "name": "subtle button",
+      "name": "subtle",
       "context": {
+        "buttonText": "Button",
         "modifier": "subtle"
       }
     },
     {
-      "name": "secondary button",
+      "name": "secondary",
       "context": {
+        "buttonText": "Button",
         "modifier": "secondary"
       }
     },
     {
-      "name": "disabled button",
+      "name": "icon",
       "context": {
-        "disabled": true,
-        "modifier": "primary"
+        "modifier": "icon",
+        "iconWithText": true,
+        "iconData": {
+          "id": "search"
+        }
       }
     },
     {
-      "name": "icon buttton",
+      "name": "icon",
       "context": {
-        "icon": true,
-        "modifier": "primary"
+        "modifier": "icon",
+        "iconWithText": false,
+        "iconData": {
+          "id": "search"
+        }
       }
     }
   ]

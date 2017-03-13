@@ -7,12 +7,13 @@
     {% endif %}
     {% if title %}
     <div class="vgr-block__header">
-      {% if icon %}
-        <div class="vgr-block__icon"></div>
-      {% endif %}
-
       {% if title %}
-      <h2 class="vgr-block__header-heading">{{ title }}</h2>
+      <h2 class="vgr-block__header-heading">
+        {% if icon %}
+            {% render "@icon", iconData %}
+        {% endif %}
+        {{ title }}
+      </h2>
       {% endif %}
 
       {% if subtitle %}
@@ -26,27 +27,6 @@
       {% if text %}
       <div class="vgr-block__text">
         <p>{{ text }}</p>
-      </div>
-      {% endif %}
-
-      {% if list %}
-      <div class="vgr-block__list-container">
-        <ul  class="vgr-block__list">
-
-          {% for item in list %}
-          <li class="vgr-block__list-item">
-            {% if item.linkText %}
-            <a href="{{ item.url }}">{{ item.linkText }}</a>
-            {% endif %}
-
-            {% if item.description %}
-            <p>{{ item.description }}</p>
-            {% endif %}
-
-          </li>
-          {% endfor %}
-
-        </ul>
       </div>
       {% endif %}
 

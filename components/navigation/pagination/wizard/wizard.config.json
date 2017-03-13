@@ -1,6 +1,6 @@
 {
   "title": "Wizard Step",
-  "status": "wip",
+  "status": "prototype",
   "context": {
     "label": "Du är här:",
     "id": "wizardlabel",

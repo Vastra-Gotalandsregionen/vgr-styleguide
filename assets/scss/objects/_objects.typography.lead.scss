@@ -1,0 +1,14 @@
+/* ==========================================================================
+   Objects - Typography Lead
+   ========================================================================== */
+
+.vgr-lead {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  font-family: $secondary-font-stack;
+  line-height: $base-line-height;
+}
+
+h1 + .vgr-lead {
+  margin-top: -.625rem;
+}

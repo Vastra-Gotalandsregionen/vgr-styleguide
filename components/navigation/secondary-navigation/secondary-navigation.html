@@ -4,14 +4,14 @@
   </div>
   <div class="vgr-secondary-navigation__content">
     <ul>
-      {% for course in courses %}
+      {% for item in items %}
         <li>
-          <a href="{{ course.url }}"{% if course.selected %} data-selected{% if course.courses %} data-isexpanded{% endif %}{% else %}{% if course.courses %} data-haschildren{% endif %}{% endif %}>{{ course.title }}</a>
-          {% if course.selected and course.courses %}
+          <a href="{{ item.url }}"{% if item.selected %} data-selected{% if item.items %} data-isexpanded{% endif %}{% else %}{% if item.items %} data-haschildren{% endif %}{% endif %}>{{ item.title }}</a>
+          {% if item.selected and item.items %}
             <ul>
-            {% for course2 in course.courses %}
+            {% for item2 in item.items %}
               <li>
-                <a href="{{ course2.url }}">{{ course2.title }}</a>
+                <a href="{{ item2.url }}">{{ item2.title }}</a>
               </li>
             {% endfor %}
             </ul>

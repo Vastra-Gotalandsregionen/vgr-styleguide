@@ -1,0 +1,25 @@
+.vgr-logo {
+  display: flex;
+
+  /* Size */
+  &--large {
+
+    svg {
+      width: 13.75rem;
+      height: 2.8125rem;
+    }
+  }
+
+  /* Position */
+  &--center {
+    justify-content: center;
+  }
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+}

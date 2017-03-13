@@ -1,0 +1,52 @@
+.vgr-badge {
+  display: inline-block;
+  padding: 2px .5em;
+  border-radius: 3;
+  vertical-align: baseline;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 700;
+  font-style: normal;
+  font-size: .8125rem;
+  font-family: $secondary-font-stack;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-left: 1rem;
+  color: #323a45;
+
+  .vgr-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: text-bottom;
+    fill: currentColor;
+  }
+
+  &--default {
+    background-color: $color-default;
+  }
+
+  &--success {
+    background-color: #e7f4e4;
+  }
+
+  &--primary,
+  &--info {
+    background-color: #e1f3f8;
+  }
+
+  &--warning {
+    background-color: #fff1d2;
+  }
+
+  &--error {
+    background-color: $color-error;
+  }
+
+
+  &__icon {
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+    fill: currentColor;
+  }
+}

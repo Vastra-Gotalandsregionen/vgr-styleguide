@@ -1,0 +1,25 @@
+{% render '@header' %}
+{% render '@primary-navigation' %}
+{% render '@breadcrumbs' %}
+
+<main class="main" id="main" role="main">
+
+  <div class="vgr-container">
+    <div class="vgr-row">
+      <div class="col-sm-4">
+        {% render '@secondary-navigation' %}
+      </div>
+
+      <div class="col-sm-8">
+        <article class="article" role="article">
+
+          {% block main %}
+          {% endblock %}
+
+        </article>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% render '@footer' %}

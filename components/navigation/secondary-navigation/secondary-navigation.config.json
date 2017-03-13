@@ -1,13 +1,13 @@
 {
-  "status": "wip",
+  "status": "prototype",
   "context": {
-    "title": "Headline",
-    "url": "#",
-    "courses":[
+    "title": "Praktisk information",
+    "url": "/",
+    "items":[
       {
         "title": "Allmänna kurser",
         "selected": true,
-        "courses": [
+        "items": [
           {
             "title": "Plus",
             "url": "#"
@@ -37,7 +37,7 @@
       {
         "title": "Särskilda kurser",
         "url": "#",
-        "courses": [
+        "items": [
           {
             "title": "Plus",
             "url": "#"
@@ -47,7 +47,7 @@
       {
         "title": "Sommarkurser",
         "url": "#",
-        "courses": [
+        "items": [
           {
             "title": "Plus",
             "url": "#"
@@ -57,7 +57,7 @@
       {
         "title": "Distanskurser",
         "url": "#",
-        "courses": [
+        "items": [
           {
             "title": "Plus",
             "url": "#"

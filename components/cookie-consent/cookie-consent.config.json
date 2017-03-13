@@ -7,7 +7,9 @@
     "description": "Vi använder cookies för att ge dig en bättre upplevelse av vår webbplats.",
     "url": "/",
     "linkText": "Läs mer om cookies",
-    "buttonText": "Jag förstår"
+    "button": {
+      "buttonText": "Jag förstår"
+    }
   },
   "variants": [
     {

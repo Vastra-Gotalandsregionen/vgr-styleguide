@@ -1,0 +1,15 @@
+{
+  "status": "prototype",
+  "context": {
+    "title": "Search",
+    "searchId": "searchbox",
+    "action": "/",
+    "name": "q",
+    "labelText": "Sök på webbplatsen",
+    "placeholderText": "Sök på webbplatsen",
+    "icon": true,
+    "iconData": {
+      "id": "message--info"
+    }
+  }
+}

@@ -5,7 +5,7 @@
         <p class="vgr-cookie-consent__description">{{ description }} <a href="{{ url }}" class="vgr-cookie-consent__description-link">{{ linkText }}</a>.</p>
       </div>
       <div class="col-sm-4 middle-sm end-sm">
-        <button class="vgr-button">{{ buttonText }}</button>
+        {% render "@button--secondary", button %}
       </div>
     </div>
   </div>
