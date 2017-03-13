@@ -1,12 +1,17 @@
 
-.secondary-navigation {
+.vgr-secondary-navigation {
     display:none;
     @media screen and (min-width: $medium) {
         display:block;
     }
+
+  &__header {
+    background: #005c95;
+    color: #fff;
+  }
 }
 
-.secondary-navigation__content a {
+.vgr-secondary-navigation__content a {
     position:relative;
     &:focus {
         text-decoration:underline;
@@ -16,8 +21,8 @@
     }
 }
 
-.secondary-navigation__content [data-hasChildren]:after,
-.secondary-navigation__content [data-isExpanded]:after {
+.vgr-secondary-navigation__content [data-hasChildren]:after,
+.vgr-secondary-navigation__content [data-isExpanded]:after {
     content: "";
     position: absolute;
     right: 10px;

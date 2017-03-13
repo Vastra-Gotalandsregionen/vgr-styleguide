@@ -1,11 +1,17 @@
 
 
-<form method="get" class="search__form">
-    <label class="search__label">
-        <span class="vgr-visually-hidden">Sök på webbplatsen</span>
-        <input type="search" name="q" placeholder="Sök på webbplatsen" class="search-input-box search__field">
-    </label>
-    <button class="vgr-button vgr-button--primary">Button</button>
+<div class="search">
+  <div class="search__wrapper">
+    <form class="search__form" action="/" method="get">
+      <label for="searchbox" class="vgr-visually-hidden">Sök på webbplatsen</label>
+      <input class="search__field" id="searchbox" type="text" name="q" placeholder="Sök på webbplatsen">
+      <button class="vgr-button" type="submit">
+  <svg class="vgr-icon vgr-icon--" ><use xlink:href="/icons/sprite/icons.svg#search"></use></svg>
 
-</form>
+  Button
+</button>
+
+    </form>
+  </div>
+</div>
 

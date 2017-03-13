@@ -12,6 +12,11 @@
   line-height: 150%;
   cursor: pointer;
 
+  .vgr-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
   &:hover,
   &:focus {
     background-color: inherit;

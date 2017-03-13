@@ -30,6 +30,7 @@
 
   &__header-heading {
     margin: 0;
+    font-weight: 400;
   }
 
   &__image-container {
@@ -41,14 +42,16 @@
     height: auto;
   }
 
-  &__icon {
-    width: 1rem;
-    height: 1rem;
-    background: green;
+  .vgr-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    vertical-align: middle;
   }
 }
 
-.vgr-block--teaser {
+.vgr-block--teaser,
+.vgr-block--teaser-linked {
 
   .vgr-block__text {
     color: #494746;

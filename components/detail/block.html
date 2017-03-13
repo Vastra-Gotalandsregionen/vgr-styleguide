@@ -73,7 +73,7 @@
 
 <div class="Status Status--tag">
 
-<label class="Status-label" style="background-color: #FF9233; border-color: #FF9233;">WIP</label>
+<label class="Status-label" style="background-color: #FF3333; border-color: #FF3333;">Prototype</label>
 
 </div>
 
@@ -164,13 +164,18 @@
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header-heading"</span>&gt;</span>
 
-            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header-heading"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">svg</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-icon vgr-icon--"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">use</span> <span class="hljs-attr">xlink:href</span>=<span class="hljs-string">"/icons/sprite/icons.svg#file-type--pdf"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">use</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">svg</span>&gt;</span> Title
+            <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
 
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__content"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__text"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Folktandvården Västra Götaland finns i länets alla 49 kommuner och har 156 kliniker inom allmän- och specialisttandvård. Vi tar emot både vuxna och barn.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
     <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
@@ -192,12 +197,13 @@
     {% endif %}
     {% if title %}
     <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header"</span>&gt;</span>
-      {% if icon %}
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__icon"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      {% endif %}
-
       {% if title %}
-      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header-heading"</span>&gt;</span>{{ title }}<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__header-heading"</span>&gt;</span>
+        {% if icon %}
+            {% render "<a href="icon.html">@icon</a>", iconData %}
+        {% endif %}
+        {{ title }}
+      <span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
       {% endif %}
 
       {% if subtitle %}
@@ -211,27 +217,6 @@
       {% if text %}
       <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__text"</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ text }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      {% endif %}
-
-      {% if list %}
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__list-container"</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>  <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__list"</span>&gt;</span>
-
-          {% for item in list %}
-          <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"vgr-block__list-item"</span>&gt;</span>
-            {% if item.linkText %}
-            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"{{ item.url }}"</span>&gt;</span>{{ item.linkText }}<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-            {% endif %}
-
-            {% if item.description %}
-            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>{{ item.description }}<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-            {% endif %}
-
-          <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-          {% endfor %}
-
-        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       {% endif %}
 
@@ -251,7 +236,8 @@
             <pre>{
   <span class="hljs-attr">"title"</span>: <span class="hljs-string">"Title"</span>,
   <span class="hljs-attr">"modifier"</span>: <span class="hljs-string">"default"</span>,
-  <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"ikon"</span>
+  <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"ikon"</span>,
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Folktandvården Västra Götaland finns i länets alla 49 kommuner och har 156 kliniker inom allmän- och specialisttandvård. Vi tar emot både vuxna och barn."</span>
 }</pre>
             
         
@@ -315,6 +301,7 @@
 
   &amp;__header-heading {
     <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">400</span>;
   }
 
   &amp;__image-container {
@@ -326,14 +313,16 @@
     <span class="hljs-attribute">height</span>: auto;
   }
 
-  &amp;__icon {
-    <span class="hljs-attribute">width</span>: <span class="hljs-number">1rem</span>;
-    <span class="hljs-attribute">height</span>: <span class="hljs-number">1rem</span>;
-    <span class="hljs-attribute">background</span>: green;
+  <span class="hljs-selector-class">.vgr-icon</span> {
+    <span class="hljs-attribute">width</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">height</span>: <span class="hljs-number">1.5rem</span>;
+    fill: currentColor;
+    <span class="hljs-attribute">vertical-align</span>: middle;
   }
 }
 
-<span class="hljs-selector-class">.vgr-block--teaser</span> {
+<span class="hljs-selector-class">.vgr-block--teaser</span>,
+<span class="hljs-selector-class">.vgr-block--teaser-linked</span> {
 
   <span class="hljs-selector-class">.vgr-block__text</span> {
     <span class="hljs-attribute">color</span>: <span class="hljs-number">#494746</span>;
@@ -381,7 +370,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">1.3 KB</span>
+                    <span class="Meta-value">1.4 KB</span>
                 </li>
             </ul>
         </div>
@@ -411,20 +400,20 @@
                     <span>Default</span>
                 </a>, 
             
-                <a href="block--contact-block.html">
-                    <span>Contact Block</span>
+                <a href="block--contact.html">
+                    <span>Contact</span>
                 </a>, 
             
-                <a href="block--teaser-block.html">
-                    <span>Teaser Block</span>
+                <a href="block--teaser.html">
+                    <span>Teaser</span>
                 </a>, 
             
                 <a href="block--teaser-block-linked.html">
                     <span>Teaser Block Linked</span>
                 </a>, 
             
-                <a href="block--list-block.html">
-                    <span>List Block</span>
+                <a href="block--list.html">
+                    <span>List</span>
                 </a>
             
             </span>
@@ -452,10 +441,21 @@
             <span class="Meta-value">components/block/block.html</span>
         </li>
         
+        <li class="Meta-item">
+            <strong class="Meta-key">References <em class="Meta-count">(1)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="icon.html">@<span>icon</span></a>
+            
+            </span>
+        </li class="Meta-item">
+        
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
+            
+                <a href="footer.html">@<span>footer</span></a>, 
             
                 <a href="row.html">@<span>row</span></a>
             
@@ -562,6 +562,16 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../docs/release-notes.html" data-pjax>
+                <span>Release Notes</span>
+                
+            </a>
+        </li>
+        
+    
 
     </ul>
 </div>
@@ -616,6 +626,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="badge.html" data-pjax>
+                <span>Badge</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="button.html" data-pjax>
                 <span>Button</span>
                 
@@ -625,7 +659,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -702,6 +736,118 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-logo">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Logo</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="logo--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="logo--center.html" data-pjax>
+                <span>Center</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="logo--start.html" data-pjax>
+                <span>Start</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="logo--end.html" data-pjax>
+                <span>End</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
         <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-media">
             <h4 class="Tree-collectionLabel" data-role="toggle">
                 <span>Media</span>
@@ -737,9 +883,9 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-embedded-video">
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-embed">
             <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Embedded Video</span>
+                <span>Embed</span>
             </h4>
             <ul class="Tree-collectionItems" data-role="items">
             
@@ -750,8 +896,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="embedded-video--default.html" data-pjax>
-                <span>Default</span>
+            <a class="Tree-entityLink" href="vimeo.html" data-pjax>
+                <span>Vimeo</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -774,8 +920,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="embedded-video--vimeo.html" data-pjax>
-                <span>Vimeo</span>
+            <a class="Tree-entityLink" href="youtube.html" data-pjax>
+                <span>Youtube</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -937,6 +1083,166 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-article">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Article</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article--typography.html" data-pjax>
+                <span>Typography</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article--news.html" data-pjax>
+                <span>News</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article--news-2.html" data-pjax>
+                <span>News 2</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article--error-page.html" data-pjax>
+                <span>Error Page</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article-meta.html" data-pjax>
+                <span>Article Meta</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="blockquote.html" data-pjax>
@@ -972,7 +1278,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1084,7 +1390,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1193,21 +1499,10 @@
         
     
         
-        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-paragraphs">
-            <h4 class="Tree-collectionLabel" data-role="toggle">
-                <span>Paragraphs</span>
-            </h4>
-            <ul class="Tree-collectionItems" data-role="items">
-            
-            
-            
-            
-    
-        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="parahraphs.html" data-pjax>
-                <span>Parahraphs</span>
+            <a class="Tree-entityLink" href="paragraph.html" data-pjax>
+                <span>Paragraph</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1227,8 +1522,27 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="subhead.html" data-pjax>
+                <span>Subhead</span>
+                
 
-            </ul>
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1257,10 +1571,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-time">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Time</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="time.html" data-pjax>
-                <span>Time</span>
+            <a class="Tree-entityLink" href="time--default.html" data-pjax>
+                <span>Default</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1277,6 +1602,35 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="time--version.html" data-pjax>
+                <span>Version</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1425,7 +1779,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1440,8 +1794,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="block--contact-block.html" data-pjax>
-                <span>Contact Block</span>
+            <a class="Tree-entityLink" href="block--contact.html" data-pjax>
+                <span>Contact</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1449,7 +1803,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1464,8 +1818,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="block--teaser-block.html" data-pjax>
-                <span>Teaser Block</span>
+            <a class="Tree-entityLink" href="block--teaser.html" data-pjax>
+                <span>Teaser</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1473,7 +1827,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1497,7 +1851,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1512,8 +1866,8 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="block--list-block.html" data-pjax>
-                <span>List Block</span>
+            <a class="Tree-entityLink" href="block--list.html" data-pjax>
+                <span>List</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1521,7 +1875,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1614,7 +1968,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1812,7 +2166,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1836,7 +2190,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1889,7 +2243,7 @@
 <div class="Status-dots">
 
 
-<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
 
 
 </div>
@@ -1927,6 +2281,30 @@
     
 
             </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="search.html" data-pjax>
+                <span>Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
         </li>
         
     
@@ -1973,6 +2351,30 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="share-links.html" data-pjax>
+                <span>Share Links</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF3333;" title="Prototype"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="skip-link.html" data-pjax>
                 <span>Skip Link</span>
                 
@@ -2004,6 +2406,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="article-template.html" data-pjax>
+                <span>Article Template</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
