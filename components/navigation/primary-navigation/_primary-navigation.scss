@@ -1,0 +1,36 @@
+.vgr-primary-navigation {
+
+  $primary-navigation-text-color: $color-white;
+  $primary-navigation-background-color: $theme-color-dark;
+
+
+  background-color: $primary-navigation-background-color;
+  color: $primary-navigation-text-color;
+  font-size: $large-font-size;
+
+  &__item {
+    display: inline;
+  }
+
+  &__link {
+    display: block;
+    color: $primary-navigation-text-color;
+    text-decoration: none;
+    transition: .15s ease-out;
+
+    &:hover,
+    &:focus {
+      background: $theme-color-darkest;
+      color: $primary-navigation-text-color;
+      box-shadow: inset 0 -4px 0 $primary-navigation-text-color;
+    }
+  }
+
+  .selected {
+    box-shadow: inset 0 -4px 0 #FF9400;
+  }
+
+  @media print {
+    display: none;
+  }
+}

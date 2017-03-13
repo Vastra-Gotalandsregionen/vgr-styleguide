@@ -1,0 +1,10 @@
+{
+  "title": "Audio",
+  "status": "ready",
+  "context": {
+    "src": "/temp/audio.mp3",
+    "type": "audio/mpeg",
+    "fallbackText": "Your browser does not support the video element.",
+    "fallbackLink": "Download the file"
+  }
+}

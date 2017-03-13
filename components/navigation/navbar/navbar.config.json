@@ -1,0 +1,25 @@
+{
+  "title": "Navbar",
+  "status": "ready",
+  "context": {
+    "items":[
+      {
+        "text": "Hjälp",
+        "url": "/"
+      },
+      {
+        "current": true,
+        "text": "Sparade sökningar",
+        "url": "/"
+      },
+      {
+        "text": "Synpunkter",
+        "url": "/"
+      },
+      {
+        "text": "Sponsra en sida",
+        "url": "/"
+      }
+    ]
+  }
+}

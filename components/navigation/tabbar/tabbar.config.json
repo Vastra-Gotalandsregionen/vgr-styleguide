@@ -1,0 +1,25 @@
+{
+  "title": "Tab bar",
+  "status": "ready",
+  "context": {
+    "items":[
+      {
+        "text": "Webb",
+        "url": "/"
+      },
+      {
+        "current": true,
+        "text": "Dokument",
+        "url": "/"
+      },
+      {
+        "text": "Hitta person",
+        "url": "/"
+      },
+      {
+        "text": "Hitta organisation",
+        "url": "/"
+      }
+    ]
+  }
+}

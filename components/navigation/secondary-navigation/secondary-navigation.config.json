@@ -1,0 +1,69 @@
+{
+  "status": "wip",
+  "context": {
+    "title": "Headline",
+    "url": "#",
+    "courses":[
+      {
+        "title": "Allmänna kurser",
+        "selected": true,
+        "courses": [
+          {
+            "title": "Plus",
+            "url": "#"
+          },
+          {
+            "title": "Grafisk",
+            "url": "#"
+          },
+          {
+            "title": "Friluftsliv",
+            "url": "#"
+          },
+          {
+            "title": "Silver och smycke",
+            "url": "#"
+          },
+          {
+            "title": "Test",
+            "url": "#"
+          },
+          {
+            "title": "Spa och hälsa",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "Särskilda kurser",
+        "url": "#",
+        "courses": [
+          {
+            "title": "Plus",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "Sommarkurser",
+        "url": "#",
+        "courses": [
+          {
+            "title": "Plus",
+            "url": "#"
+          }
+        ]
+      },
+      {
+        "title": "Distanskurser",
+        "url": "#",
+        "courses": [
+          {
+            "title": "Plus",
+            "url": "#"
+          }
+        ]
+      }
+    ]
+  }
+}

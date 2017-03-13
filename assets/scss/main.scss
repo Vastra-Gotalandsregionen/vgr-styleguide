@@ -10,3 +10,32 @@
 @import "objects/objects.main";          // Design-free objects, abstractions and patterns
 @import "utilities/utilities.main";      // Helper classes and overrides
 @import "components/components.main";    // Components and widgets
+
+@import "components/base/alerts/alerts";
+
+
+/* Global Components styles
+   ========================================================================== */
+
+/* Navigation */
+@import "components/navigation/breadcrumbs/breadcrumbs";
+@import "components/navigation/navbar/navbar";
+@import "components/navigation/pagination/standard-pagination/standard-pagination";
+@import "components/navigation/pagination/wizard/wizard";
+@import "components/navigation/primary-navigation/primary-navigation";
+//@import "components/navigation/sidebar-navigation/sidebar-navigation";
+@import "components/navigation/tabbar/tabbar";
+
+
+/* Global Components styles
+   ========================================================================== */
+
+@import "components/cookie-consent/cookie-consent";
+@import "components/header/header";
+@import "components/footer/footer";
+
+/* Common Components styles
+   ==========================================================================
+@import "components/common/button/button";
+@import "components/common/block/block";
+ */

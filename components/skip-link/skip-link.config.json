@@ -1,0 +1,9 @@
+{
+  "title": "Skip link",
+  "status": "ready",
+  "context": {
+    "url": "#main-content",
+    "class": "vgr-skip-link",
+    "label": "Direkt till huvudinnehållet"
+  }
+}

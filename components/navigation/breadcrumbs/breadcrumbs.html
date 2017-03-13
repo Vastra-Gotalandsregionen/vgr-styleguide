@@ -1,0 +1,22 @@
+<div class="vgr-breadcrumbs">
+  <div class="vgr-container">
+    <p id="{{ id }}" class="vgr-breadcrumbs__description vgr-visually-hidden">{{ label }}</p>
+    <ol class="vgr-breadcrumbs__list" aria-labelledby="{{ id }}" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+    {% for item in items %}
+
+      {% if loop.last %}
+        <li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <span itemprop="item">{{ item.text }}</span>
+          <meta itemprop="position" content="{{loop.index}}">
+        </li>
+      {% else %}
+        <li class="vgr-breadcrumbs__list-item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+          <a href="{{ item.url }}" itemprop="item">{{ item.text }}</a>
+          <meta itemprop="position" content="{{loop.index}}">
+        </li>
+      {% endif %}
+
+    {% endfor %}
+    </ol>
+  </div>
+</div>

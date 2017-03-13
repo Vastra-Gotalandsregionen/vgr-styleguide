@@ -1,0 +1,41 @@
+{
+  "collated": true,
+  "title": "File Type Attribute Links",
+  "status": "ready",
+  "notes": "Add the data-attribute `data-smart-links=\"true\"` on the parent (normally your `<main>` element or the content article.",
+  "context": {
+    "modifier": ".pdf"
+  },
+  "variants": [
+    {
+      "name": "doc",
+      "context": {
+        "modifier": ".doc"
+      }
+    },
+    {
+      "name": "xls",
+      "context": {
+        "modifier": ".xls"
+      }
+    },
+    {
+      "name": "zip",
+      "context": {
+        "modifier": ".zip"
+      }
+    },
+    {
+      "name": "mailto",
+      "context": {
+        "modifier": "mailto:"
+      }
+    },
+    {
+      "name": "tel",
+      "context": {
+        "modifier": "tel:"
+      }
+    }
+  ]
+}

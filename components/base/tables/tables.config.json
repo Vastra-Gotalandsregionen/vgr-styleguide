@@ -1,0 +1,28 @@
+{
+  "collated": true,
+  "title": "Tables",
+  "status": "ready",
+  "context": {
+    "modifier": "default"
+  },
+  "variants": [
+    {
+      "name": "bordered",
+      "context": {
+        "modifier": "bordered"
+      }
+    },
+    {
+      "name": "lined",
+      "context": {
+        "modifier": "lined"
+      }
+    },
+    {
+      "name": "zebra",
+      "context": {
+        "modifier": "zebra"
+      }
+    }
+  ]
+}

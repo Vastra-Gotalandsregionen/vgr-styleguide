@@ -1,0 +1,7 @@
+/* Unstyled list
+ * Reset an ordered or an unordered list
+ */
+
+.vgr-unstyled-list {
+  @include unstyled-list;
+}

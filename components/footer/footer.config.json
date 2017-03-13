@@ -1,0 +1,91 @@
+{
+  "title": "Footer",
+  "status": "wip",
+  "context": {
+    "navigation":[
+      {
+        "title": "Malmö högskola",
+        "navigation": [
+          {
+            "title": "Bibliotek",
+            "url": "/"
+          },
+          {
+            "title": "Studie- och karriärvägledning",
+            "url": "/"
+          },
+          {
+            "title": "Jobba hos oss",
+            "url": "/"
+          },
+          {
+            "title": "Forsknings­publikationer",
+            "url": "/"
+          },
+          {
+            "title": "Alumni och vänner",
+            "url": "/"
+          },
+          {
+            "title": "Studentkåren",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "title": "Tjänster",
+        "navigation": [
+          {
+            "title": "Schema",
+            "url": "/"
+          },
+          {
+            "title": "Mina studier",
+            "url": "/"
+          },
+          {
+            "title": "It's Learning",
+            "url": "/"
+          },
+          {
+            "title": "IT-service för studenter",
+            "url": "/"
+          },
+          {
+            "title": "IT-service för personal",
+            "url": "/"
+          },
+          {
+            "title": "Webmail medarbetare",
+            "url": "/"
+          }
+        ]
+      },
+      {
+        "title": "Fakulteter",
+        "navigation": [
+          {
+            "title": "Hälsa och samhälle",
+            "url": "/"
+          },
+          {
+            "title": "Kultur och samhälle",
+            "url": "/"
+          },
+          {
+            "title": "Lärande och samhälle",
+            "url": "/"
+          },
+          {
+            "title": "Teknik och samhälle",
+            "url": "/"
+          },
+          {
+            "title": "Odontologiska fakulteten",
+            "url": "/"
+          }
+        ]
+      }
+    ]
+  }
+}

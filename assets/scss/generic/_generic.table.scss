@@ -1,0 +1,51 @@
+.vgr-table {
+  margin-bottom: $default-whitespace;
+  min-width: 100%;
+  border-collapse: collapse;
+  background: $color-white;
+  text-align: left;
+
+  caption {
+    text-align: left;
+  }
+
+  thead {
+    th {
+      background-color: $theme-color;
+      color: $theme-on-color;
+      vertical-align: middle;
+      text-align: left;
+      font-weight: 700;
+    }
+  }
+
+  td,
+  th {
+    padding: .3rem;
+    vertical-align: top;
+  }
+
+  &--zebra {
+    tbody tr:nth-child(odd) {
+        background: $color-gray-light;
+      }
+  }
+
+  &--bordered {
+    tbody {
+      td,
+      th {
+        border-bottom: 1px solid $color-gray-light;
+      }
+    }
+  }
+
+  &--lined {
+    tbody {
+      td,
+      th {
+        border: 1px solid $color-gray-light;
+      }
+    }
+  }
+}

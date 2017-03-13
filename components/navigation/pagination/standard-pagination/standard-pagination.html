@@ -1,0 +1,31 @@
+<div class="vgr-visually-hidden">hej</div>
+
+<p id="{{ labelId }}" class="vgr-visually-hidden">{{ title }}</p>
+<ol class="vgr-pagination" aria-labelledby="{{ labelId }}">
+
+    <li class="pagination__item">
+        <form action="/ftv-webbtidsbokning/AvailableAppointments/" method="get">
+            <input name="index" type="hidden" value="0">
+            <button aria-label="Föregående sida" class="vgr-button vgr-button--subtle" type="submit" disabled="">Föregående</button>
+        </form>
+    </li>
+
+    <li class="pagination__item pagination__item--num">
+        <form action="/ftv-webbtidsbokning/AvailableAppointments/" class="display-flex pagination__form" method="get">
+            <label for="pagination_numinput" class="pagination__text">Sida</label>
+            <input id="pagination_numinput" name="index" class="vgr-form__input pagination__numinput" type="number" min="1" max="17" value="1">
+            <button aria-label="Gå till vald sida" class="vgr-button vgr-button--subtle" type="submit">Gå</button>
+            <div class="pagination__text">
+                av <i>17</i>
+            </div>
+        </form>
+    </li>
+
+    <li class="pagination__item">
+        <form action="/ftv-webbtidsbokning/AvailableAppointments/" method="get">
+            <input name="index" type="hidden" value="2">
+            <button aria-label="Nästa sida" class="vgr-button vgr-button--subtle" type="submit">Nästa</button>
+        </form>
+    </li>
+
+</ol>

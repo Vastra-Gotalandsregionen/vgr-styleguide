@@ -1,0 +1,59 @@
+{
+  "collated": true,
+  "title": "File Type Class Links",
+  "status": "ready",
+  "context": {
+    "url": "/",
+    "modifier": "pdf"
+  },
+  "variants": [
+    {
+      "name": "doc",
+      "context": {
+        "modifier": "doc"
+      }
+    },
+    {
+      "name": "xls",
+      "context": {
+        "modifier": "xls"
+      }
+    },
+    {
+      "name": "zip",
+      "context": {
+        "modifier": "zip"
+      }
+    },
+    {
+      "name": "mail",
+      "context": {
+        "modifier": "mail"
+      }
+    },
+    {
+      "name": "phone",
+      "context": {
+        "modifier": "phone"
+      }
+    },
+    {
+      "name": "video",
+      "context": {
+        "modifier": "video"
+      }
+    },
+    {
+      "name": "image",
+      "context": {
+        "modifier": "image"
+      }
+    },
+    {
+      "name": "sound",
+      "context": {
+        "modifier": "sound"
+      }
+    }
+  ]
+}

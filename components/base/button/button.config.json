@@ -1,0 +1,37 @@
+{
+  "collated": true,
+  "title": "Button",
+  "status": "ready",
+  "context": {
+    "text": "Button",
+    "modifier": "primary"
+  },
+  "variants": [
+    {
+      "name": "subtle button",
+      "context": {
+        "modifier": "subtle"
+      }
+    },
+    {
+      "name": "secondary button",
+      "context": {
+        "modifier": "secondary"
+      }
+    },
+    {
+      "name": "disabled button",
+      "context": {
+        "disabled": true,
+        "modifier": "primary"
+      }
+    },
+    {
+      "name": "icon buttton",
+      "context": {
+        "icon": true,
+        "modifier": "primary"
+      }
+    }
+  ]
+}

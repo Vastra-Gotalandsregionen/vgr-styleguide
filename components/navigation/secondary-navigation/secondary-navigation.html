@@ -1,0 +1,23 @@
+<nav role="navigation" class="vgr-secondary-navigation" aria-labelledby="secondary-navigation-title">
+  <div class="vgr-secondary-navigation__header">
+    <a href="{{ url }}" id="secondary-navigation-title" class="vgr-secondary-navigation__header-title">{{ title }}</a>
+  </div>
+  <div class="vgr-secondary-navigation__content">
+    <ul>
+      {% for course in courses %}
+        <li>
+          <a href="{{ course.url }}"{% if course.selected %} data-selected{% if course.courses %} data-isexpanded{% endif %}{% else %}{% if course.courses %} data-haschildren{% endif %}{% endif %}>{{ course.title }}</a>
+          {% if course.selected and course.courses %}
+            <ul>
+            {% for course2 in course.courses %}
+              <li>
+                <a href="{{ course2.url }}">{{ course2.title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

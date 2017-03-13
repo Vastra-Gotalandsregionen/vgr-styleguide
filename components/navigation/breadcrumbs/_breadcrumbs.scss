@@ -1,0 +1,31 @@
+.vgr-breadcrumbs {
+
+  $breadcrumbs-text-color: $text-color;
+
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  color: $breadcrumbs-text-color;
+  font-size: $small-font-size;
+
+  &__description {
+    display: inline;
+  }
+
+  &__list {
+    display: inline;
+    padding: 0;
+  }
+
+  &__list-item {
+    display: inline;
+
+    &:not(:last-child)::after {
+      color: $breadcrumbs-text-color;
+      content: " /";
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
