@@ -1,0 +1,39 @@
+.vgr-cookie-consent {
+
+  $cookie-consent-dark-background: $color-gray-700;
+  $cookie-consent-dark-color: $color-white;
+  $cookie-consent-light-background: $color-gray-100;
+  $cookie-consent-light-color: $color-gray-700;
+
+  padding-top: $gutter-width;
+  padding-bottom: $gutter-width;
+  font-size: $small-font-size;
+  font-family: $secondary-font-stack;
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $small) {
+      margin-bottom: $gutter-width;
+    }
+  }
+
+  &__description-link {
+    color: inherit;
+  }
+
+  &--dark {
+    background-color: $cookie-consent-dark-background;
+    color: $cookie-consent-dark-color;
+  }
+
+  &--light {
+    background-color: $cookie-consent-light-background;
+    color: $cookie-consent-light-color;
+  }
+
+  @media print {
+    display: none;
+  }
+}

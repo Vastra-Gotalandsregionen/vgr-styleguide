@@ -1,0 +1,114 @@
+.vgr-wizardstep {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  font-size: $small-font-size;
+  counter-reset: wizard_step;
+  position: relative;
+  margin: 0 -5px;
+
+  &__item {
+    counter-increment: wizard_step;
+    position: relative;
+    margin: 0 0 10px 0;
+    font-size: 0; // collapses the whitespace between two inline-blocks
+    padding: 0 5px;
+
+    // The counter X)
+    &:before {
+      content: counter(wizard_step, decimal);
+      font-weight: normal;
+      padding: 3px 10px;
+      display: inline-block;
+      border: 1px solid $color-gray-lighter;
+      border-right: none;
+      font-size: .8rem;
+      color: #fff;
+      background: $theme-color;
+    }
+
+    > * {
+      padding: 3px 10px;
+      position: relative;
+      display: inline-block;
+      border: 1px solid $color-gray-lighter;
+      border-left: none;
+      font-size: .8rem;
+      background: $color-white;
+    }
+
+    > a {
+      text-decoration: none;
+      color: $text-color;
+      background-image: linear-gradient(to left, transparent, transparent 50%, $theme-color 50%, $theme-color);
+      background-position: 99% 0;
+      background-size: 200% 100%;
+      transition: all .15s ease-in;
+
+
+      &:hover {
+        text-decoration: underline;
+        background-position: 0 0;
+        color: $color-white;
+      }
+    }
+
+    &--active {
+      &:before {
+        color: #fff;
+        background: $theme-color;
+        border-right: none;
+      }
+
+      > * {
+        color: #fff;
+        border-right: none;
+        background: $theme-color-darkest;
+      }
+    }
+
+    &--active:not(:last-child) {
+      margin-right: 15px;
+
+      > * {
+        // The arrow > at the end of the active item
+        &:after {
+          content: '';
+          width: 18px;
+          height: 18px;
+          background: $theme-color-darkest;
+          transform: translateY(-50%) rotate(45deg);
+          position: absolute;
+          right: -9px;
+          top: 50%;
+          z-index: -1;
+
+          @media (min-width: $large) {
+            width: 20px;
+            height: 20px;
+            right: -11px;
+          }
+
+          @media (min-width: $extra-large) {
+            width: 22px;
+            height: 22px;
+          }
+        }
+      }
+    }
+
+    &--inactive {
+      color: #707070;
+
+      &:before {
+        background: $color-gray-100;
+        color: inherit;
+        border-right: 1px solid $color-gray-lighter;
+      }
+
+      > * {
+        background: transparent;
+      }
+    }
+  }
+}

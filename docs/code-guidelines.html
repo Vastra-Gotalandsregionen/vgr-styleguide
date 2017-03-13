@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    window.frctl = {
+        env: 'static'
+    };
+    </script>
+    <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/ico">
+
+<link rel="stylesheet" href="../themes/mandelbrot/css/default.css?cachebust=1.1.0" type="text/css">
+
+<link rel="stylesheet" href="../temp/fractal.css?cachebust=1.1.0" type="text/css">
+
+
+<title>Code Guidelines | VGR Styleguide</title>
+
+</head>
+<body>
+
+
+
+<div class="Frame" id="frame">
+
+    <div class="Frame-header">
+        <div class="Header">
+    <button class="Header-button Header-navToggle" data-action="toggle-sidebar">
+        <svg class="Header-navToggleIcon Header-navToggleIcon--open" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/>
+</svg>
+
+        <svg class="Header-navToggleIcon Header-navToggleIcon--closed" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 0h24v24H0z" fill="none"/>
+    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+</svg>
+
+    </button>
+    <a href="../index.html" class="Header-title" data-pjax>VGR Styleguide</a>
+</div>
+
+    </div>
+
+    <div class="Frame-body" data-role="body">
+
+        <div class="Frame-panel Frame-panel--main" data-role="main">
+            <div class="Frame-inner" id="pjax-container">
+            
+
+<div class="Document">
+
+    <div class="Document-header">
+        
+        <h1 class="Document-title">Code Guidelines</h1>
+        
+
+
+        
+    </div>
+
+    <div class="Document-content">
+
+    
+
+<div class="Prose">
+
+
+
+    
+    
+    <p>Standards for developing flexible, durable, and sustainable HTML and CSS.</p>
+<blockquote>
+<p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
+</blockquote>
+<h2 id="golden-rule">Golden rule</h2>
+<p>Enforce these agreed upon guidelines at all times. Small or large, call out what’s incorrect. For additions or contributions to this Code Guide, <a href="https://github.com/Vastra-Gotalandsregionen/vgr-styleguide/issues">please open an issue on Github</a>.</p>
+<hr>
+<h2 id="html">HTML</h2>
+<p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+<h3 id="syntax">Syntax</h3>
+<ul>
+<li>Use two soft spaces to indent code.</li>
+<li>Nested elements should be indented once (two soft spaces).</li>
+<li>Always use double quotes, never single quotes, on attributes.</li>
+<li>Don’t include a trailing slash in self-closing elements — the HTML5 spec says they’re optional.</li>
+<li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
+</ul>
+<code><pre><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>Page title<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/company-logo.svg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Company"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"hello-world"</span>&gt;</span>Hello, world!<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre></code><h3 id="html5-doctype">HTML5 doctype</h3>
+<p>Enforce standards mode and more consistent rendering in every browser possible with this simple doctype at the beginning of every HTML page.</p>
+<code><pre><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre></code><h3 id="language-attribute">Language attribute</h3>
+<p>From the HTML5 spec:</p>
+<blockquote>
+<p>Authors are encouraged to specify a lang attribute on the root html element, giving the document’s language. This aids speech synthesis tools to determine what pronunciations to use, translation tools to determine what rules to use, and so forth.</p>
+</blockquote>
+<p>Read more about the <code>lang</code> attribute <a href="http://www.w3.org/html/wg/drafts/html/master/semantics.html#the-html-element">in the spec</a>.</p>
+<p>Head to Sitepoint for a <a href="http://reference.sitepoint.com/html/lang-codes">list of language codes</a>.</p>
+<code><pre><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"sv-SE"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- ... --&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></pre></code><h3 id="internet-explorer-compatibility-mode">Internet Explorer compatibility mode</h3>
+<p>Internet Explorer supports the use of a document compatibility <code>&lt;meta&gt;</code> tag to specify what version of IE the page should be rendered as. Unless circumstances require otherwise, it’s most useful to instruct IE to use the latest supported mode with <strong>edge mode</strong>.</p>
+<p>For more information, <a href="http://stackoverflow.com/questions/6771258/whats-the-difference-if-meta-http-equiv-x-ua-compatible-content-ie-edge-e">read this Stack Overflow article</a>.</p>
+<p><strong>Example:</strong></p>
+<p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=Edge&quot;&gt;</code></p>
+<h3 id="character-encoding">Character encoding</h3>
+<p>Quickly and easily ensure proper rendering of your content by declaring an explicit character encoding. When doing so, you may avoid using character entities in your HTML, provided their encoding matches that of the document (generally UTF-8).</p>
+<p><strong>Example:</strong></p>
+<code><pre><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></pre></code><h3 id="css-and-javascript-includes">CSS and JavaScript includes</h3>
+<p>Per HTML5 spec, typically there is no need to specify a type when including CSS and JavaScript files as <code>text/css</code> and <code>text/javascript</code> are their respective defaults.</p>
+<p><strong>HTML5 spec links</strong></p>
+<ul>
+<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-link-element">Using link</a></li>
+<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/semantics.html#the-style-element">Using style</a></li>
+<li><a href="http://www.w3.org/TR/2011/WD-html5-20110525/scripting-1.html#the-script-element">Using script</a></li>
+</ul>
+<p><strong>Example:</strong></p>
+<code><pre><span class="hljs-comment">&lt;!-- External CSS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"main.css"</span>&gt;</span></pre></code><p><strong>Example:</strong></p>
+<code><pre><span class="hljs-comment">&lt;!-- In-document CSS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  <span class="hljs-comment">/* ... */</span>
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></pre></code><p><strong>Example:</strong></p>
+<code><pre><span class="hljs-comment">&lt;!-- JavaScript --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"main.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></pre></code><h3 id="practicality-over-purity">Practicality over purity</h3>
+<p>Strive to maintain HTML standards and semantics. Use the least amount of markup with the fewest intricacies whenever possible.</p>
+<h3 id="attribute-order">Attribute order</h3>
+<p>HTML attributes should come in this particular order for easier reading of code.</p>
+<p>Classes make for great reusable components, so they come first. <code>Id</code>s are more specific and should be used sparingly (e.g., for in-page bookmarks), so they come second.</p>
+<ul>
+<li><code>class</code></li>
+<li><code>id</code>, <code>name</code></li>
+<li><code>data-*</code></li>
+<li><code>src</code>, <code>for</code>, <code>type</code>, <code>href</code>, <code>value</code></li>
+<li><code>title</code>, <code>alt</code></li>
+<li><code>role</code>, <code>aria-*</code></li>
+</ul>
+<p><strong>Example:</strong></p>
+<code><pre>&lt;a <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"..."</span> id=<span class="hljs-string">"..."</span> data-toggle=<span class="hljs-string">"modal"</span> href=<span class="hljs-string">"/"</span>&gt;<span class="hljs-type">Example</span> link&lt;/a&gt;
+
+&lt;input <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"form-control"</span> <span class="hljs-class"><span class="hljs-keyword">type</span></span>=<span class="hljs-string">"text"</span>&gt;
+
+&lt;img src=<span class="hljs-string">"..."</span> alt=<span class="hljs-string">"..."</span>&gt;</pre></code><h3 id="boolean-attributes">Boolean attributes</h3>
+<p>A boolean attribute is one that needs no declared value. XHTML required you to declare a value, but HTML5 has no such requirement.</p>
+<p>For further reading, consult the <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/common-microsyntaxes.html#boolean-attributes">WhatWG section on boolean attributes</a>:</p>
+<blockquote>
+<p>The presence of a boolean attribute on an element represents the true value, and the absence of the attribute represents the false value.</p>
+</blockquote>
+<p>If you <em>must</em> include the attribute’s value, and <strong>you don’t need to</strong>, follow this WhatWG guideline:</p>
+<blockquote>
+<p>If the attribute is present, its value must either be the empty string or […] the attribute’s canonical name, with no leading or trailing whitespace.</p>
+</blockquote>
+<p><strong>In short, don’t add a value.</strong></p>
+<p><strong>Example:</strong></p>
+<code><pre><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">disabled</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">checked</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">selected</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></pre></code><h3 id="reducing-markup">Reducing markup</h3>
+<p>Whenever possible, avoid superfluous parent elements when writing HTML. Many times this requires iteration and refactoring, but produces less HTML. Take the following example:</p>
+<p><strong>Example:</strong></p>
+<code><pre><span class="hljs-comment">&lt;!-- Not so great --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"avatar"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></pre></code><code><pre><span class="hljs-comment">&lt;!-- Better --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"avatar"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"..."</span>&gt;</span></pre></code><h3 id="javascript-generated-markup">JavaScript generated markup</h3>
+<p>Writing markup in a JavaScript file makes the content harder to find, harder to edit, and less performant. Avoid it whenever possible.</p>
+<hr>
+<h2 id="css">CSS</h2>
+<h3 id="syntax">Syntax</h3>
+<ul>
+<li>Use soft tabs with two spaces—they’re the only way to guarantee code renders the same in any environment.</li>
+<li>When grouping selectors, keep individual selectors to a single line.</li>
+<li>Include one space before the opening brace of declaration blocks for legibility.</li>
+<li>Place closing braces of declaration blocks on a new line.</li>
+<li>Include one space after <code>:</code> for each declaration.</li>
+<li>Each declaration should appear on its own line for more accurate error reporting.</li>
+<li>End all declarations with a semi-colon. The last declaration’s is not optional.</li>
+<li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
+<li>Don’t include spaces after commas within <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
+<li>Don’t prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
+<li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
+<li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
+<li>Quote attribute values in selectors, e.g., <code>input[type=&quot;text&quot;]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
+<li>Avoid specifying units for zero values, e.g., <code>margin: 0;</code> instead of <code>margin: 0px;</code>.</li>
+</ul>
+<p>Questions on the terms used here? See the <a href="http://en.wikipedia.org/wiki/Cascading_Style_Sheets#Syntax">syntax section of the Cascading Style Sheets article</a> on Wikipedia.</p>
+<code><pre><span class="hljs-comment">/* Bad CSS */</span>
+<span class="hljs-selector-class">.selector</span>, <span class="hljs-selector-class">.selector-secondary</span>, <span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type=text]</span> {
+  <span class="hljs-attribute">padding</span>:<span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">margin</span>:<span class="hljs-number">0px</span> <span class="hljs-number">0px</span> <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-color</span>:<span class="hljs-built_in">rgba</span>(0, 0, 0, 0.5);
+  <span class="hljs-attribute">box-shadow</span>:<span class="hljs-number">0px</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#CCC</span>,inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#FFFFFF</span>
+}
+
+<span class="hljs-comment">/* Good CSS */</span>
+<span class="hljs-selector-class">.selector</span>,
+<span class="hljs-selector-class">.selector-secondary</span>,
+<span class="hljs-selector-class">.selector</span><span class="hljs-selector-attr">[type="text"]</span> {
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(0,0,0,.5);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-number">#ccc</span>, inset <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">0</span> <span class="hljs-number">#fff</span>;
+}</pre></code><h3 id="declaration-order">Declaration order</h3>
+<p>Related property declarations should be grouped together following the order:</p>
+<ol>
+<li>Positioning</li>
+<li>Box model</li>
+<li>Visual</li>
+<li>Typographic</li>
+<li>Misc</li>
+</ol>
+<p>Positioning comes first because it can remove an element from the normal flow of the document and override box model related styles. The box model comes next as it dictates a component’s dimensions and placement.</p>
+<p>Everything else takes place <em>inside</em> the component or without impacting the previous two sections, and thus they come last.</p>
+<p>For a complete list of properties and their order, please see our <a href="/">.csscomb.json</a>.</p>
+<p>For all new projects use our <a href="/csscomb-example.txt">.csscomb.json file</a>. Learn more <a href="http://csscomb.com/">about CSScomb</a>.</p>
+<code><pre><span class="hljs-selector-class">.declaration-order</span> {
+<span class="hljs-comment">/* Positioning */</span>
+<span class="hljs-attribute">position</span>: absolute;
+<span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;
+<span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;
+<span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;
+<span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;
+<span class="hljs-attribute">z-index</span>: <span class="hljs-number">100</span>;
+
+<span class="hljs-comment">/* Box-model */</span>
+<span class="hljs-attribute">display</span>: block;
+<span class="hljs-attribute">float</span>: right;
+<span class="hljs-attribute">width</span>: <span class="hljs-number">100px</span>;
+<span class="hljs-attribute">height</span>: <span class="hljs-number">100px</span>;
+
+<span class="hljs-comment">/* Visual */</span>
+<span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#e5e5e5</span>;
+<span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span>;
+<span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f5f5f5</span>;
+
+<span class="hljs-comment">/* Typography */</span>
+<span class="hljs-attribute">color</span>: <span class="hljs-number">#333</span>;
+<span class="hljs-attribute">text-align</span>: center;
+<span class="hljs-attribute">font</span>: normal <span class="hljs-number">13px</span> <span class="hljs-string">"Helvetica Neue"</span>, sans-serif;
+<span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
+
+<span class="hljs-comment">/* Misc */</span>
+<span class="hljs-attribute">opacity</span>: <span class="hljs-number">1</span>;
+}</pre></code><h3 id="don-t-use-import-">Don’t use <code>@import</code></h3>
+<p>Compared to <code>&lt;link&gt;</code>s, <code>@import</code> is slower, adds extra page requests, and can cause other unforeseen problems. Avoid them and instead opt for an alternate approach:</p>
+<ul>
+<li>Use multiple <code>&lt;link&gt;</code> elements</li>
+<li>Compile your CSS with a preprocessor like Sass into a single file</li>
+<li>Concatenate your CSS files with features provided in Rails, Jekyll, and other environments</li>
+</ul>
+<p>For more information, <a href="http://www.stevesouders.com/blog/2009/04/09/dont-use-import/">read this article by Steve Souders</a>.</p>
+<code><pre><span class="hljs-comment">&lt;!-- Use link elements --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"core.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Avoid @imports --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+  @<span class="hljs-keyword">import</span> url(<span class="hljs-string">"more.css"</span>);
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></pre></code><h3 id="media-query-placement">Media query placement</h3>
+<p>Place media queries as close to their relevant rule sets whenever possible. Don’t bundle them all in a separate stylesheet or at the end of the document. Doing so only makes it easier for folks to miss them in the future. Here’s a typical setup.</p>
+<code><pre><span class="hljs-selector-class">.element</span> { ... }
+<span class="hljs-selector-class">.element-avatar</span> { ... }
+<span class="hljs-selector-class">.element-selected</span> { ... }
+
+@media (<span class="hljs-attribute">min-width</span>: <span class="hljs-number">480px</span>) {
+  <span class="hljs-selector-class">.element</span> { ...}
+  <span class="hljs-selector-class">.element-avatar</span> { ... }
+  <span class="hljs-selector-class">.element-selected</span> { ... }
+}</pre></code><h3 id="prefixed-properties">Prefixed properties</h3>
+<p>When using vendor prefixed properties, don’t indent each property.</p>
+<code><pre><span class="hljs-comment">/* Prefixed properties */</span>
+<span class="hljs-selector-class">.selector</span> {
+  <span class="hljs-attribute">-webkit-box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(0,0,0,.15);
+  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">1px</span> <span class="hljs-number">2px</span> <span class="hljs-built_in">rgba</span>(0,0,0,.15);
+}</pre></code><h3 id="single-declarations">Single declarations</h3>
+<p>In instances where a rule set includes <strong>only one declaration</strong>, consider removing line breaks for readability and faster editing. Any rule set with multiple declarations should be split to separate lines.</p>
+<p>The key factor here is error detection—e.g., a CSS validator stating you have a syntax error on Line 183. With a single declaration, there’s no missing it. With multiple declarations, separate lines is a must for your sanity.</p>
+<code><pre><span class="hljs-comment">/* Single declarations on one line */</span>
+<span class="hljs-selector-class">.span1</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">60px</span>; }
+<span class="hljs-selector-class">.span2</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">140px</span>; }
+<span class="hljs-selector-class">.span3</span> { <span class="hljs-attribute">width</span>: <span class="hljs-number">220px</span>; }
+
+<span class="hljs-comment">/* Multiple declarations, one per line */</span>
+<span class="hljs-selector-class">.sprite</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">16px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">15px</span>;
+  <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(../img/sprite.png);
+}
+<span class="hljs-selector-class">.icon</span>           { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span>; }
+<span class="hljs-selector-class">.icon-home</span>      { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> -<span class="hljs-number">20px</span>; }
+<span class="hljs-selector-class">.icon-account</span>   { <span class="hljs-attribute">background-position</span>: <span class="hljs-number">0</span> -<span class="hljs-number">40px</span>; }</pre></code><h3 id="shorthand-notation">Shorthand notation</h3>
+<p>Strive to limit use of shorthand declarations to instances where you must explicitly set all the available values. Common overused shorthand properties include:</p>
+<ul>
+<li><code>padding</code></li>
+<li><code>margin</code></li>
+<li><code>font</code></li>
+<li><code>background</code></li>
+<li><code>border</code></li>
+<li><code>border-radius</code></li>
+</ul>
+<p>Often times we don’t need to set all the values a shorthand property represents. For example, HTML headings only set top and bottom margin, so when necessary, only override those two values. Excessive use of shorthand properties often leads to sloppier code with unnecessary overrides and unintended side effects.</p>
+<p>The Mozilla Developer Network has a great article on <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties">shorthand properties</a> for those unfamiliar with notation and behavior.</p>
+<code><pre><span class="hljs-comment">/* Bad example */</span>
+<span class="hljs-selector-class">.element</span> {
+    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background</span>: red;
+    <span class="hljs-attribute">background</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"image.jpg"</span>);
+    <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">3px</span> <span class="hljs-number">3px</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>;
+}</pre></code><code><pre><span class="hljs-comment">/* Good example */</span>
+<span class="hljs-selector-class">.element</span> {
+    <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">10px</span>;
+    <span class="hljs-attribute">background-color</span>: red;
+    <span class="hljs-attribute">background-image</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">"image.jpg"</span>);
+    <span class="hljs-attribute">border-top-left-radius</span>: <span class="hljs-number">3px</span>;
+    <span class="hljs-attribute">border-top-right-radius</span>: <span class="hljs-number">3px</span>;
+}</pre></code><h3 id="nesting-in-sass">Nesting in Sass</h3>
+<p>Avoid unnecessary nesting. Just because you can nest, doesn’t mean you always should. Consider nesting only if you must scope styles to a parent and if there are multiple elements to be nested.</p>
+<code><pre><span class="hljs-comment">// Without nesting</span>
+<span class="hljs-selector-class">.table</span> &gt; <span class="hljs-selector-tag">thead</span> &gt; <span class="hljs-selector-tag">tr</span> &gt; <span class="hljs-selector-tag">th</span> { … }
+<span class="hljs-selector-class">.table</span> &gt; <span class="hljs-selector-tag">thead</span> &gt; <span class="hljs-selector-tag">tr</span> &gt; <span class="hljs-selector-tag">td</span> { … }
+
+<span class="hljs-comment">// With nesting</span>
+<span class="hljs-selector-class">.table</span> &gt; <span class="hljs-selector-tag">thead</span> &gt; <span class="hljs-selector-tag">tr</span> {
+  &gt; <span class="hljs-selector-tag">th</span> { … }
+  &gt; <span class="hljs-selector-tag">td</span> { … }
+}</pre></code><h3 id="comments">Comments</h3>
+<p>Code is written and maintained by people. Ensure your code is descriptive, well commented, and approachable by others. Great code comments convey context or purpose. Do not simply reiterate a component or class name.</p>
+<p>Be sure to write in complete sentences for larger comments and succinct phrases for general notes.</p>
+<ul>
+<li>Place comments on a new line above their subject.</li>
+<li>Keep line-length to a sensible maximum, e.g., 80 columns.</li>
+<li>Make liberal use of comments to break CSS code into discrete sections.</li>
+<li>Use “sentence case” comments and consistent text indentation.</li>
+</ul>
+<p>Use <a href="https://github.com/necolas/idiomatic-css#comments">Idomatic CSS</a> style for comments.</p>
+<p>Use editor snippets to easier maintain comment standards. There are plugins for both <a href="https://github.com/chrisborrowdale/Idiomatic-CSS-Comments-Snippets">Sublime Text</a> and <a href="https://github.com/james2doyle/sublime-to-atom-snippets">Atom</a>.</p>
+<p><strong>Basic comment</strong></p>
+<code><pre><span class="hljs-comment">/* comment */</span></pre></code><p><strong>Sub comment</strong></p>
+<code><pre><span class="hljs-comment">/*
+   Comment
+   ========================================================================== */</span></pre></code><p><strong>TODO comment</strong></p>
+<code><pre><span class="hljs-comment">/*
+/**
+ * <span class="hljs-doctag">@TODO</span>
+ */</span></pre></code><p><strong>Section comment</strong></p>
+<code><pre>/* <span class="hljs-comment">==========================================================================</span>
+   Comment
+   <span class="hljs-comment">========================================================================== */</span></pre></code><p><strong>Long comment</strong></p>
+<code><pre><span class="hljs-comment">/**
+ * Comment
+ */</span></pre></code><h3 id="classes">Classes</h3>
+<ul>
+<li>Keep classes lowercase and use dashes (not underscores or camelCase). Dashes serve as natural breaks in related class (e.g., <code>.button</code> and <code>.button-danger</code>).</li>
+<li>Avoid excessive and arbitrary shorthand notation. <code>.btn</code> is useful for button, but <code>.s</code> doesn’t mean anything.</li>
+<li>Keep classes as short and succinct as possible.</li>
+<li>Use meaningful names; use structural or purposeful names over presentational.</li>
+<li>Prefix classes based on the closest parent or base class.</li>
+<li><code>.js-*</code> classes to denote behavior (as opposed to style), but keep these classes out of your CSS.</li>
+</ul>
+<p>It’s also useful to apply many of these same rules when creating Sass and Less variable names.</p>
+<h3 id="selectors">Selectors</h3>
+<ul>
+<li>Use classes over generic element tag for optimum rendering performance.</li>
+<li>Avoid using several attribute selectors (e.g., <code>[class^=&quot;...&quot;])</code> on commonly occuring components. Browser performance is known to be impacted by these.</li>
+<li>Keep selectors short and strive to limit the number of elements in each selector to three.</li>
+<li>Scope classes to the closest parent <strong>only</strong> when necessary (e.g., when not using prefixed classes).</li>
+</ul>
+<p>Additional reading:</p>
+<ul>
+<li><a href="http://markdotto.com/2012/02/16/scope-css-classes-with-prefixes/">Scope CSS classes with prefixes</a></li>
+<li><a href="http://markdotto.com/2012/03/02/stop-the-cascade/">Stop the cascade</a></li>
+</ul>
+<h3 id="organization">Organization</h3>
+<ul>
+<li>Organize sections of code by component.</li>
+<li>Develop a consistent commenting hierarchy.</li>
+<li>Use consistent white space to your advantage when separating sections of code for scanning larger documents.</li>
+<li>When using multiple CSS files, break them down by component instead of page. Pages can be rearranged and components moved.</li>
+</ul>
+<h2 id="editor-preferences">Editor preferences</h2>
+<p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
+<ul>
+<li>Use hard-tab.</li>
+<li>Trim trailing white space on save.</li>
+<li>Set encoding to <code>UTF-8</code>.</li>
+<li>Add new line at end of files.</li>
+</ul>
+<p>For all new projects use our <a href="/">.editorconfig file</a>. Learn more <a href="http://editorconfig.org/">about EditorConfig</a>.</p>
+<hr>
+<p><a href="https://opensource.org/licenses/MIT">MIT License</a>. Copyright 2015 <a href="https://twitter.com/mdo">@mdo</a>. <a href="http://codeguide.co/">Original version</a>.</p>
+
+    
+
+
+</div>
+
+
+
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div class="Frame-handle" data-role="frame-resize-handle"></div>
+        
+        <div class="Frame-panel Frame-panel--sidebar" data-role="sidebar">
+            <nav class="Navigation">
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-docs">
+    <h3 class="Tree-title">documentation</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="getting-started.html" data-pjax>
+                <span>Getting Started</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="for-developers.html" data-pjax>
+                <span>For Developers</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="for-designers.html" data-pjax>
+                <span>For Designers</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
+                <span>Code Guidelines</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="performance-budget.html" data-pjax>
+                <span>Performance Budget</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="design-principles.html" data-pjax>
+                <span>Design Principles</span>
+                
+            </a>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+    
+<div class="Navigation-group">
+
+<div class="Tree" data-behaviour="tree" id="tree-components">
+    <h3 class="Tree-title">components</h3>
+    <ul class="Tree-items Tree-depth-1">
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-base">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Base</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/alerts.html" data-pjax>
+                <span>Alerts</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/button.html" data-pjax>
+                <span>Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-icons">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Icons</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/icon.html" data-pjax>
+                <span>Icon</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/svg-sprite.html" data-pjax>
+                <span>Svg Sprite</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-media">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Media</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/audio.html" data-pjax>
+                <span>Audio</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-embedded-video">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Embedded Video</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/embedded-video--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/embedded-video--vimeo.html" data-pjax>
+                <span>Vimeo</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/figure.html" data-pjax>
+                <span>Figure</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/image.html" data-pjax>
+                <span>Image</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/video.html" data-pjax>
+                <span>Video</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/tables.html" data-pjax>
+                <span>Tables</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-typography">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Typography</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/abbreviations.html" data-pjax>
+                <span>Abbreviations</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/blockquote.html" data-pjax>
+                <span>Blockquote</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/click-to-action.html" data-pjax>
+                <span>Click To Action</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-extended-links">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Extended Links</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/file-type-attribute.html" data-pjax>
+                <span>File Type Attribute</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/file-type-class.html" data-pjax>
+                <span>File Type Class</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/file-type-with-metadata.html" data-pjax>
+                <span>File Type With Metadata</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/headings.html" data-pjax>
+                <span>Headings</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/inline-elements.html" data-pjax>
+                <span>Inline Elements</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/lead.html" data-pjax>
+                <span>Lead</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/links.html" data-pjax>
+                <span>Links</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/lists.html" data-pjax>
+                <span>Lists</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-4" data-behaviour="collection" id="tree-components-collection-paragraphs">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Paragraphs</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/parahraphs.html" data-pjax>
+                <span>Parahraphs</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/thematic-break.html" data-pjax>
+                <span>Thematic Break</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/time.html" data-pjax>
+                <span>Time</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-utilities">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Utilities</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/aligment.html" data-pjax>
+                <span>Aligment</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/clearfix.html" data-pjax>
+                <span>Clearfix</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/scrollable.html" data-pjax>
+                <span>Scrollable</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/visually-hidden.html" data-pjax>
+                <span>Visually Hidden</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-block">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Block</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/block--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/block--contact-block.html" data-pjax>
+                <span>Contact Block</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/block--teaser-block.html" data-pjax>
+                <span>Teaser Block</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/block--teaser-block-linked.html" data-pjax>
+                <span>Teaser Block Linked</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/block--list-block.html" data-pjax>
+                <span>List Block</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-cookie-consent">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Cookie Consent</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/cookie-consent--default.html" data-pjax>
+                <span>Default</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/cookie-consent--light.html" data-pjax>
+                <span>Light</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/footer.html" data-pjax>
+                <span>Footer</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/header.html" data-pjax>
+                <span>Header</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-layouts">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Layouts</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-grid">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Grid</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/container.html" data-pjax>
+                <span>Container</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/row.html" data-pjax>
+                <span>Row</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-navigation">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Navigation</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/breadcrumbs.html" data-pjax>
+                <span>Breadcrumbs</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/navbar.html" data-pjax>
+                <span>Navbar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-3" data-behaviour="collection" id="tree-components-collection-pagination">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Pagination</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/standard-pagination.html" data-pjax>
+                <span>Standard Pagination</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/wizard.html" data-pjax>
+                <span>Wizard</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/primary-navigation.html" data-pjax>
+                <span>Primary Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/secondary-navigation.html" data-pjax>
+                <span>Secondary Navigation</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #FF9233;" title="WIP"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/tabbar.html" data-pjax>
+                <span>Tabbar</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-search-bar">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Search Bar</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/search.html" data-pjax>
+                <span>Search</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/skip-link.html" data-pjax>
+                <span>Skip Link</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-templates">
+            <h4 class="Tree-collectionLabel" data-role="toggle">
+                <span>Templates</span>
+            </h4>
+            <ul class="Tree-collectionItems" data-role="items">
+            
+            
+            
+            
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../components/detail/server-error-template.html" data-pjax>
+                <span>Server Error Template</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
+        </li>
+        
+    
+
+    </ul>
+</div>
+
+</div>
+
+
+
+</nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="../themes/mandelbrot/js/mandelbrot.js?cachebust=1.1.0"></script>
+
+
+
+</body>
+</html>

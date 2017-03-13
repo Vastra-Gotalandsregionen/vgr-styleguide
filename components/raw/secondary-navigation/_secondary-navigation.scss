@@ -1,0 +1,31 @@
+
+.secondary-navigation {
+    display:none;
+    @media screen and (min-width: $medium) {
+        display:block;
+    }
+}
+
+.secondary-navigation__content a {
+    position:relative;
+    &:focus {
+        text-decoration:underline;
+    }
+    &[data-selected]:focus {
+        color:#000;
+    }
+}
+
+.secondary-navigation__content [data-hasChildren]:after,
+.secondary-navigation__content [data-isExpanded]:after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform:translateY(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: .35rem 0 .35rem .35rem;
+    border-color: transparent transparent transparent #222;
+}

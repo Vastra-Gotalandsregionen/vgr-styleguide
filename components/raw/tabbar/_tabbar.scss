@@ -1,0 +1,49 @@
+.vgr-tabbar {
+
+  /* Sizes */
+  $list-font-size: $medium-font-size;
+  $list-default-space: 1rem .625rem !default;
+
+  /* Colors */
+  $list-background: $color-white !default;
+  $list-link-color: $color-gray-700 !default;
+
+  /* Current */
+  $list-current-color: $color-white;
+  $list-current-border-size: .25rem !default;
+
+  /* Active (Hover and Focus state) */
+  $list-active-color: $color-black;
+
+  background: $list-background;
+  font-size: $list-font-size;
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__list-item {
+    display: flex;
+    border-bottom: $list-current-border-size solid transparent;
+
+    &--current {
+      border-bottom-color: $list-current-color;
+      color: $list-current-color;
+    }
+  }
+
+  &__list-link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: $list-link-color;
+    padding: $list-default-space;
+
+    &:hover,
+    &:focus {
+      color: $list-active-color;
+      text-decoration: none;
+    }
+  }
+}
