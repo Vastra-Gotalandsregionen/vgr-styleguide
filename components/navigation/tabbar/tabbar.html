@@ -1,15 +1,21 @@
 <nav class="vgr-tabbar" role="navigation">
-  <ul class="vgr-tabbar__list vgr-o-list-bare">
-    {% for item in items %}
-      {% if item.current %}
-        <li class="vgr-tabbar__list-item vgr-tabbar__list-item--current">
-          <a href="{{ item.url }}" class="vgr-tabbar__list-link" aria-current="page">{{ item.text }}</a>
-        </li>
-      {% else %}
-      <li class="vgr-tabbar__list-item">
-        <a href="{{ item.url }}" class="vgr-tabbar__list-link">{{ item.text }}</a>
-      </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
+  <div class="vgr-container">
+    <div class="vgr-row">
+      <div class="col-xs-12 col-md-10 col-lg-8 vgr-centered">
+        <ul class="vgr-tabbar__list vgr-unstyled-list">
+          {% for item in items %}
+            {% if item.current %}
+              <li class="vgr-tabbar__list-item vgr-tabbar__list-item--current">
+                <a href="{{ item.url }}" class="vgr-tabbar__list-link" aria-current="page">{{ item.text }}</a>
+              </li>
+            {% else %}
+            <li class="vgr-tabbar__list-item">
+              <a href="{{ item.url }}" class="vgr-tabbar__list-link">{{ item.text }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </nav>

@@ -1,0 +1,21 @@
+.vgr-form-field {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: .625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    transform: translateY(-50%);
+    fill: #002842;
+  }
+
+  &__input {
+    padding: 1rem 1rem 1rem 2.5rem;
+    width: 100%;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba($color-black, .2);
+  }
+}

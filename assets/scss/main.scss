@@ -13,7 +13,6 @@
 
 @import "components/base/alerts/alerts";
 
-
 /* Global Components styles
    ========================================================================== */
 
@@ -25,7 +24,6 @@
 @import "components/navigation/primary-navigation/primary-navigation";
 @import "components/navigation/secondary-navigation/secondary-navigation";
 @import "components/navigation/tabbar/tabbar";
-
 
 /* Global Components styles
    ========================================================================== */
@@ -40,5 +38,11 @@
 @import "components/base/logo/logo";
 @import "components/block/block";
 @import "components/base/badge/badge";
-//@import "components/share-links/share-links";
+@import "components/share-links/share-links";
 @import "components/skip-link/skip-link";
+@import "components/forms/forms";
+
+/* Templates
+   ========================================================================== */
+@import "components/scoped/search/search-card/search-card";
+@import "components/templates/hitta/hitta";

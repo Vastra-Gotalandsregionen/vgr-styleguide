@@ -5,25 +5,5 @@
     "url": "/",
     "label": "Gå till startsidan",
     "title": "Västa Götalandsregionen"
-  },
-  "variants": [
-    {
-      "name": "center",
-      "context": {
-        "modifier": "center"
-      }
-    },
-    {
-      "name": "start",
-      "context": {
-        "modifier": "start"
-      }
-    },
-    {
-      "name": "end",
-      "context": {
-        "modifier": "end"
-      }
-    }
-  ]
+  }
 }

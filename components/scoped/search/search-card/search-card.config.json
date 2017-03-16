@@ -1,0 +1,70 @@
+{
+  "title": "Search card",
+  "status": "wip",
+  "context": {
+    "headline": "Lorem ipsum",
+    "url": "/",
+    "datetime": "2015-08-19",
+    "date": "19 augusti 2015",
+    "source": "Västra Götalandsregionen",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+  },
+  "variants": [
+    {
+      "name": "panel",
+      "context": {
+        "modifier": "panel"
+      }
+    },
+    {
+      "name": "person",
+      "context": {
+        "modifier": "person",
+        "expandable": true,
+        "bestbet": false,
+        "statusOnline": true,
+        "statusOffline": false,
+        "statusUnavailable": false,
+        "image": "/temp/profile-photo.png",
+        "mapAddress": "/temp/map.png",
+        "imageAlt": "alt text",
+        "imageHeight": "66",
+        "imageWidth": "66",
+        "title": "Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "emailLabel": "E-postadress",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landlinelabel": "Telefon",
+        "landline": "010 - 473 75 77",
+        "mobileLabel": "Mobiltelefon",
+        "mobile": "0702 - 96 67 99",
+        "switchedTelephoneLabel": "Växeltelefon",
+        "switchedTelephone": "0500 -620 00",
+        "faxNumberLabel": "Faxnummer",
+        "faxNumber": "0500 -620 65",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "19 augusti 2015",
+        "source": "Västra Götalandsregionen",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+      }
+    },
+    {
+      "name": "organisation",
+      "context": {
+        "modifier": "organisation",
+        "bestbet": true,
+        "title": "Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landline": "010 - 473 75 77",
+        "mobile": "0702 - 96 67 99",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "19 augusti 2015",
+        "source": "Västra Götalandsregionen",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+      }
+    }
+  ]
+}
