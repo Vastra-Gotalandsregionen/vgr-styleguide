@@ -1,0 +1,219 @@
+.vgr-search-card {
+  margin-bottom: .625rem;
+  padding: 1rem .75rem;
+  background: $color-white;
+
+  $headline-size: 1.125rem;
+  $meta-size: 14px;
+  $meta-color: #0c6725;
+  $excerpt-size: 14px;
+
+  &--panel {
+    box-shadow: 0 1px 3px rgba($color-black, .2);
+  }
+
+  &__folded {
+    padding-top: .625rem;
+    border-top: 1px solid $color-gray-lighter;
+  }
+
+  &__headline {
+    margin: 0;
+    font-weight: 400;
+    font-size: $large-font-size;
+  }
+
+  &__image-holder {
+    position: relative;
+    float: left;
+    margin: .5rem;
+    width: 4.125rem;
+    height: 4.125rem;
+  }
+
+  &__image {
+    width: 4.125rem;
+    height: 4.125rem;
+  }
+
+  &__status {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &__date {
+    color: $meta-color;
+    font-size: $meta-size;
+  }
+
+  &__source {
+    display: inline;
+    color: $meta-color;
+    font-size: $meta-size;
+  }
+
+  &__excerpt {
+    margin: 0;
+    font-size: $excerpt-size;
+  }
+
+  &__meta {
+    margin: 0;
+    font-size: $meta-size;
+  }
+}
+
+.vgr-search-card__header {
+  width: calc(100% + 1.5rem);
+  background: #f6f6f6;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .05);
+
+  &--photo {
+    margin: -1rem -.75rem 0;
+  }
+}
+
+.vgr-search-card--bestbet {
+  .vgr-search-card__header {
+    background: #004674;
+    color: #fff;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.vgr-search-card__information {
+  margin-top: .625rem;
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+}
+
+.vgr-detail-list {
+  display: table;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+
+  &__title {
+    color: #727272;
+  }
+
+  &__item {
+    margin-left: 0;
+  }
+
+  &__label {
+    padding-right: 10px;
+    color: #000;
+    font-weight: 700;
+  }
+
+  @media screen and (min-width: $small) {
+    &__item {
+      display: table-row;
+    }
+
+    &__label {
+      display: table-cell;
+      width: 130px;
+    }
+  }
+}
+
+.vgr-link-list {
+  font-size: 14px;
+
+  &__heading {
+    margin: .5rem 0 0;
+    color: #727272;
+    font-size: 14px;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 5px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+    background: #f6f6f6;
+    line-height: 1;
+  }
+}
+
+.vgr-search-card__map {
+  margin: 0 -.75rem;
+}
+
+.vgr-address-list {
+  overflow: scroll;
+  margin-top: .5rem;
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  max-width: 100vw;
+  border-width: 0;
+  border-style: solid;
+  border-color: #d8d8d8;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  background: #f8f8f8;
+  -webkit-overflow-scrolling: touch;
+
+  &-container {
+    margin-bottom: 1rem;
+    white-space: nowrap;
+  }
+
+  &-item {
+    display: inline-block;
+    margin: 10px;
+    min-width: 10rem;
+    width: 25vw;
+    background: #fff;
+  }
+}
+
+.vgr-search-card__expand-button {
+  display: block;
+  margin: .75rem -.75rem -1rem;
+  padding: 1rem;
+  width: calc(100% + 1.5rem);
+  border: 0;
+  background: #f6f6f6;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, .05);
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background .1s ease-in-out;
+
+  svg {
+    margin-right: .5rem;
+    vertical-align: middle;
+  }
+
+  &:hover,
+  &:focus {
+    background: #efefef;
+    text-decoration: underline;
+  }
+}
+
+.vgr-search-card__folded + .vgr-search-card__expand-button {
+  display: none;
+}
+
+.vgr-search-card__folded[hidden] + .vgr-search-card__expand-button {
+  display: block;
+}
