@@ -51,7 +51,7 @@
   </div>
 
   {% if expandable %}
-    <div class="vgr-search-card__folded vgr-search-card__information" id="folded-1" hiddenx>
+    <div class="vgr-search-card__folded vgr-search-card__information" id="folded-1">
 
       <dl class="vgr-detail-list">
         <dt class="vgr-detail-list__title">Kontaktuppgifter</dt>
@@ -113,8 +113,7 @@
       </ul>
     </div>
 
-    <button class="vgr-search-card__expand-button" aria-controls="folded-1" aria-expanded="true">
-    <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M8.418.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0L.601 1.828a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L5 4 8.418.859z" fill="#5B5B5B" fill-rule="evenodd"/></svg>
-    Fler kontaktuppgifter</button>
+    <button class="vgr-search-card__expand-button" aria-controls="folded-1" data-component="toggle-button">
+    <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M8.418.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0L.601 1.828a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L5 4 8.418.859z" fill="#5B5B5B" fill-rule="evenodd"/></svg>Fler kontaktuppgifter</button>
   {% endif %}
 </div>

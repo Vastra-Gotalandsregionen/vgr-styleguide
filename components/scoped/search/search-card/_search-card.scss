@@ -8,11 +8,20 @@
   $meta-color: #0c6725;
   $excerpt-size: 14px;
 
+  [aria-expanded=true] {
+    display: block;
+  }
+
+  [aria-expanded=false] {
+    display: none;
+  }
+
   &--panel {
     box-shadow: 0 1px 3px rgba($color-black, .2);
   }
 
   &__folded {
+    display: none;
     padding-top: .625rem;
     border-top: 1px solid $color-gray-lighter;
   }
@@ -210,10 +219,6 @@
   }
 }
 
-.vgr-search-card__folded + .vgr-search-card__expand-button {
+.vgr-search-card__folded[aria-expanded="true"] + .vgr-search-card__expand-button {
   display: none;
-}
-
-.vgr-search-card__folded[hidden] + .vgr-search-card__expand-button {
-  display: block;
 }
