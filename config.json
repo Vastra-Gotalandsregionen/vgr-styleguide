@@ -26,14 +26,19 @@
     },
     "themeSettings": {
       "nav": ["docs", "components"],
-      "favicon": "/static/favicon.ico",
+      "favicon": "assets/static/favicon.ico",
       "lang": "en",
       "styles": ["default", "/temp/fractal.css"]
     }
   },
+  "assets": {
+    "assetTasks": ["fonts", "icons", "images"],
+    "codeTasks": ["css", "js"],
+    "dest": "assets"
+  },
   "tasks": {
     "css": {
-      "src": ["scss", "components"],
+      "src": ["assets/scss", "components"],
       "dest": "css",
       "autoprefixer": {
         "browsers": ["last 3 versions"]
