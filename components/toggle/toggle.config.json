@@ -1,0 +1,24 @@
+{
+  "title": "Block",
+  "status": "ready",
+  "context": {
+    "modifier": "default",
+    "title": "Headline",
+    "toggleId": "first",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+  },
+  "variants": [
+    {
+      "name": "Simple",
+      "context": {
+        "modifier": "simple"
+      }
+    },
+    {
+      "name": "Headline",
+      "context": {
+        "modifier": "headline"
+      }
+    }
+  ]
+}
