@@ -1,0 +1,60 @@
+.awesomplete {
+  position: relative;
+
+  [hidden] {
+    display: none;
+  }
+
+  > ul {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 2px 0 0;
+    padding: 0;
+    min-width: 100%;
+    width: 100%;
+    border-radius: 3px;
+    background: $color-white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    list-style: none;
+    font-size: $small-font-size;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  li {
+    position: relative;
+    padding: .75rem 1rem;
+    font-weight: 500;
+    cursor: pointer;
+
+    mark {
+      background-color: transparent;
+      color: inherit;
+      font-weight: 400;
+    }
+
+    &:hover {
+      background: $color-gray-600;
+      color: $color-black;
+    }
+
+    &[aria-selected="true"] {
+      background: $theme-color;
+      color: $color-white;
+
+      &:hover {
+        background: $theme-color;
+        color: $color-white;
+      }
+
+      mark {
+        color: inherit;
+      }
+    }
+  }
+}
