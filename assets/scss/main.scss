@@ -42,7 +42,14 @@
 @import "components/skip-link/skip-link";
 @import "components/forms/forms";
 @import "components/toggle/toggle";
-@import "components/autocomplete/autocomplete";
+
+// Beställar ID
+// ==========================================================================
+@import "components/search/autocomplete/autocomplete";
+@import "components/search/autocomplete/awesomplete";
+@import "components/search/search-block/search-block";
+@import "components/search/search-autocomplete-item/search-autocomplete-item";
+@import "components/search/search-autocomplete-more/search-autocomplete-more";
 
 /* Templates
    ========================================================================== */

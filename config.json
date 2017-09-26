@@ -28,8 +28,9 @@
       "nav": ["docs", "components"],
       "favicon": "assets/static/favicon.ico",
       "lang": "en",
-      "styles": ["default", "/temp/fractal.css"]
-    }
+      "styles": ["/theme/css/fractal.css"]
+    },
+    "templateOverride": "/_fractal/views"
   },
   "assets": {
     "assetTasks": ["fonts", "icons", "images"],
