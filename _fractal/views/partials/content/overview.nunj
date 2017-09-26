@@ -1,0 +1,5 @@
+{% import "macros/status.nunj" as status %}
+
+  <h2>Welcome!</h2>
+
+  <p>This website contains all relevant documentation regarding Whitespace's development methods and tools. Feel free to add and update the content.</p>
