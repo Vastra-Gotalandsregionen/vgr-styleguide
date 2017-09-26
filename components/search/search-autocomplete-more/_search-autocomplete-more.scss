@@ -1,0 +1,14 @@
+.vgr-autocomplete {
+  $background-color: #f6f6f6;
+  $text-color: #5b5b5b;
+  $default-padding: .5rem 1rem;
+  $text-size: .875rem;
+
+  &__more {
+    display: block;
+    padding: $default-padding;
+    font-size: $text-size;
+    color: $text-color;
+    background: $background-color;
+  }
+}

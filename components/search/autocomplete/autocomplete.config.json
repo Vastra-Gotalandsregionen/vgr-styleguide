@@ -1,0 +1,75 @@
+{
+  "label": "Beställar-id",
+  "context": {
+    "blockData": {
+      "title": "Sök Beställar-ID",
+      "label": "Ange namn, VGR-id eller beställar-id",
+      "button": "Sök"
+     },
+    "items":[
+      {
+        "itemData": {
+          "headline": "Evelyn Stolfer",
+          "photo": "/temp/female-1.jpg",
+          "vgridResult": "evest2",
+          "bestallaridResult": "36692",
+          "ansvarsnummerResult": "3669239",
+          "inummerResult": "i70201",
+          "multipleBestallarid": true
+         }
+      },
+      {
+        "itemData": {
+          "headline": "Evelyn Svensson",
+          "photo": "/temp/female-2.jpg",
+          "vgridResult": "evesv5",
+          "bestallaridResult": "36612",
+          "ansvarsnummerResult": "3661222",
+          "inummerResult": "i90357"
+        }
+      },
+      {
+        "itemData": {
+          "headline": "Evelyn Andersson",
+          "photo": "/temp/female-3.jpg",
+          "vgridResult": "evego1",
+          "bestallaridResult": "36681",
+          "ansvarsnummerResult": "3668141",
+          "inummerResult": "i11945"
+        }
+      },
+      {
+        "itemData": {
+          "headline": "Evelyn Serrano Hiles Kristensson",
+          "photo": "/temp/female-4.jpg",
+          "vgridResult": "eveha1",
+          "bestallaridResult": "36623",
+          "ansvarsnummerResult": "3662310",
+          "inummerResult": "i98642",
+          "multipleAnsvarsnummer": true
+        }
+      },
+      {
+        "itemData": {
+          "headline": "Evelyn de la Fuente Soto",
+          "photo": "/temp/female-5.jpg",
+          "vgridResult": "evede1",
+          "bestallaridResult": "36691",
+          "ansvarsnummerResult": "3669172",
+          "inummerResult": "i9123"
+        }
+      },
+      {
+        "itemData": {
+          "headline": "Eva-Lena Wennerholm",
+          "photo": "/temp/female-6.jpg",
+          "vgridResult": "evlwe1",
+          "bestallaridResult": "36659",
+          "ansvarsnummerResult": "3665918",
+          "inummerResult": "i9123",
+          "multipleInummer": true
+        }
+      }
+    ]
+  }
+}
