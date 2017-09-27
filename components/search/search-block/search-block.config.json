@@ -1,5 +1,6 @@
 {
-  "label": "Sökblock",
+  "label": "Search Block with Autocomplete",
+  "notes": "Test using *eve* or '366*",
   "context": {
     "title": "Sök",
     "label": "Etikett",

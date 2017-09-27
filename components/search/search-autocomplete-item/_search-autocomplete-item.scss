@@ -1,18 +1,17 @@
 .vgr-autocomplete {
 
   $link-color: $theme-color;
-  $text-color: $text-color;
 
   &__item {
     padding: 1rem;
-    background: #fff;
-    color: $text-color;
     display: block;
     text-decoration: none;
     border-bottom: 1px solid #E6E6E6;
 
     @at-root {
       a#{&} {
+        color: $text-color;
+
         .vgr-autocomplete__headline {
           color: $link-color;
         }

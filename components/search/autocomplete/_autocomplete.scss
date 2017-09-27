@@ -1,10 +1,10 @@
 .vgr-autocomplete {
-  max-width: 634px;
   border: 1px solid #CCC;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   box-shadow: 0 .3125rem 1rem 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  background: #fff;
 
   &-list {
     margin: 0;
@@ -14,9 +14,6 @@
 
   mark {
     font-weight: 700;
+    background: transparent
   }
-}
-
-.vgr-autocomplete {
-  display: none;
 }

@@ -1,5 +1,5 @@
 {
-  "label": "Beställar-id",
+  "label": "Autocomplete Dropdown",
   "context": {
     "blockData": {
       "title": "Sök Beställar-ID",
