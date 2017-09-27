@@ -80,9 +80,6 @@
 
 
 /* What input */
-[data-whatinput="mouse"],
-[data-whatinput="touch"] {
-  :focus {
-    outline: none;
-  }
+[data-whatintent="mouse"] *:focus {
+  outline: none;
 }
