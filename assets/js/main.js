@@ -9,5 +9,4 @@ components.enhance();
 import global from './global';
 
 // Add component from Components
-import '../../components/search/autocomplete/awesomplete.js';
-import '../../components/search/autocomplete/autocomplete.js';
+import Awesomplete from 'awesomplete';

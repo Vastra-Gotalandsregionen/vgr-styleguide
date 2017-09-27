@@ -9,7 +9,7 @@
 
 .awesomplete {
   display: flex;
-  width: 100%;
+  flex: 1;
   position: relative;
 }
 
@@ -75,15 +75,15 @@ text-shadow: none;
   color: white;
 }
 
-  .awesomplete mark {
-    background: hsl(65, 100%, 50%);
-  }
+.awesomplete mark {
+  background: hsl(65, 100%, 50%);
+}
 
-  .awesomplete li:hover mark {
-    background: hsl(68, 100%, 41%);
-  }
+.awesomplete li:hover mark {
+  background: hsl(68, 100%, 41%);
+}
 
-  .awesomplete li[aria-selected="true"] mark {
-    background: hsl(86, 100%, 21%);
-    color: inherit;
-  }
+.awesomplete li[aria-selected="true"] mark {
+  background: hsl(86, 100%, 21%);
+  color: inherit;
+}

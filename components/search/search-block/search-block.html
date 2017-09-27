@@ -1,4 +1,4 @@
-<div class="vgr-block vgr-block__search">
+<div class="vgr-block vgr-block__search" data-module="autocomplete">
   <div class="vgr-block__container">
     <div class="vgr-block__header">
       <h2 class="vgr-block__header-heading">
@@ -10,7 +10,7 @@
       <form action="/" class="vgr-block__search-form">
         <label class="vgr-block__search-label" for="q">{{ label }}</label>
         <div class="vgr-block__search-box">
-          <input class="vgr-block__search-input" type="search" id="q" value="">
+          <input class="vgr-block__search-input" type="search" id="q" value="" data-type="ajax" data-url="http://akademssr.whitespace.work/autosuggest/">
           <button class="vgr-button vgr-button--primary vgr-block__search-button">{{ button }}</button>
         </div>
       </form>
