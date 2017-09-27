@@ -1,4 +1,4 @@
-.vgr-autocomplete {
+.vgr-quick-search {
 
   $link-color: $theme-color;
 
@@ -12,7 +12,7 @@
       a#{&} {
         color: $text-color;
 
-        .vgr-autocomplete__headline {
+        .vgr-quick-search__headline {
           color: $link-color;
         }
 
@@ -21,7 +21,7 @@
           background: $link-color;
           color: #fff;
 
-          .vgr-autocomplete__headline,
+          .vgr-quick-search__headline,
           mark {
             color: #fff;
           }
@@ -71,24 +71,24 @@
 }
 
 // Aligned
-.vgr-autocomplete__item--aligned {
-  .vgr-autocomplete__inline-list {
+.vgr-quick-search__item--aligned {
+  .vgr-quick-search__inline-list {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .vgr-autocomplete__inline-list-item {
+  .vgr-quick-search__inline-list-item {
     flex: 1 0 auto;
   }
 }
 
 
 // Photo
-.vgr-autocomplete__item--photo {
+.vgr-quick-search__item--photo {
   display: flex;
 }
 
-.vgr-autocomplete__item-img {
+.vgr-quick-search__item-img {
   margin-right: .5rem;
   display: none;
   border-radius: .25rem;

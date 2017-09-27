@@ -43,15 +43,16 @@
 @import "components/forms/forms";
 @import "components/toggle/toggle";
 
-// Beställar ID
-// ==========================================================================
-@import "components/search/autocomplete/autocomplete";
-@import "components/search/autocomplete/awesomplete";
-@import "components/search/search-block/search-block";
-@import "components/search/search-autocomplete-item/search-autocomplete-item";
-@import "components/search/search-autocomplete-more/search-autocomplete-more";
-
 /* Templates
    ========================================================================== */
 @import "components/scoped/search/search-card/search-card";
 @import "components/templates/hitta/hitta";
+
+
+// Quick Search
+// ==========================================================================
+@import "components/search/quick-search/quick-search";
+@import "components/search/quick-search/awesomplete";
+@import "components/search/search-block/search-block";
+@import "components/search/quick-search-item/quick-search-item";
+@import "components/search/quick-search-more/quick-search-more";
