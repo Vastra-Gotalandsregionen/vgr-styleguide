@@ -2,7 +2,7 @@ import Awesomplete from 'awesomplete'
 
 export default class quicksearch {
   constructor(element) {
-    this.inputElement = element.querySelector('.vgr-block__search-input')
+    this.inputElement = element.querySelector('input[type=search]')
 
     this.templateElement = element.querySelector('div[data-id="template"]')
     if(!this.templateElement) return false;
