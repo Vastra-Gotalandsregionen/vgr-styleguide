@@ -2,9 +2,9 @@
   <ul class="vgr-quick-search-list">
     {% for item in items %}
     <li class="vgr-quick-search-list-item">
-       {% render "@search-quick-search-item--linked", item.itemData, true %}
+       {% render "@quick-search-item--linked", item.itemData, true %}
     </li>
     {% endfor %}
   </ul>
-  {% render "@search-quick-search-more" %}
+  {% render "@quick-search-more" %}
 </div>
