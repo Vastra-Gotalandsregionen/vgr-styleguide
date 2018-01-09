@@ -1,0 +1,60 @@
+{
+  "collated": true,
+  "title": "File links with meta data",
+  "status": "ready",
+  "context": {
+    "url": "/",
+    "modifier": "pdf",
+    "label": "filstorlek",
+    "text": "1",
+    "suffix": "MB",
+    "abbreviation": "megabyte"
+  },
+  "variants": [
+    {
+      "name": "doc",
+      "context": {
+        "modifier": "doc",
+        "text": "125",
+        "suffix": "kB",
+        "abbreviation": "kilobyte"
+      }
+    },
+    {
+      "name": "xls",
+      "context": {
+        "modifier": "xls",
+        "text": "10",
+        "suffix": "MB",
+        "abbreviation": "megabyte"
+      }
+    },
+    {
+      "name": "zip",
+      "context": {
+        "modifier": "zip",
+        "text": "2",
+        "suffix": "GB",
+        "abbreviation": "gigabyte"
+      }
+    },
+    {
+      "name": "image",
+      "context": {
+        "modifier": "image",
+        "text": "1024",
+        "suffix": "kB",
+        "abbreviation": "kilobyte"
+      }
+    },
+    {
+      "name": "sound",
+      "context": {
+        "modifier": "sound",
+        "text": "3",
+        "suffix": "MB",
+        "abbreviation": "megabyte"
+      }
+    }
+  ]
+}

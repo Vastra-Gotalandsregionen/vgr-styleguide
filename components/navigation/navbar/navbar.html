@@ -1,0 +1,21 @@
+<nav class="vgr-navbar" role="navigation">
+  <div class="vgr-container">
+    <div class="vgr-row">
+      <div class="col-xs-12 col-md-10 col-lg-8 vgr-centered">
+        <ul class="vgr-navbar__list vgr-unstyled-list">
+          {% for item in items %}
+            {% if item.current %}
+              <li class="vgr-navbar__list-item vgr-navbar__list-item--current">
+                <a href="{{ item.url }}" class="vgr-navbar__list-link" aria-current="page">{{ item.text }}</a>
+              </li>
+            {% else %}
+            <li class="vgr-navbar__list-item">
+              <a href="{{ item.url }}" class="vgr-navbar__list-link">{{ item.text }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

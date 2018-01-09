@@ -1,0 +1,31 @@
+{
+  "collated": true,
+  "title": "Aligment",
+  "status": "ready",
+  "context": {
+    "modifier": "left",
+    "data": {
+      "class": "vgr-align-left"
+    }
+  },
+  "variants": [
+    {
+      "name": "center",
+      "context": {
+        "modifier": "center",
+        "data": {
+          "class": "vgr-align-center"
+        }
+      }
+    },
+    {
+      "name": "right",
+      "context": {
+        "modifier": "right",
+        "data": {
+          "class": "vgr-align-right"
+        }
+      }
+    }
+  ]
+}

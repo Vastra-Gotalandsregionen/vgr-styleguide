@@ -1,0 +1,109 @@
+{
+  "root": {
+    "path": "../../",
+    "src": "assets",
+    "dest": "build",
+    "production": "production"
+  },
+  "production" : {
+    "rev": true
+  },
+  "fractal": {
+    "project": {
+      "title": "VGR Styleguide"
+    },
+    "templateEngine": "nunjucks",
+    "templateSettings":{},
+    "templateExtension": ".html",
+    "path": {
+      "components": "components",
+      "docs": "docs",
+      "static": "build"
+    },
+    "syncOptions": {
+     "open": true,
+     "notify": true
+    },
+    "themeSettings": {
+      "nav": ["docs", "components"],
+      "favicon": "assets/static/favicon.ico",
+      "lang": "en",
+      "styles": ["/theme/css/fractal.css"]
+    },
+    "templateOverride": "/_fractal/views"
+  },
+  "assets": {
+    "assetTasks": ["fonts", "icons", "images"],
+    "codeTasks": ["css", "js"],
+    "dest": "assets"
+  },
+  "tasks": {
+    "css": {
+      "src": ["assets/scss", "components"],
+      "dest": "css",
+      "autoprefixer": {
+        "browsers": ["last 3 versions"]
+      },
+      "sass": {
+        "indentedSyntax": false,
+        "outputStyle": "compressed"
+      },
+      "extensions": ["sass", "scss", "css"]
+    },
+    "fonts": {
+      "src": "fonts",
+      "dest": "fonts",
+      "extensions": ["woff2", "woff", "eot", "ttf", "svg"]
+    },
+    "icons": {
+      "src": "icons",
+      "dest": "icons",
+      "extensions": ["*"],
+      "config": {
+        "shape": {
+          "dest": "../icons",
+          "dimension": {
+            "maxWidth": 32,
+            "maxHeight": 32
+          }
+        },
+        "mode": {
+          "symbol": {
+            "dest": "../icons/sprite",
+            "sprite": "icons.svg",
+            "example": false,
+            "scss" : true
+          }
+        }
+      }
+    },
+    "images": {
+      "src": "img",
+      "dest": "img",
+      "extensions": ["jpg", "png", "svg", "gif"]
+    },
+    "js": {
+      "src": "js",
+      "dest": "js",
+      "entries": {
+        "app": ["./site.js"]
+      },
+      "extensions": ["js", "json"],
+      "babel": {
+        "presets": ["es2015", "stage-1"],
+        "plugins": []
+      },
+      "extractSharedJs": false
+    },
+    "static": {
+      "src": "static",
+      "dest": "./",
+      "extensions": ["*"]
+    },
+    "temp": {
+      "src": "temp",
+      "dest": "temp",
+      "extensions": ["*"]
+    }
+  }
+}

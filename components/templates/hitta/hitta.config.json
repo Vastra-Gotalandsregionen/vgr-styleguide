@@ -1,0 +1,128 @@
+{
+  "title": "Hitta",
+  "status": "prototype",
+  "context": {
+    "searchItems": "1490",
+    "didYouMean": "evelyn.stolfer@vgregion.se",
+    "person": [
+      {
+        "headline": "12Lorem ipsum",
+        "title": "1213131Applikationsspecialist",
+        "expandable": true
+      }
+    ],
+    "searchResults":[
+      {
+        "resultList": {
+          "headline": "Pressmeddelanden - Västra Götalandsregionen",
+          "modifier": "panel",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionens webbplats",
+          "excerpt": "Lorem <mark>Evelyn</mark> ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Maria C. Webre",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Global Assurance Facilitator",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Internal Communications Architect",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Corporate Program Consultant",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Forward Applications Manager",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Senior Paradigm Designer",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Global Optimization Agent",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Direct Intranet Executive",
+          "url": "/",
+          "datetime": "2015-08-19",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      },
+      {
+        "resultList": {
+          "headline": "Dynamic Configuration Assistant",
+          "url": "/",
+          "datetime": "2017-01-12",
+          "date": "19 augusti 2015",
+          "modifier": "default",
+          "source": "Västra Götalandsregionen",
+          "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        }
+      }
+    ]
+  }
+}

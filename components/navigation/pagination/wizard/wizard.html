@@ -1,0 +1,16 @@
+<p id="{{ id }}" class="vgr-visually-hidden">{{ label }}</p>
+<ol class="vgr-wizardstep" aria-labelledby="{{ id }}">
+  {% for item in items %}
+    {% if item.done %}
+    <li class="vgr-wizardstep__item" aria-label="{{ labelDone }}">
+      <a href="{{ item.url }}">{{ item.label }}</a>
+    {% elif item.active %}
+    <li class="vgr-wizardstep__item vgr-wizardstep__item--active" aria-label="{{ labelActive }}">
+      <div>{{ item.label }}</div>
+    {% else %}
+    <li class="vgr-wizardstep__item vgr-wizardstep__item--inactive">
+      <div>{{ item.label }}</div>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ol>

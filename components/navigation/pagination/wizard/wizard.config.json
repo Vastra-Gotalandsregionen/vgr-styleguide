@@ -1,0 +1,34 @@
+{
+  "title": "Wizard Step",
+  "status": "prototype",
+  "context": {
+    "label": "Du är här:",
+    "id": "wizardlabel",
+    "labelDone": "Avklarat steg:",
+    "labelActive": "Nuvarande steg",
+    "items":[
+      {
+        "done": true,
+        "label": "Sök tid",
+        "url": "/"
+      },
+      {
+        "active": true,
+        "label": "Välj tid",
+        "url": "/"
+      },
+      {
+        "label": "Personuppgifter",
+        "url": "/"
+      },
+      {
+        "label": "Kontrollera",
+        "url": "/"
+      },
+      {
+        "label": "Bekräftelse",
+        "url": "/"
+      }
+    ]
+  }
+}

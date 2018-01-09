@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Elements Links
+   ========================================================================== */
+
+a {
+  background-color: transparent;
+  color: $link-color;
+  transition: outline .1s ease-in-out;
+  -webkit-text-decoration-skip: objects;
+
+  &:hover {
+    color: $link-active-color;
+    text-decoration: none;
+  }
+}
+
+:focus {
+  outline: 4px solid $link-focus-color;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    a::after {
+      content:" (" attr(href) ") ";
+      font-size: 75%;
+    }
+  }
+}
+
+/* New window message when using target blank */
+[lang=sv] a[target="_blank"]::after {
+  content: " (nytt fönster)";
+
+  @media print {
+    display: none;
+  }
+}
+
+[lang=en] a[target="_blank"]::after {
+  content: " (new window)";
+
+  @media print {
+    display: none;
+  }
+}

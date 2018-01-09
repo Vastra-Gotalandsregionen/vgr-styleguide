@@ -1,0 +1,8 @@
+/* Clearfix
+ * Include in your CSS using `@extend .clearfix;` or use in your HTML using the
+ * class `vgr-clearfix`
+ */
+
+.vgr-clearfix {
+  @include clearfix;
+}

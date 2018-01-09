@@ -1,0 +1,11 @@
+<footer class="vgr-footer" role="contentinfo">
+  <div class="vgr-container vgr-clearfix">
+    <div class="vgr-row">
+      {% for item in items %}
+      <div class="col-md-4">
+          {% render "@block", item.blockData, true %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</footer>

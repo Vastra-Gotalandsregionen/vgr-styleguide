@@ -1,0 +1,16 @@
+{
+  "name": "vgr",
+  "version": "2.0.0",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "flightplan": "^0.6.14",
+    "gulp": "^3.9.1",
+    "spacecraft": "git+ssh://git@bitbucket.org:whitespace_se/spacecraft.git#0.2.6",
+    "what-input": "^5.0.2"
+  },
+  "dependencies": {
+    "awesomplete": "^1.1.2"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Breadcrumbs",
+  "status": "ready",
+  "context": {
+    "label": "Du är här:",
+    "id": "breadcrumblabel",
+    "items":[
+      {
+        "text": "Startsida",
+        "url": "/"
+      },
+      {
+        "text": "Om oss",
+        "url": "/"
+      },
+      {
+        "text": "Organisation",
+        "url": "/"
+      },
+            {
+        "text": "Koncernkontoret",
+        "url": "/"
+      },
+      {
+        "text": "Ekonomi",
+        "url": "/"
+      },
+      {
+        "text": "Budget"
+      }
+    ]
+  }
+}

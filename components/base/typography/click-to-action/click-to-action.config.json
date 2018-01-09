@@ -1,0 +1,11 @@
+{
+  "title": "Click to Action Link",
+  "status": "prototype",
+  "context": {
+    "title": "A click to action link",
+    "url": "/",
+    "iconData": {
+      "id": "arrow-forward"
+    }
+  }
+}

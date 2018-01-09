@@ -1,0 +1,20 @@
+$vgr-skip-link-color: $color-white;
+$vgr-skip-link-background: $theme-color-darkest;
+
+.vgr-skip-link {
+  position: absolute;
+  top: -5rem;
+  z-index: $level-top;
+  display: inline-block;
+  margin-left: .625rem;
+  padding: .5rem 1.5rem;
+  background: $vgr-skip-link-background;
+  box-shadow: .125rem .125rem 1rem rgba($vgr-skip-link-background, .5);
+  color: $vgr-skip-link-color;
+  text-decoration: none;
+  transition: top .3s ease-in-out;
+
+  &:focus {
+    top: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+/* ==========================================================================
+   Settings Typography
+   ========================================================================== */
+
+/* Sizes */
+$base-font-size: 100% !default; /* 16px */
+$base-line-height: 150% !default; /* 24px */
+$leading: $base-line-height * 1rem !default;
+$base-font-weight: 400 !default;
+
+$large-font-size: 1.125rem !default; /* 18px */
+$medium-font-size: .9375rem !default; /* 15px */
+$small-font-size: 87.5% !default; /* 14px */
+$smallest-font-size: .8125rem !default; /* 13px */
+
+$h1: $base-font-size * 2.25;
+$h2: $base-font-size * 1.75;
+$h3: $base-font-size * 1.5;
+$h4: $base-font-size * 1.25;
+$h5: $base-font-size * 1.125;
+$h6: $base-font-size;

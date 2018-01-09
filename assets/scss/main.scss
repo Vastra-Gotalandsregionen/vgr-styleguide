@@ -1,0 +1,58 @@
+/*! vgr-styleguide | MIT License */
+
+/* Basic styles
+   ========================================================================== */
+
+@import "settings/settings.main";        // Global variables and site wide settings
+@import "tools/tools.main";              // Global functions and mixins
+@import "generic/generic.main";          // Low-specificity, far-reaching rulesets
+@import "elements/elements.main";        // Unclassed HTML elements
+@import "objects/objects.main";          // Design-free objects, abstractions and patterns
+@import "utilities/utilities.main";      // Helper classes and overrides
+@import "components/components.main";    // Components and widgets
+
+@import "components/base/alerts/alerts";
+
+/* Global Components styles
+   ========================================================================== */
+
+/* Navigation */
+@import "components/navigation/breadcrumbs/breadcrumbs";
+@import "components/navigation/navbar/navbar";
+@import "components/navigation/pagination/standard-pagination/standard-pagination";
+@import "components/navigation/pagination/wizard/wizard";
+@import "components/navigation/primary-navigation/primary-navigation";
+@import "components/navigation/secondary-navigation/secondary-navigation";
+@import "components/navigation/tabbar/tabbar";
+
+/* Global Components styles
+   ========================================================================== */
+
+@import "components/cookie-consent/cookie-consent";
+@import "components/header/header";
+@import "components/footer/footer";
+
+/* Common Components styles
+   ========================================================================== */
+@import "components/base/button/button";
+@import "components/base/logo/logo";
+@import "components/block/block";
+@import "components/base/badge/badge";
+@import "components/share-links/share-links";
+@import "components/skip-link/skip-link";
+@import "components/forms/forms";
+@import "components/toggle/toggle";
+
+/* Templates
+   ========================================================================== */
+@import "components/scoped/search/search-card/search-card";
+@import "components/templates/hitta/hitta";
+
+
+// Quick Search
+// ==========================================================================
+@import "components/search/quick-search/quick-search";
+@import "components/search/quick-search/awesomplete";
+@import "components/search/search-block/search-block";
+@import "components/search/quick-search-item/quick-search-item";
+@import "components/search/quick-search-more/quick-search-more";

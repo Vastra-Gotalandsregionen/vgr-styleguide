@@ -1,0 +1,43 @@
+{
+  "title": "Search List",
+  "status": "ready",
+  "context": {
+    "items":[
+      {
+        "headline": "Lorem ipsum",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "20 augusti 2015",
+        "source": "Västra Götalandsregionen",
+        "modifier": "panel",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+      },
+      {
+        "headline": "Lorem ipsum 2",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "21 augusti 2015",
+        "source": "Skaraborgs Sjukhus",
+        "modifier": "person",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+      },
+      {
+        "modifier": "person",
+        "bestbet": true,
+        "title": "Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landline": "010 - 473 75 77",
+        "mobile": "0702 - 96 67 99"
+      },
+      {
+        "modifier": "person",
+        "title": "Ys Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landline": "010 - 473 75 77",
+        "mobile": "0702 - 96 67 99"
+      }
+    ]
+  }
+}

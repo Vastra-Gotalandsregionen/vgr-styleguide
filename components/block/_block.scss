@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Components Block
+   ========================================================================== */
+
+.vgr-block {
+  float: left;
+  box-sizing: border-box;
+  flex: none;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
+
+  &__container {
+    word-wrap: break-word;
+    font-size: $small-font-size;
+    font-family: $secondary-font-stack;
+    line-height: 1.4;
+    margin-bottom: $gutter;
+  }
+
+  &__container {
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+
+  &__header {
+    position: relative;
+    padding: .7rem 1rem;
+    border-bottom: 2px solid #005c95;
+  }
+
+  &__header-heading {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  &__image-container {
+
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  .vgr-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    vertical-align: middle;
+  }
+}
+
+.vgr-block--teaser,
+.vgr-block--teaser-linked {
+
+  .vgr-block__text {
+    color: #494746;
+    padding: .7rem 1rem;
+  }
+}
+
+.vgr-block__list-container {
+
+  .vgr-block__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .vgr-block__list-item {
+    padding: .7rem 1rem;
+
+    p {
+      margin-top: .3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .vgr-block__list-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+}

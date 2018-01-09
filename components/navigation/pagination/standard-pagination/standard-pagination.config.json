@@ -1,0 +1,31 @@
+{
+  "title": "Standard Pagination",
+  "labelId": "paginglabel",
+  "status": "prototype",
+  "context": {
+    "items":[
+      {
+        "done": true,
+        "label": "Sök tid",
+        "url": "/"
+      },
+      {
+        "active": true,
+        "label": "Välj tid",
+        "url": "/"
+      },
+      {
+        "label": "Personuppgifter",
+        "url": "/"
+      },
+      {
+        "label": "Kontrollera",
+        "url": "/"
+      },
+      {
+        "label": "Bekräftelse",
+        "url": "/"
+      }
+    ]
+  }
+}

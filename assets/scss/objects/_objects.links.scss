@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Objects Links
+   ========================================================================== */
+
+[data-smart-links=true] a::before,
+.vgr-link::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  background-size: 1rem 1rem;
+  background-position: 0 50%;
+  display: inline-block;
+  vertical-align: text-bottom;
+  padding-right: .25em;
+  background-repeat: no-repeat;
+  line-height: inherit;
+
+  @media print {
+    display: none;
+  }
+}
+
+/* PDF */
+[data-smart-links=true] [href$=".pdf"]::before,
+.vgr-link--pdf::before {
+  background-image: url(../icons/file-type--pdf.svg);
+}
+
+/* Word */
+[data-smart-links=true] [href$=".doc"]::before,
+.vgr-link--doc::before {
+  background-image: url(../icons/file-type--word.svg);
+}
+
+/* Excel */
+[data-smart-links=true] [href$=".xls"]::before,
+.vgr-link--xls::before {
+  background-image: url(../icons/file-type--excel.svg);
+}
+
+/* Powerpoint */
+[data-smart-links=true] [href$=".ppt"]::before,
+.vgr-link--ppt::before {
+  background-image: url(../icons/file-type--powerpoint.svg);
+}
+
+/* Archive */
+[data-smart-links=true] [href$=".zip"]::before,
+.vgr-link--zip::before {
+  background-image: url(../icons/file-type--zip.svg);
+}
+
+/* Mailto */
+[data-smart-links=true] [href$="mailto:"]::before,
+.vgr-link--mail::before {
+  background-image: url(../icons/file-type--mail.svg);
+}
+
+/* Tel */
+[data-smart-links=true] [href$="tel:"]::before,
+.vgr-link--phone::before {
+  background-image: url(../icons/file-type--phone.svg);
+}
+
+/* Video */
+.vgr-link--video::before {
+  background-image: url(../icons/file-type--video.svg);
+}
+
+/* Image */
+.vgr-link--image::before {
+  background-image: url(../icons/file-type--image.svg);
+}
+
+/* Sound */
+.vgr-link--sound::before {
+  background-image: url(../icons/file-type--sound.svg);
+}
+
+
+/* What input */
+[data-whatintent="mouse"] *:focus {
+  outline: none;
+}

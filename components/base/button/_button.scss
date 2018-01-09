@@ -1,0 +1,76 @@
+.vgr-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: .4rem 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  font-family: Helvetica,Arial,sans-serif;
+  line-height: 150%;
+  cursor: pointer;
+
+  .vgr-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: inherit;
+    box-shadow: inherit;
+    color: $color-gray-100;
+  }
+
+  &[disabled] {
+    background-color: $color-gray-100;
+    background-image: none;
+    color: $color-black;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray-100;
+      box-shadow: none;
+      color: $color-black;
+    }
+  }
+
+  &--primary {
+    border-color: #4ab31f;
+    border-bottom-color: #075d2d;
+    background-color: #13aa55;
+    background-image: linear-gradient(to bottom,#4ab31f 0,#39791f 100%);
+    color: $color-white;
+  }
+}
+
+.vgr-button--subtle {
+  padding: 10px 16px 12px;
+  border: solid 1px $color-gray-lighter;
+  border-radius: 2px;
+  background: $color-gray-100;
+  background-image: linear-gradient(to bottom,$color-gray-100 0%,lighten($color-gray-lighter, 5%) 100%);
+  color: #2d2d2d;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .8125em;
+  transition: all .1s linear;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:active {
+    color: #2d2d2d;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: #c6c6c6;
+    background-image: linear-gradient(to bottom,#f8f8f8 0%,#f1f1f1 100%);
+    box-shadow: 0 1px 3px rgba(0,0,0,.15);
+    color: #2d2d2d;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "collated": true,
+  "title": "Share Links",
+  "status": "prototype",
+  "context": {
+    "label": "Dela sidan via:",
+    "id": "sharelabel",
+    "items":[
+      {
+        "url": "/",
+        "modifier": "facebook",
+        "labelText": "Facebook"
+      },
+      {
+        "url": "/",
+        "modifier": "twitter",
+        "labelText": "Twitter"
+      },
+      {
+        "url": "/",
+        "modifier": "linkedin",
+        "labelText": "Linkedin"
+      },
+      {
+        "url": "/",
+        "modifier": "google",
+        "labelText": "Google+"
+      },
+      {
+        "url": "/",
+        "modifier": "pinterest",
+        "labelText": "Pinterest"
+      },
+      {
+        "url": "/",
+        "modifier": "email",
+        "labelText": "E-post"
+      },
+      {
+        "url": "/",
+        "modifier": "print",
+        "labelText": "Skriv ut"
+      }
+    ]
+  }
+}

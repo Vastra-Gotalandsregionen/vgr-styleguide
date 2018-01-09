@@ -1,0 +1,63 @@
+.vgr-alert {
+  padding: $default-whitespace;
+  font-family: $secondary-font-stack;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a {
+    color: inherit;
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  &__description {
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--default {
+    background-color: $color-success;
+    color: darken($color-success, 60%);
+  }
+
+  &--success {
+    background-color: $color-success;
+    color: darken($color-success, 60%);
+  }
+
+  &--warning {
+    background-color: $color-warning;
+    color: darken($color-warning, 70%);
+  }
+
+  &--error {
+    background-color: $color-error;
+    color: darken($color-error, 60%);
+  }
+
+  &--info {
+    background-color: $color-info;
+    color: darken($color-info, 60%);
+  }
+
+  &__icon {
+    margin-right: $default-whitespace;
+    fill: currentColor;
+  }
+
+  .vgr-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}

@@ -1,0 +1,23 @@
+<nav role="navigation" class="vgr-secondary-navigation" aria-labelledby="secondary-navigation-title">
+  <div class="vgr-secondary-navigation__header">
+    <a href="{{ url }}" id="secondary-navigation-title" class="vgr-secondary-navigation__header-title">{{ title }}</a>
+  </div>
+  <div class="vgr-secondary-navigation__content">
+    <ul>
+      {% for item in items %}
+        <li>
+          <a href="{{ item.url }}"{% if item.selected %} data-selected{% if item.items %} data-isexpanded{% endif %}{% else %}{% if item.items %} data-haschildren{% endif %}{% endif %}>{{ item.title }}</a>
+          {% if item.selected and item.items %}
+            <ul>
+            {% for item2 in item.items %}
+              <li>
+                <a href="{{ item2.url }}">{{ item2.title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

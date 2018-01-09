@@ -1,0 +1,17 @@
+/* Visually Hidden
+ * Include in your CSS using `@extend .visually-hidden;` or use in your HTML
+ * using the class `vgr-visually-hidden`
+ */
+
+.vgr-visually-hidden {
+  @include visually-hidden;
+}
+
+/* Visually Hidden Focusable
+ * Include in your CSS using `@extend .visually-hidden--focusable;` or use in your HTML
+ * using the class `vgr-visually-hidden--focusable`
+ */
+
+.vgr-visually-hidden--focusable {
+  @include visually-hidden--focusable;
+}

@@ -1,0 +1,41 @@
+<div class="fractal--icons">
+  {% for icon in icons %}
+    <div class="fractal--icon-example">
+      <div class="fractal--icon-wrapper">
+        <svg class="vgr-icon" width="32" height="32" {% if iconLabel %} aria-label="{{ iconLabel }}"{% endif %}><use xlink:href="/icons/sprite/icons.svg#{{ icon.id }}"></use></svg>
+      </div>
+      <div class="fractal--icon-name">{{ icon.id }}</div>
+    </div>
+  {% endfor %}
+</div>
+
+<style>
+  .fractal--icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .fractal--icon-example {
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    min-width: 8rem;
+    margin: 1rem;
+  }
+  .fractal--icon-wrapper {
+    padding: 1rem;
+  }
+  .fractal--icon-wrapper .vgr-icon {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .fractal--icon-name {
+    display: block;
+    padding: 0 4px 4px;
+    border-top: 1px solid #eee;
+    text-align: center;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+</style>

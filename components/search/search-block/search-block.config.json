@@ -1,0 +1,9 @@
+{
+  "label": "Search Block with Quick Search",
+  "notes": "Test using *eve* or *366*",
+  "context": {
+    "title": "Sök",
+    "label": "Etikett",
+    "button": "Sök"
+  }
+}

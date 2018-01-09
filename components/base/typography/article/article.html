@@ -1,0 +1,30 @@
+<article class="article article--{{ modifier }}" role="article">
+  <h1 class="article__headline">{{ title }}</h1>
+
+  {% if pubdate %}
+  <div class="article__byline">
+    <time class="article__date" datetime="{{ pubdate }}">{{ pubdate }}</time>
+  </div>
+  {% endif %}
+
+  {% if lead %}
+  <div class="article__lead">
+    <p>
+    {% if category %}<b class="article__category">{{ category }}</b>{% endif %}
+    {{ lead }}</p>
+  </div>
+  {% endif %}
+
+  {% if body %}
+  <div class="article__body">
+    {{ body }}
+  </div>
+  {% endif %}
+
+  {% if articleMeta %}
+    {% render "@article-meta", articleMeta %}
+  {% endif %}
+
+
+
+</article>

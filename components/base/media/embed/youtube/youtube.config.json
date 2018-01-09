@@ -1,0 +1,10 @@
+{
+  "title": "Youtube",
+  "status": "ready",
+  "context": {
+    "embedUrl": "https://www.youtube.com/embed/YE7VzlLtp-4",
+    "title": "Video från YouTube",
+    "width": "560",
+    "height": "315"
+  }
+}

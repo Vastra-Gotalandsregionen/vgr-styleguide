@@ -1,0 +1,22 @@
+/* ==========================================================================
+   Objects Grid Wrappers
+   ========================================================================== */
+
+.vgr-container {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $gutter-width;
+  padding-left: $gutter-width;
+  max-width: $max-width;
+}
+
+.vgr-row {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  margin-right: -$gutter-width;
+  margin-left: -$gutter-width;
+  flex: none;
+  flex-wrap: wrap;
+}

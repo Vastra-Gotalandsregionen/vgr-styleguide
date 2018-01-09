@@ -1,0 +1,83 @@
+{
+  "title": "Block",
+  "status": "prototype",
+  "context": {
+    "title": "Standard Block",
+    "modifier": "default",
+    "title": "Title",
+    "icon": "ikon",
+    "text": "Folktandvården Västra Götaland finns i länets alla 49 kommuner och har 156 kliniker inom allmän- och specialisttandvård. Vi tar emot både vuxna och barn."
+  },
+  "variants": [
+    {
+      "name": "Contact",
+      "context": {
+        "modifier": "contact",
+        "title": "Monica Ögren",
+        "subtitle": "Ledning, köks- och måltidsarbete"
+      }
+    },
+    {
+      "name": "Teaser",
+      "context": {
+        "modifier": "teaser",
+        "title": "Sök till våra kurser",
+        "text": "På Grebbestads folkhögskola har vi många olika kurser att välja bland!",
+        "image": "/temp/block-image.jpg",
+        "imageAlt": "Alternative text"
+      }
+    },
+    {
+      "name": "Teaser Block Linked",
+      "context": {
+        "modifier": "teaser-linked",
+        "icon": false,
+        "iconData": {
+          "id": "content-paste"
+        },
+        "title": "Sök till våra kurser",
+        "text": "På Grebbestads folkhögskola har vi många olika kurser att välja bland!",
+        "image": "/temp/block-image.jpg",
+        "imageAlt": "Alternative text"
+      }
+    },
+    {
+      "name": "List",
+      "context": {
+        "title": "Aktuellt",
+        "icon": true,
+        "iconData": {
+          "id": "content-paste"
+        },
+        "modifier": "list",
+        "list": [
+          {
+            "url": "/",
+            "linkText": "Fåtal platser kvar!",
+            "description": "Vi har nu endast ett fåtal platser kvar på vår fina sommarkurs i silversmide. Passa på att söka!"
+          },
+          {
+            "url": "/",
+            "linkText": "Sommarkurser släppta för sommaren 2017",
+            "description": "Välkommen att söka till sommarens kurser!"
+          },
+          {
+            "url": "/",
+            "linkText": "Öppet hus",
+            "description": "Lördag 8 april 2017"
+          },
+          {
+            "url": "/",
+            "linkText": "Ny distanskurs i textil",
+            "description": "Välkommen till distanskurs med LIN-garner på Grebbestads folkhögskola."
+          },
+          {
+            "url": "/",
+            "linkText": "Vad är en folkhögskola",
+            "description": "En film om folkhögskolan"
+          }
+        ]
+      }
+    }
+  ]
+}

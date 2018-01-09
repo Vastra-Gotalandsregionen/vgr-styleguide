@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Objects - Typography Subhead
+   ========================================================================== */
+
+.vgr-subhead {
+  margin: 0 0 1.25rem;
+  color: lighten($text-color, 20%);
+  font-size: 1.1rem;
+  font-family: $secondary-font-stack;
+  line-height: $base-line-height;
+  font-weight: 400;
+}
+
+h1 + .subhead {
+  margin-top: -.625rem;
+}

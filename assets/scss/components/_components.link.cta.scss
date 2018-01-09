@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Component CTA Link
+   ========================================================================== */
+
+.vgr-link--cta[href] {
+  display: flex;
+  margin: 2rem 0 .5rem;
+  padding: 1rem;
+  border-width: 1px 1px 1px 4px;
+  border-style: solid;
+  border-color: rgba(0,0,0,.05) rgba(0,0,0,.07) rgba(0,0,0,.1) $theme-color;
+  background: $color-white;
+  background-position: calc(100% - 14px) 50%;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  box-shadow: rgba(0,0,0,.03) 0 2px 2px 0;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  justify-content: space-between;
+  align-items: center;
+
+  &:before {
+    display: none;
+  }
+
+  .vgr-icon {
+    width: 1rem;
+    height: 1rem;
+    transition: margin .2s ease-in-out;
+    fill: currentColor;
+  }
+
+  &:hover {
+    background-color: rgba($color-gray-100, .5);
+    background-position: calc(100% - 10px) 50%;
+    text-decoration: none;
+
+    .vgr-icon {
+      margin-right: -.2rem;
+    }
+  }
+}

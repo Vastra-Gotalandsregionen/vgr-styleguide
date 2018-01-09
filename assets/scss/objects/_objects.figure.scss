@@ -1,0 +1,16 @@
+.vgr-figure {
+  display: table;
+  margin: 0;
+
+  > img {
+    display: block;
+  }
+
+  > figcaption {
+    display: table-caption;
+    padding: 1rem;
+    background: $color-gray-light;
+    caption-side: bottom;
+    font-family: $secondary-font-stack;
+  }
+}

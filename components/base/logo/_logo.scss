@@ -1,0 +1,45 @@
+.vgr-logo {
+  display: flex;
+  margin-bottom: .5rem;
+  justify-content: center;
+
+  @media screen and (min-width: $small) {
+
+    svg {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 13.625rem;
+      height: 2.8125rem;
+    }
+  }
+
+  @media screen and (min-width: $medium) {
+
+    svg {
+      width: 18.75rem;
+      height: 3.75rem;
+    }
+  }
+
+  /* Size */
+  &--large {
+
+    svg {
+      width: 13.75rem;
+      height: 2.8125rem;
+    }
+  }
+
+  /* Position */
+  &--center {
+    justify-content: center;
+  }
+
+  &--start {
+    justify-content: flex-start;
+  }
+
+  &--end {
+    justify-content: flex-end;
+  }
+}

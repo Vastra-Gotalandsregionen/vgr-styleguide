@@ -1,0 +1,46 @@
+.vgr-pagination {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 444px) {
+    justify-content: center;
+  }
+
+  &__item {
+    @media (max-width: 444px) {
+      margin: 0 5px 10px;
+    }
+
+    &--num {
+      @media (max-width: 444px) {
+        order: 1;
+      }
+    }
+
+    &--active {
+      > a {
+        box-shadow: inset 0 -2px 0 #FF9400;
+      }
+    }
+  }
+
+  &__form {
+    align-items: center;
+  }
+
+  &__numinput {
+    align-self: stretch;
+    width: 4.5rem;
+  }
+
+  &__text {
+    margin: 0 5px;
+    flex-shrink: 0;
+    font-size: .8rem;
+  }
+}

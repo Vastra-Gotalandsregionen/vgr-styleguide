@@ -1,0 +1,115 @@
+<article class="article article--{{ modifier }}" role="article">
+  <h1 class="article__headline">{{ title }}</h1>
+
+  {% if pubdate %}
+  <div class="article__byline">
+    <time class="article__date" datetime="{{ pubdate }}">{{ pubdate }}</time>
+  </div>
+  {% endif %}
+
+  {% if lead %}
+  <div class="article__lead">
+    <p>
+    {% if category %}<b class="article__category">{{ category }}</b>{% endif %}
+    {{ lead }}</p>
+  </div>
+  {% endif %}
+
+  <div class="article__body">
+    <h2>Heading 2 Lorem Ipsum Dolor Sit Amet Consectetur</h2>
+    <p>A paragraph (from the Greek paragraphos, “to write beside” or “written beside”) is a self-contained unit of a discourse in writing dealing with a particular point or idea. A paragraph consists of one or more sentences. Though not required by the syntax of any language, paragraphs are usually an expected part of formal writing, used to organize longer prose.</p>
+    <h3>Heading 3 Lorem Ipsum Dolor Sit Amet Consectetur</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+    <h4>Heading 4 Lorem Ipsum Dolor Sit Amet Consectetur</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+    <h5>Heading 5 Lorem Ipsum Dolor Sit Amet Consectetur</h5>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+    <h6>Heading 6 Lorem Ipsum Dolor Sit Amet Consectetur</h6>
+    <p>Lorem ipsum dolor sit amet, <a href="/">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+
+    <hr>
+
+    <h2>Blockquote</h2>
+    <blockquote>
+    <p>The power of the web is in its universality. Access by everyone regardless of disability is an essential aspect.</p>
+    <footer><cite>Tim Berners-Lee</cite></footer>
+    </blockquote>
+
+    <hr>
+
+    <h2>Links</h2>
+    <p>An <a href="?=1481112567474" class="prototype-random">unvisited link</a> and a <a href="">visited link</a>.</p>
+    <p>An <a href="?=1481112567474" class="prototype-random" target="_blank">external link</a> and another <a href="/" target="_blank" aria-label="opens in a new window">external link</a>.</p>
+    <p>A <a href="temp/test.pdf">link to a PDF</a>.</p>
+
+    <script>
+    var elements = document.querySelectorAll('.prototype-random');
+    Array.prototype.forEach.call(elements, function(el) {
+    el.setAttribute('href', '?=' + (new Date().getTime()));
+    });
+    </script>
+
+    <hr>
+
+    <h2>Ordered list</h2>
+    <ol>
+    <li>Donec cursus justo sit amet viverra interdum</li>
+    <li>
+      Praesent aliquam posuere efficitur
+      <ol>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Ut consequat auctor lorem</li>
+      </ol>
+    </li>
+    <li>
+      Praesent aliquam posuere efficitur
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+      </ul>
+    </li>
+    <li>Proin vel nulla vel sapien ornare feugiat</li>
+    </ol>
+
+    <hr>
+
+    <h2>Unordered list</h2>
+    <ul>
+    <li>Proin gravida varius dui non elementum</li>
+    <li>
+      Aliquam mollis aliquet quam, vitae aliquet elit molestie eget
+      <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Nulla vel tortor vel mi rutrum elementum vitae vitae erat</li>
+      </ul>
+    </li>
+    <li>Suspendisse placerat condimentum euismod</li>
+    </ul>
+
+    <hr>
+
+    <h2>Inline elements</h2>
+
+    <p><a href="#">This is a text link</a>.</p>
+    <p><strong>Strong is used to indicate strong importance.</strong></p>
+    <p><em>This text has added emphasis.</em></p>
+    <p>The <b>b element</b> is stylistically different text from normal text, without any special importance.</p>
+    <p>The <i>i element</i> is text that is offset from the normal text.</p>
+    <p>The <u>u element</u> is text with an unarticulated, though explicitly rendered, non-textual annotation.</p>
+    <p><del>This text is deleted</del> and <ins>This text is inserted</ins>.</p>
+    <p><s>This text has a strikethrough</s>.</p>
+    <p>Superscript<sup>®</sup>.</p>
+    <p>Subscript for things like H<sub>2</sub>O.</p>
+    <p><small>This small text is small for for fine print, etc.</small></p>
+    <p>Abbreviation: <abbr title="HyperText Markup Language">HTML</abbr></p>
+    <p><q cite="https://developer.mozilla.org/en-US/docs/HTML/Element/q">This text is a short inline quotation.</q></p>
+    <p><cite>This is a citation.</cite>
+    </p><p>The <dfn>dfn element</dfn> indicates a definition.</p>
+    <p>The <mark>mark element</mark> indicates a highlight.</p>
+    <p>The <var>variable element</var>, such as <var>x</var> = <var>y</var>.</p>
+    <p>The time element: <time datetime="2013-04-06T12:32+00:00">2 weeks ago</time></p>
+  </div>
+
+</article>

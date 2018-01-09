@@ -1,0 +1,42 @@
+/* ==========================================================================
+   Settings Colors
+   ========================================================================== */
+
+/* Default Theme Colors */
+
+$theme-color: #025296 !default;
+$theme-on-color: #fff !default;
+$theme-color-dark: #094e79 !default;
+$theme-color-darkest: #06304a !default;
+$theme-color-light: #06304a !default;
+$theme-link-color: $theme-color !default;
+$theme-focus-color: #fabb00 !default;
+$theme-color-complementary: #278900 !default;
+
+/* Default Colors */
+
+$text-color: #494746 !default;
+$color-white: #fff !default;
+$color-black: #000 !default;
+$color-gray-base: #ccc !default;
+$color-gray-100: #eee !default;
+$color-gray-lighter: #ddd !default;
+$color-gray-light: #f4f4f4 !default;
+$color-gray-600: #5B5B5B !default;
+$color-gray-700: #313131 !default;
+$color-gray-900: #999 !default;
+
+/* Link Colors */
+
+$link-color: $theme-color !default;
+$link-active-color: darken($link-color, 30%) !default;
+$link-focus-color: $theme-focus-color !default;
+$link-visited-color: $color-gray-base !default;
+
+/* Alert Colors */
+
+$color-default: $color-gray-900 !default;
+$color-success: #e7f4e4 !default;
+$color-warning: #fff1d2 !default;
+$color-error: #f9dede !default;
+$color-info: #e1f3f8 !default;

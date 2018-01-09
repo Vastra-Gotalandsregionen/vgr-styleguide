@@ -1,0 +1,193 @@
+{
+  "title": "SVG Sprite",
+  "context": {
+    "icons":[
+      {
+        "id": "add-circle-outline"
+      },
+      {
+        "id": "arrow-forward"
+      },
+      {
+        "id": "brightness-medium"
+      },
+      {
+        "id": "close"
+      },
+      {
+        "id": "content-paste"
+      },
+      {
+        "id": "directions-car"
+      },
+      {
+        "id": "directions-run"
+      },
+      {
+        "id": "email"
+      },
+      {
+        "id": "error"
+      },
+      {
+        "id": "event-note"
+      },
+      {
+        "id": "event"
+      },
+      {
+        "id": "expand-more"
+      },
+      {
+        "id": "explore"
+      },
+      {
+        "id": "facebook"
+      },
+      {
+        "id": "format-list-numbered"
+      },
+      {
+        "id": "google"
+      },
+      {
+        "id": "hearing"
+      },
+      {
+        "id": "help"
+      },
+      {
+        "id": "history"
+      },
+      {
+        "id": "home"
+      },
+      {
+        "id": "info-outline"
+      },
+      {
+        "id": "info"
+      },
+      {
+        "id": "linkedin"
+      },
+      {
+        "id": "local-parking"
+      },
+      {
+        "id": "location-on"
+      },
+      {
+        "id": "menu"
+      },
+      {
+        "id": "mode-edit"
+      },
+      {
+        "id": "open-in-browser"
+      },
+      {
+        "id": "party-mode"
+      },
+      {
+        "id": "person"
+      },
+      {
+        "id": "phone-iphone"
+      },
+      {
+        "id": "picture-in-picture"
+      },
+      {
+        "id": "pinterest"
+      },
+      {
+        "id": "place"
+      },
+      {
+        "id": "print"
+      },
+      {
+        "id": "public"
+      },
+      {
+        "id": "remove"
+      },
+      {
+        "id": "rss"
+      },
+      {
+        "id": "schedule"
+      },
+      {
+        "id": "search"
+      },
+      {
+        "id": "sign-language"
+      },
+      {
+        "id": "smoke-free"
+      },
+      {
+        "id": "success"
+      },
+      {
+        "id": "time"
+      },
+      {
+        "id": "tram"
+      },
+      {
+        "id": "twitter"
+      },
+      {
+        "id": "view-comfy"
+      },
+      {
+        "id": "warning"
+      },
+      {
+        "id": "file-type--excel"
+      },
+      {
+        "id": "file-type--image"
+      },
+      {
+        "id": "file-type--mail"
+      },
+      {
+        "id": "file-type--pdf"
+      },
+      {
+        "id": "file-type--phone"
+      },
+      {
+        "id": "file-type--ppt"
+      },
+      {
+        "id": "file-type--sound"
+      },
+      {
+        "id": "file-type--video"
+      },
+      {
+        "id": "file-type--word"
+      },
+      {
+        "id": "file-type--zip"
+      },
+      {
+        "id": "message--error"
+      },
+      {
+        "id": "message--info"
+      },
+      {
+        "id": "message--success"
+      },
+      {
+        "id": "message--warning"
+      }
+    ]
+  }
+}

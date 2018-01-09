@@ -1,0 +1,17 @@
+{
+  "title": "Time",
+  "status": "ready",
+  "context": {
+    "datetime": "2013-04-06T12:32+00:00",
+    "time": "2 weeks ago"
+  },
+  "variants": [
+    {
+      "name": "version",
+      "context": {
+        "datetime": "2013-04-06T12:32+00:00",
+        "time": "2017-01-01"
+      }
+    }
+  ]
+}

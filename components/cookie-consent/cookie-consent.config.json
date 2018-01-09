@@ -1,0 +1,22 @@
+{
+  "title": "Cookie Consent",
+  "status": "ready",
+  "context": {
+    "id": "cookie-consent",
+    "modifier": "dark",
+    "description": "Vi använder cookies för att ge dig en bättre upplevelse av vår webbplats.",
+    "url": "/",
+    "linkText": "Läs mer om cookies",
+    "button": {
+      "buttonText": "Jag förstår"
+    }
+  },
+  "variants": [
+    {
+      "name": "light",
+      "context": {
+        "modifier": "light"
+      }
+    }
+  ]
+}
