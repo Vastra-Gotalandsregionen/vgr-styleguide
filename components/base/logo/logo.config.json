@@ -1,9 +1,79 @@
 {
-  "title": "Logotype",
+  "title": "Logotype png",
   "status": "prototype",
   "context": {
     "url": "/",
     "label": "Gå till startsidan",
-    "title": "Västa Götalandsregionen"
-  }
+    "title": "Västa Götalandsregionen",
+    "modifier": "",
+    "img": {
+      "src": "/img/logotype-color.png",
+      "alt": "Logotype"
+    }
+  },
+  "variants": [
+    {
+      "name": "png -white",
+      "context": {
+        "img": {
+          "src": "/img/logotype-white.png",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "png -black",
+      "context": {
+        "img": {
+          "src": "/img/logotype-black.png",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "svg -color",
+      "context": {
+        "img": {
+          "src": "/img/logotype-color.svg",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "svg -white",
+      "context": {
+        "img": {
+          "src": "/img/logotype-white.svg",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "svg -black",
+      "context": {
+        "img": {
+          "src": "/img/logotype-black.svg",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "jpg -color",
+      "context": {
+        "img": {
+          "src": "/img/logotype-color.jpg",
+          "alt": "Logotype"
+        }
+      }
+    },
+    {
+      "name": "jpg -black",
+      "context": {
+        "img": {
+          "src": "/img/logotype-black.jpg",
+          "alt": "Logotype"
+        }
+      }
+    }
+  ]
 }

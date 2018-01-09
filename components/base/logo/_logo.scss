@@ -5,7 +5,7 @@
 
   @media screen and (min-width: $small) {
 
-    svg {
+    img {
       margin-top: 1rem;
       margin-bottom: 1rem;
       width: 13.625rem;
@@ -15,7 +15,7 @@
 
   @media screen and (min-width: $medium) {
 
-    svg {
+    img {
       width: 18.75rem;
       height: 3.75rem;
     }
@@ -24,7 +24,7 @@
   /* Size */
   &--large {
 
-    svg {
+    img {
       width: 13.75rem;
       height: 2.8125rem;
     }
