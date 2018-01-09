@@ -1,0 +1,82 @@
+<style>
+
+.colors__heading {
+  margin: 24px 16px;
+  margin-top: 24px;
+  margin-left: 16px;
+}
+
+.colors {
+ display: block;
+ margin: 8px 16px 24px;
+ border-top: solid 1px #000;
+}
+
+.colors__items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.colors__color-card {
+  background-color: #fff;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 0px 4px rgba(0,0,0,0.15);
+  border-radius: 2px;
+  height: auto;
+}
+
+.colors__color-display {
+  height: 130px;
+  min-width: 300px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.colors__color-info-wrapper {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.colors__color-info.colors__color-info--large {
+  font-size: 18px;
+}
+
+.colors__color-info {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 14px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (max-width: 480px){
+  .colors__items{
+    flex-direction: column;
+  }
+  .colors__color__display{
+    width: 100%;
+  }
+}
+
+</style>
+
+<h1 class="colors__heading">Colors</h1>
+{% for sectionName, section in Colors %}
+<div class="colors">
+  <h2>{{ sectionName }}</h2>
+  <div class="colors__items">
+    {% for color in section %}
+    <div class="colors__color-card">
+      <div class="colors__color-display" style="background-color:{{ color.values.hex }}"></div>
+      <div class="colors__color-info-wrapper">
+        <p class="colors__color-info colors__color-info--large"><strong>{{ color.name }}</strong></p>
+        {% for type, value in color.values %}
+          <p class="colors__color-info"><strong>{{ type|upper }}:</strong> {{ value|lower }}</p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}

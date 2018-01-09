@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "dot-object": "^1.7.0",
+    "format-json-pretty": "^1.0.1",
+    "gulp": "^3.9.1",
+    "ora": "^1.3.0",
+    "postcss-scss": "^1.0.2",
+    "prettyjson": "^1.2.1"
+  }
+}

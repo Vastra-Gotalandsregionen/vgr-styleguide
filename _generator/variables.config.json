@@ -1,0 +1,318 @@
+{
+  "context": {
+    "Colors": {
+      "Brand": [{
+        "name": "$color-primary",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Primary",
+        "deprecated": false,
+        "values": {
+          "hex": "#20809D",
+          "rgba": "rgba(32, 128, 157, 1)",
+          "darker": "#1D728C"
+        }
+      },{
+        "name": "$color-primary-darker",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Primary darker",
+        "deprecated": false,
+        "values": {
+          "hex": "#1C647A",
+          "rgba": "rgba(28, 100, 122, 1)",
+          "darker": "#19596C"
+        }
+      },{
+        "name": "$color-primary-lighter",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Primary lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#DFF7FE",
+          "rgba": "rgba(223, 247, 254, 1)",
+          "darker": "#B5ECFD"
+        }
+      },{
+        "name": "$color-secondary",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Secondary",
+        "deprecated": false,
+        "values": {
+          "hex": "#E55224",
+          "rgba": "rgba(229, 82, 36, 1)",
+          "darker": "#D74519"
+        }
+      },{
+        "name": "$color-secondary-darker",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Secondary darker",
+        "deprecated": false,
+        "values": {
+          "hex": "#D23F11",
+          "rgba": "rgba(210, 63, 17, 1)",
+          "darker": "#C13910"
+        }
+      },{
+        "name": "$color-secondary-lighter",
+        "type": "color",
+        "section": "Colors > Brand",
+        "description": "Secondary lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#E75113",
+          "rgba": "rgba(231, 81, 19, 0.1)",
+          "darker": "#D04A11"
+        }
+      }],
+      "Neutral": [{
+        "name": "$color-black",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Black",
+        "deprecated": false,
+        "values": {
+          "hex": "#000000",
+          "rgba": "rgba(0, 0, 0, 1)",
+          "darker": "#000000"
+        }
+      },{
+        "name": "$color-darkest",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Darkest",
+        "deprecated": false,
+        "values": {
+          "hex": "#333333",
+          "rgba": "rgba(51, 51, 51, 1)",
+          "darker": "#2E2E2E"
+        }
+      },{
+        "name": "$color-dark",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Dark",
+        "deprecated": false,
+        "values": {
+          "hex": "#666666",
+          "rgba": "rgba(102, 102, 102, 1)",
+          "darker": "#5C5C5C"
+        }
+      },{
+        "name": "$color-light",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Light",
+        "deprecated": false,
+        "values": {
+          "hex": "#CCCCCC",
+          "rgba": "rgba(204, 204, 204, 1)",
+          "darker": "#B8B8B8"
+        }
+      },{
+        "name": "$color-lighter",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#E9E9E9",
+          "rgba": "rgba(233, 233, 233, 1)",
+          "darker": "#D1D1D1"
+        }
+      },{
+        "name": "$color-lightest",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "Lightest",
+        "deprecated": false,
+        "values": {
+          "hex": "#F9F9F8",
+          "rgba": "rgba(249, 249, 248, 1)",
+          "darker": "#E1E1DB"
+        }
+      },{
+        "name": "$color-white",
+        "type": "color",
+        "section": "Colors > Neutral",
+        "description": "White",
+        "deprecated": false,
+        "values": {
+          "hex": "#FFFFFF",
+          "rgba": "rgba(255, 255, 255, 1)",
+          "darker": "#E6E6E6"
+        }
+      }],
+      "Highlight": [{
+        "name": "$color-approved",
+        "type": "color",
+        "section": "Colors > Highlight",
+        "description": "Approved",
+        "deprecated": false,
+        "values": {
+          "hex": "#018563",
+          "rgba": "rgba(1, 133, 99, 1)",
+          "darker": "#017558"
+        }
+      },{
+        "name": "$color-error",
+        "type": "color",
+        "section": "Colors > Highlight",
+        "description": "Error",
+        "deprecated": false,
+        "values": {
+          "hex": "#CCCCCC",
+          "rgba": "rgba(204, 204, 204, 1)",
+          "darker": "#B8B8B8"
+        }
+      },{
+        "name": "$color-warning",
+        "type": "color",
+        "section": "Colors > Highlight",
+        "description": "Warning",
+        "deprecated": false,
+        "values": {
+          "hex": "#E99600",
+          "rgba": "rgba(233, 150, 0, 1)",
+          "darker": "#D18800"
+        }
+      },{
+        "name": "$color-mark-color",
+        "type": "color",
+        "section": "Colors > Highlight",
+        "description": "Mark color",
+        "deprecated": false,
+        "values": {
+          "hex": "#E55224",
+          "rgba": "rgba(229, 82, 36, 1)",
+          "darker": "#D74519"
+        }
+      }],
+      "Mark": [{
+        "name": "$color-mark-background",
+        "type": "color",
+        "section": "Colors > Mark",
+        "description": "Mark background",
+        "deprecated": false,
+        "values": {
+          "hex": "#000000",
+          "rgba": "rgba(0, 0, 0, 0)",
+          "darker": "#000000"
+        }
+      }],
+      "Social media colors": [{
+        "name": "$color-facebook",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Facebook",
+        "deprecated": false,
+        "values": {
+          "hex": "#3B5998",
+          "rgba": "rgba(59, 89, 152, 1)",
+          "darker": "#354F88"
+        }
+      },{
+        "name": "$color-twitter",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Twitter",
+        "deprecated": false,
+        "values": {
+          "hex": "#1DA1F2",
+          "rgba": "rgba(29, 161, 242, 1)",
+          "darker": "#0D94E7"
+        }
+      },{
+        "name": "$color-linkedin",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Linkedin",
+        "deprecated": false,
+        "values": {
+          "hex": "#0077B5",
+          "rgba": "rgba(0, 119, 181, 1)",
+          "darker": "#006AA3"
+        }
+      }]
+    },
+    "FontTypes": {
+      "Main": [{
+        "name": "$font-stack",
+        "type": "fontType",
+        "section": "FontTypes > Main",
+        "description": "Font stack",
+        "deprecated": false,
+        "value": "'Lato', 'Helvetica Neue', Helvetica, sans-serif"
+      },{
+        "name": "$font-sans-serif",
+        "type": "fontType",
+        "section": "FontTypes > Main",
+        "description": "Font sans serif",
+        "deprecated": false,
+        "value": "'Alright Sans', $font-stack"
+      },{
+        "name": "$font-bold",
+        "type": "fontType",
+        "section": "FontTypes > Main",
+        "description": "Font bold",
+        "deprecated": false,
+        "value": "'Alright Sans Medium', $font-stack"
+      }]
+    },
+    "FontSizes": {
+      "Main": [{
+        "name": "$global-font-size",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Global font size",
+        "deprecated": false,
+        "value": "18px"
+      },{
+        "name": "$font-size-largest",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size largest",
+        "deprecated": false,
+        "value": "2.6667rem"
+      },{
+        "name": "$font-size-larger",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size larger",
+        "deprecated": false,
+        "value": "1.6667rem"
+      },{
+        "name": "$font-size-large",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size large",
+        "deprecated": false,
+        "value": "1.3334rem"
+      },{
+        "name": "$font-size-small",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size small",
+        "deprecated": false,
+        "value": "0.8889rem"
+      },{
+        "name": "$font-size-smaller",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size smaller",
+        "deprecated": false,
+        "value": "0.7778rem"
+      },{
+        "name": "$font-size-smallest",
+        "type": "fontSize",
+        "section": "FontSizes > Main",
+        "description": "Font size smallest",
+        "deprecated": false,
+        "value": "0.667rem"
+      }]
+    }
+  }
+}

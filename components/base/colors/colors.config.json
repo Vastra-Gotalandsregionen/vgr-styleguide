@@ -1,0 +1,185 @@
+{
+  "context": {
+    "Colors": {
+      "VGR Decor Colors": [{
+        "name": "$color-yellow",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors",
+        "description": "Decor yellow",
+        "deprecated": false,
+        "values": {
+          "hex": "#F2A900",
+          "rgba": "rgba(242, 169, 0, 1)",
+          "darker": "#FFC338"
+        }
+      },{
+        "name": "$color-red",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors",
+        "description": "Decor red",
+        "deprecated": false,
+        "values": {
+          "hex": "#9D2235",
+          "rgba": "rgba(157, 34, 53, 1)",
+          "darker": "#C92C44"
+        }
+      },{
+        "name": "$color-green",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors",
+        "description": "Decor green",
+        "deprecated": false,
+        "values": {
+          "hex": "#4A773C",
+          "rgba": "rgba(74, 119, 60, 1)",
+          "darker": "#619C4F"
+        }
+      },{
+        "name": "$color-blue",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors",
+        "description": "Decor blue",
+        "deprecated": false,
+        "values": {
+          "hex": "#006298",
+          "rgba": "rgba(0, 98, 152, 1)",
+          "darker": "#0081C7"
+        }
+      },{
+        "name": "$color-gray",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors",
+        "description": "Decor gray",
+        "deprecated": false,
+        "values": {
+          "hex": "#9EA2A2",
+          "rgba": "rgba(158, 162, 162, 1)",
+          "darker": "#D0D2D2"
+        }
+      }],
+      "VGR Complementary Colors": [{
+        "name": "$color-complementary-blue",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary Blue",
+        "deprecated": false,
+        "values": {
+          "hex": "#71B2C9",
+          "rgba": "rgba(113, 178, 201, 1)",
+          "darker": "#B9D9E4"
+        }
+      },{
+        "name": "$color-complementary-lime",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary lime",
+        "deprecated": false,
+        "values": {
+          "hex": "#A8AD00",
+          "rgba": "rgba(168, 173, 0, 1)",
+          "darker": "#D9E000"
+        }
+      },{
+        "name": "$color-complementary-green",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary green",
+        "deprecated": false,
+        "values": {
+          "hex": "#008755",
+          "rgba": "rgba(0, 135, 85, 1)",
+          "darker": "#00AD6E"
+        }
+      },{
+        "name": "$color-complementary-beige",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary beige",
+        "deprecated": false,
+        "values": {
+          "hex": "#C6AA75",
+          "rgba": "rgba(198, 170, 117, 1)",
+          "darker": "#E3D5BA"
+        }
+      },{
+        "name": "$color-complementary-red",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary red",
+        "deprecated": false,
+        "values": {
+          "hex": "#C8102E",
+          "rgba": "rgba(200, 16, 46, 1)",
+          "darker": "#EE2B4B"
+        }
+      },{
+        "name": "$color-complementary-purple",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary purple",
+        "deprecated": false,
+        "values": {
+          "hex": "#582C83",
+          "rgba": "rgba(88, 44, 131, 1)",
+          "darker": "#7038A8"
+        }
+      },{
+        "name": "$color-complementary-pink",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary pink",
+        "deprecated": false,
+        "values": {
+          "hex": "#AF1685",
+          "rgba": "rgba(175, 22, 133, 1)",
+          "darker": "#E421B0"
+        }
+      },{
+        "name": "$color-complementary-orange",
+        "type": "color",
+        "section": "Colors > VGR Complementary Colors",
+        "description": "Complementary orange",
+        "deprecated": false,
+        "values": {
+          "hex": "#D86018",
+          "rgba": "rgba(216, 96, 24, 1)",
+          "darker": "#EB894C"
+        }
+      }],
+      "Social media colors": [{
+        "name": "$color-facebook",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Facebook",
+        "deprecated": false,
+        "values": {
+          "hex": "#3B5998",
+          "rgba": "rgba(59, 89, 152, 1)",
+          "darker": "#5274BC"
+        }
+      },{
+        "name": "$color-twitter",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Twitter",
+        "deprecated": false,
+        "values": {
+          "hex": "#1DA1F2",
+          "rgba": "rgba(29, 161, 242, 1)",
+          "darker": "#6AC0F6"
+        }
+      },{
+        "name": "$color-linkedin",
+        "type": "color",
+        "section": "Colors > Social media colors",
+        "description": "Linkedin",
+        "deprecated": false,
+        "values": {
+          "hex": "#0077B5",
+          "rgba": "rgba(0, 119, 181, 1)",
+          "darker": "#0098EB"
+        }
+      }]
+    }
+  }
+}
