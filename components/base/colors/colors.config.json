@@ -9,8 +9,7 @@
         "deprecated": false,
         "values": {
           "hex": "#F2A900",
-          "rgba": "rgba(242, 169, 0, 1)",
-          "darker": "#FFC338"
+          "rgba": "rgba(242, 169, 0, 1)"
         }
       },{
         "name": "$color-red",
@@ -20,8 +19,7 @@
         "deprecated": false,
         "values": {
           "hex": "#9D2235",
-          "rgba": "rgba(157, 34, 53, 1)",
-          "darker": "#C92C44"
+          "rgba": "rgba(157, 34, 53, 1)"
         }
       },{
         "name": "$color-green",
@@ -31,8 +29,7 @@
         "deprecated": false,
         "values": {
           "hex": "#4A773C",
-          "rgba": "rgba(74, 119, 60, 1)",
-          "darker": "#619C4F"
+          "rgba": "rgba(74, 119, 60, 1)"
         }
       },{
         "name": "$color-blue",
@@ -42,8 +39,7 @@
         "deprecated": false,
         "values": {
           "hex": "#006298",
-          "rgba": "rgba(0, 98, 152, 1)",
-          "darker": "#0081C7"
+          "rgba": "rgba(0, 98, 152, 1)"
         }
       },{
         "name": "$color-gray",
@@ -53,8 +49,58 @@
         "deprecated": false,
         "values": {
           "hex": "#9EA2A2",
-          "rgba": "rgba(158, 162, 162, 1)",
-          "darker": "#D0D2D2"
+          "rgba": "rgba(158, 162, 162, 1)"
+        }
+      }],
+      "VGR Decor Colors lighter tone": [{
+        "name": "$color-yellow-lighter",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors lighter tone",
+        "description": "Decor yellow lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#F6C34C",
+          "rgba": "rgba(246, 195, 76, 1)"
+        }
+      },{
+        "name": "$color-red-lighter",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors lighter tone",
+        "description": "Decor red lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#BA6471",
+          "rgba": "rgba(186, 100, 113, 1)"
+        }
+      },{
+        "name": "$color-green-lighter",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors lighter tone",
+        "description": "Decor green lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#80A076",
+          "rgba": "rgba(128, 160, 118, 1)"
+        }
+      },{
+        "name": "$color-blue-lighter",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors lighter tone",
+        "description": "Decor blue lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#4C91B7",
+          "rgba": "rgba(76, 145, 183, 1)"
+        }
+      },{
+        "name": "$color-gray-lighter",
+        "type": "color",
+        "section": "Colors > VGR Decor Colors lighter tone",
+        "description": "Decor gray lighter",
+        "deprecated": false,
+        "values": {
+          "hex": "#BBBEBE",
+          "rgba": "rgba(187, 190, 190, 1)"
         }
       }],
       "VGR Complementary Colors": [{
@@ -65,8 +111,7 @@
         "deprecated": false,
         "values": {
           "hex": "#71B2C9",
-          "rgba": "rgba(113, 178, 201, 1)",
-          "darker": "#B9D9E4"
+          "rgba": "rgba(113, 178, 201, 1)"
         }
       },{
         "name": "$color-complementary-lime",
@@ -76,8 +121,7 @@
         "deprecated": false,
         "values": {
           "hex": "#A8AD00",
-          "rgba": "rgba(168, 173, 0, 1)",
-          "darker": "#D9E000"
+          "rgba": "rgba(168, 173, 0, 1)"
         }
       },{
         "name": "$color-complementary-green",
@@ -87,8 +131,7 @@
         "deprecated": false,
         "values": {
           "hex": "#008755",
-          "rgba": "rgba(0, 135, 85, 1)",
-          "darker": "#00AD6E"
+          "rgba": "rgba(0, 135, 85, 1)"
         }
       },{
         "name": "$color-complementary-beige",
@@ -98,8 +141,7 @@
         "deprecated": false,
         "values": {
           "hex": "#C6AA75",
-          "rgba": "rgba(198, 170, 117, 1)",
-          "darker": "#E3D5BA"
+          "rgba": "rgba(198, 170, 117, 1)"
         }
       },{
         "name": "$color-complementary-red",
@@ -109,8 +151,7 @@
         "deprecated": false,
         "values": {
           "hex": "#C8102E",
-          "rgba": "rgba(200, 16, 46, 1)",
-          "darker": "#EE2B4B"
+          "rgba": "rgba(200, 16, 46, 1)"
         }
       },{
         "name": "$color-complementary-purple",
@@ -120,8 +161,7 @@
         "deprecated": false,
         "values": {
           "hex": "#582C83",
-          "rgba": "rgba(88, 44, 131, 1)",
-          "darker": "#7038A8"
+          "rgba": "rgba(88, 44, 131, 1)"
         }
       },{
         "name": "$color-complementary-pink",
@@ -131,8 +171,7 @@
         "deprecated": false,
         "values": {
           "hex": "#AF1685",
-          "rgba": "rgba(175, 22, 133, 1)",
-          "darker": "#E421B0"
+          "rgba": "rgba(175, 22, 133, 1)"
         }
       },{
         "name": "$color-complementary-orange",
@@ -142,8 +181,7 @@
         "deprecated": false,
         "values": {
           "hex": "#D86018",
-          "rgba": "rgba(216, 96, 24, 1)",
-          "darker": "#EB894C"
+          "rgba": "rgba(216, 96, 24, 1)"
         }
       }],
       "Social media colors": [{
@@ -154,8 +192,7 @@
         "deprecated": false,
         "values": {
           "hex": "#3B5998",
-          "rgba": "rgba(59, 89, 152, 1)",
-          "darker": "#5274BC"
+          "rgba": "rgba(59, 89, 152, 1)"
         }
       },{
         "name": "$color-twitter",
@@ -165,8 +202,7 @@
         "deprecated": false,
         "values": {
           "hex": "#1DA1F2",
-          "rgba": "rgba(29, 161, 242, 1)",
-          "darker": "#6AC0F6"
+          "rgba": "rgba(29, 161, 242, 1)"
         }
       },{
         "name": "$color-linkedin",
@@ -176,8 +212,7 @@
         "deprecated": false,
         "values": {
           "hex": "#0077B5",
-          "rgba": "rgba(0, 119, 181, 1)",
-          "darker": "#0098EB"
+          "rgba": "rgba(0, 119, 181, 1)"
         }
       }]
     }

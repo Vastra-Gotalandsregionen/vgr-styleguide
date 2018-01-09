@@ -40,8 +40,7 @@ var Color = function(raw) {
     deprecated: raw.annotations.deprecated,
     values: {
       hex: colorValue.hexString(),
-      rgba: colorValue.rgbaString(),
-      darker: colorValue.lighten(0.3).hexString()
+      rgba: colorValue.rgbaString()
     }
   };
 

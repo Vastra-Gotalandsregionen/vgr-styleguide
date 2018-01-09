@@ -68,7 +68,7 @@
   <div class="colors__items">
     {% for color in section %}
     <div class="colors__color-card">
-      <div class="colors__color-display" style="background-color:{{ color.values.hex }}"></div>
+      <div class="colors__color-display" style="background-color:{{ color.values.rgba }}"></div>
       <div class="colors__color-info-wrapper">
         <p class="colors__color-info colors__color-info--large"><strong>{{ color.name }}</strong></p>
         {% for type, value in color.values %}

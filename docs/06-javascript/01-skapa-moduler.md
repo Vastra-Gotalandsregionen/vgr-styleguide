@@ -11,7 +11,7 @@ Implementera javascript-moduler i din html som attribut med följande syntax:
 data-module="<modulnamn>"
 ```
 
-Skapa en fil i src/js/modules med namn <modulnamn>.js och lägg till följande kod i filen:
+Skapa en fil i assets/js/modules med namn <modulnamn>.js och lägg till följande kod i filen:
 ```
 export default class <modulnamn-som-camel-case> {
   constructor(element) {
