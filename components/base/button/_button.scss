@@ -1,3 +1,10 @@
+/* Gradient backgrounds */
+
+$color-gradient-primary-light: linear-gradient(to bottom,#4ab31f 0,#39791f 100%); // Primary btn
+$color-gradient-primary-dark: linear-gradient(to bottom,#388618 0,#244d14 100%); // Primary btn hover
+$color-gradient-subtle-light: linear-gradient(to bottom,#f8f8f8 0%,#f1f1f1 100%); // Subtlebtn
+$color-gradient-subtle-dark: linear-gradient(to bottom,$color-gray-100 0%,lighten($color-gray-lighter, 5%) 100%); // Subtlebtn hover
+
 .vgr-button {
   position: relative;
   display: inline-block;
@@ -15,21 +22,23 @@
   .vgr-icon {
     width: 1rem;
     height: 1rem;
+    vertical-align: text-top;
   }
 
   &:hover,
   &:focus {
     background-color: inherit;
     box-shadow: inherit;
-    color: $color-gray-100;
   }
 
   &[disabled] {
     background-color: $color-gray-100;
+    border-color: $color-gray-lighter;
+    color: $color-gray-600;
     background-image: none;
-    color: $color-black;
     cursor: not-allowed;
     box-shadow: none;
+    pointer-events: none;
 
     &:hover,
     &:focus {
@@ -43,8 +52,23 @@
     border-color: #4ab31f;
     border-bottom-color: #075d2d;
     background-color: #13aa55;
-    background-image: linear-gradient(to bottom,#4ab31f 0,#39791f 100%);
+    background-image: $color-gradient-primary-light;
     color: $color-white;
+
+    &:hover,
+    &:focus {
+      background: $color-gradient-primary-dark;
+      border-color: #388618 #388618 #084422;
+      color: #fff;
+      outline: 0;
+    }
+  }
+
+  &--secondary {
+    &:hover,
+    &:focus {
+      color: $color-black;
+    }
   }
 }
 
@@ -53,7 +77,7 @@
   border: solid 1px $color-gray-lighter;
   border-radius: 2px;
   background: $color-gray-100;
-  background-image: linear-gradient(to bottom,$color-gray-100 0%,lighten($color-gray-lighter, 5%) 100%);
+  background-image: $color-gradient-subtle-dark;
   color: #2d2d2d;
   text-decoration: none;
   font-weight: 700;
@@ -68,7 +92,7 @@
   &:hover,
   &:focus {
     border-color: #c6c6c6;
-    background-image: linear-gradient(to bottom,#f8f8f8 0%,#f1f1f1 100%);
+    background-image: $color-gradient-subtle-light;
     box-shadow: 0 1px 3px rgba(0,0,0,.15);
     color: #2d2d2d;
     text-decoration: none;

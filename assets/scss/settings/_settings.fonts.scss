@@ -2,5 +2,7 @@
    Settings Fonts
    ========================================================================== */
 
-$primary-font-stack: Times New Roman, Georgia, serif !default;
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+
+$primary-font-stack: "PT Serif", Georgia, "Times New Roman", serif !default;
 $secondary-font-stack: Helvetica, Arial, sans-serif !default;

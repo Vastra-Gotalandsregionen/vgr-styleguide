@@ -1,5 +1,4 @@
 {
-  "collated": true,
   "title": "Buttons",
   "status": "prototype",
   "context": {
@@ -22,7 +21,14 @@
       }
     },
     {
-      "name": "icon",
+      "name": "disabled",
+      "context": {
+        "buttonText": "Button",
+        "disabled": "disabled"
+      }
+    },
+    {
+      "name": "icon with text",
       "context": {
         "modifier": "icon",
         "iconWithText": true,

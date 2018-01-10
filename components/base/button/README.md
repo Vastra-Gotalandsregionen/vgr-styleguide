@@ -8,13 +8,9 @@ The examples demonstrate how to use button elements. To use a button style on an
 
 To use a different style button on your anchor link, add the special button class in addition to `vgr-button`:
 
-* `vgr-button-primary-alt`
-* `vgr-button-secondary`
-* `vgr-button-gray`
-* `vgr-button-outline`
-* `vgr-button-outline-inverse`
-* `vgr-button-disabled`
-* `vgr-button-big`
+* `vgr-button--primary`
+* `vgr-button--secondary`
+* `vgr-button--subtle`
 
 For example, a secondary button style would use the following code: `<a class="vgr-button vgr-button-secondary" href="/my-link">My button</a>`
 

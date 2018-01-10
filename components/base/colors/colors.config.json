@@ -183,37 +183,6 @@
           "hex": "#D86018",
           "rgba": "rgba(216, 96, 24, 1)"
         }
-      }],
-      "Social media colors": [{
-        "name": "$color-facebook",
-        "type": "color",
-        "section": "Colors > Social media colors",
-        "description": "Facebook",
-        "deprecated": false,
-        "values": {
-          "hex": "#3B5998",
-          "rgba": "rgba(59, 89, 152, 1)"
-        }
-      },{
-        "name": "$color-twitter",
-        "type": "color",
-        "section": "Colors > Social media colors",
-        "description": "Twitter",
-        "deprecated": false,
-        "values": {
-          "hex": "#1DA1F2",
-          "rgba": "rgba(29, 161, 242, 1)"
-        }
-      },{
-        "name": "$color-linkedin",
-        "type": "color",
-        "section": "Colors > Social media colors",
-        "description": "Linkedin",
-        "deprecated": false,
-        "values": {
-          "hex": "#0077B5",
-          "rgba": "rgba(0, 119, 181, 1)"
-        }
       }]
     }
   }

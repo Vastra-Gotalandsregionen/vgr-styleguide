@@ -1,5 +1,9 @@
 /*! vgr-styleguide | MIT License */
 
+/* Settings
+   ========================================================================== */
+@import "components/base/colors/colors";
+
 /* Basic styles
    ========================================================================== */
 
@@ -47,7 +51,6 @@
    ========================================================================== */
 @import "components/scoped/search/search-card/search-card";
 @import "components/templates/hitta/hitta";
-
 
 // Quick Search
 // ==========================================================================
