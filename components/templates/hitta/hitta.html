@@ -26,9 +26,11 @@
             <p>Menade du <a href="/">{{ didYouMean }}</a></p>
           </div>
           <ul class="vgr-search-results vgr-unstyled-list">
-            <li class="vgr-search-results__item">
-              {% render "@search-card--person" %}
-            </li>
+            {% for item in person %}
+              <li class="vgr-search-results__item">
+                {% render "@search-card--person" %}
+              </li>
+            {% endfor %}
             {% for item in searchResults %}
               <li class="vgr-search-results__item">
                 {% render "@search-card--panel", item.resultList %}
