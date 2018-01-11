@@ -1,9 +1,15 @@
   <div class="article__meta">
-  <hr>
   <div>
-    <strong>Publicerad av:</strong> {{ name}}, {{ date}}
+    <strong>Senast uppdaterad:</strong> {{ date }}
   </div>
-  <div>
-    <a href="mailto:{{ email}}" title="E-postadress">{{ email }}</a>
+  <div class="vgr-toggle print-hide" data-togglestyle="slide" data-isexpanded="false">
+    <button class="vgr-toggle__button" data-tab="" role="tab" tabindex="0">
+        <span class="vgr-visually-hidden" data-showtext="Expandera information om" data-hidetext="Kollapsa information om">Expandera information om</span>
+        <a>Kontakta innehållsansvarig</a>
+        <img src="/img/chevron-down.svg" alt="#">
+    </button>
+    <div class="vgr-toggle__panel" data-panel="" id="" tabindex="-1" role="tabpanel" aria-expanded="false">
+      <!-- Toggle form here -->
+    </div>
   </div>
 </div>

@@ -3,8 +3,11 @@
    ========================================================================== */
 
 html {
+  font-family: $primary-font-stack;
   font-size: $base-font-size;
   line-height: $base-line-height;
   color: $text-color;
   background: $color-gray-light;
 }
+
+p { margin: 0 0 1.25rem; }

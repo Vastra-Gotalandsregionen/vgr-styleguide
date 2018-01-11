@@ -11,8 +11,8 @@
  */
 
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
+  // font-family: sans-serif; /* 1 */ // Set in generic.typography.scss
+  // line-height: 1.15; /* 2 */ // Set in generic.typography.scss
   -ms-text-size-adjust: 100%; /* 3 */
   -webkit-text-size-adjust: 100%; /* 3 */
 }
@@ -134,7 +134,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: inherit;
+  font-weight: bolder;
 }
 
 /**
