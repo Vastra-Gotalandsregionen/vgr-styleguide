@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Objects - Typography Article Meta
+   ========================================================================== */
+
+.vgr-toggle {
+
+  &__button {
+    font-family: $primary-font-stack;
+    appearance: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #494746;
+    position: relative;
+
+    & img,
+    & svg {
+      position: relative;
+      top: -1px;
+      vertical-align: middle;
+    }
+  }
+
+  & [data-tab] img,
+  & [data-tab] svg {
+    transition: transform .2s ease-in-out;
+  }
+}
