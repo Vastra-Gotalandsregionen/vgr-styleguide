@@ -34,13 +34,13 @@
     {% endif %}
   </div>
 
-  {% if mapAddress %}
+  <!-- {% if mapAddress %}
   <div class="vgr-search-card__map">
     <img src="{{ mapAddress | path }}" alt="">
   </div>
-  {% endif %}
+  {% endif %} -->
 
-  <div class="vgr-search-card__information">
+  <!-- <div class="vgr-search-card__information">
 
     <dl class="vgr-detail-list">
       <dt class="vgr-detail-list__title">Ekonomiska uppgifter</dt>
@@ -48,12 +48,19 @@
       <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">Beställar-ID</span> 36692 12</dd>
       <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">I-nummer</span> I70210</dd>
     </dl>
+  </div> -->
+  <div class="vgr-search-card__information">
+    <dl class="vgr-detail-list">
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ emailLabel }}</span> <a class="vgr-detail-list__link" href="/">{{ email }}</a></dd>
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ landlinelabel }}</span> <a class="vgr-detail-list__link" href="/">{{ landline }}</a></dd>
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ mobileLabel }}</span> <a class="vgr-detail-list__link" href="/">{{ mobile }}</a></dd>
+      </dl>
   </div>
 
   {% if expandable %}
     <div class="vgr-search-card__folded vgr-search-card__information" id="folded-1">
 
-      <dl class="vgr-detail-list">
+      <!-- <dl class="vgr-detail-list">
         <dt class="vgr-detail-list__title">Kontaktuppgifter</dt>
         <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ emailLabel }}</span> <a class="vgr-detail-list__link" href="/">{{ email }}</a></dd>
         <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ landlinelabel }}</span> {{ landline }}</dd>
@@ -61,6 +68,19 @@
         <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ switchedTelephoneLabel
    }}</span> <a class="vgr-detail-list__link" href="/">{{ switchedTelephone }}</a></dd>
         <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ faxNumberLabel }}</span> {{ faxNumber }}</dd>
+      </dl> -->
+      <dl class="vgr-detail-list">
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">Skype</span> <a class="vgr-detail-list__link" href="/">Ring upp via Skype</a></dd>
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">{{ switchedTelephoneLabel
+   }}</span> <a class="vgr-detail-list__link" href="/">{{ switchedTelephone }}</a></dd>
+        <dd class="vgr-detail-list__item"><span class="vgr-detail-list__label">Organisation</span> 
+            <ul class="vgr-detail-list__group">
+                <li><a class="vgr-detail-list__link" href="/">Organisation1</a></li>
+                <li><a class="vgr-detail-list__link" href="/">Organisation 2</a></li>
+                <li><a class="vgr-detail-list__link" href="/">Organisation1 3</a></li>
+            </ul>
+        </dd>
+        <dd class="vgr-detail-list__item vgr-detail-list__item--margintop"><span class="vgr-detail-list__label">Linjechef</span> <a class="vgr-detail-list__link" href="/">Namn/VGRID</a></dd>
       </dl>
 
       <div class="vgr-address-list">
@@ -113,7 +133,10 @@
       </ul>
     </div>
 
-    <button class="vgr-search-card__expand-button" aria-controls="folded-1" data-component="toggle-button">
-    <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M8.418.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0L.601 1.828a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L5 4 8.418.859z" fill="#5B5B5B" fill-rule="evenodd"/></svg>Fler kontaktuppgifter</button>
+    <!-- <button class="vgr-search-card__expand-button" aria-controls="folded-1" data-component="toggle-button">
+    <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M8.418.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0L.601 1.828a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L5 4 8.418.859z" fill="#5B5B5B" fill-rule="evenodd"/></svg>Fler kontaktuppgifter</button> -->
+    <button class="vgr-search-card__expand-button" aria-controls="vgr-search-card__folded" data-module="togglebutton">
+        <svg width="10" height="6" viewBox="0 0 10 6" xmlns="http://www.w3.org/2000/svg"><path d="M8.418.859a.695.695 0 0 1 .978 0 .68.68 0 0 1 0 .969l-3.908 3.83a.697.697 0 0 1-.979 0L.601 1.828a.68.68 0 0 1 0-.969.695.695 0 0 1 .978 0L5 4 8.418.859z" fill="#5B5B5B" fill-rule="evenodd"/></svg><p class="vgr-search-card__expand-button__open">Visa mer</p><p class="vgr-search-card__expand-button__close">Visa mindre</p>
+    </button>
   {% endif %}
 </div>
