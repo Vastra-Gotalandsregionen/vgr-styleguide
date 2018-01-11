@@ -2,6 +2,10 @@
    Objects - Typography Article Meta
    ========================================================================== */
 
+.article__meta {
+  font-family: $primary-font-stack;
+}
+
 .vgr-toggle {
 
   &__button {

@@ -141,6 +141,16 @@
     text-decoration: none;
   }
 
+  &__group {
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+    padding: 0;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    margin-bottom: 1em;
+  }
+
   @media screen and (min-width: $small) {
     &__item {
       display: table-row;
@@ -149,6 +159,10 @@
     &__label {
       display: table-cell;
       width: 130px;
+    }
+
+    &__group {
+
     }
   }
 }
