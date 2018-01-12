@@ -38,7 +38,7 @@
 
       a:link, a:focus, a:visited {
         color: #fff;
-      }  
+      }
     }
   }
 
@@ -108,6 +108,41 @@
   }
 }
 
+.vgr-search-card__multi-employee {
+  margin: 0 -.75rem;
+  background-color: $color-info;
+  font-size: 14px;
+
+  [aria-expanded=true] {
+    display: block;
+  }
+
+  [aria-expanded=false] {
+    display: none;
+  }
+
+  svg {
+    padding-top: .5rem;
+    padding-right: .4rem;
+    padding-bottom: .5rem;
+    padding-left: .5rem;
+    vertical-align: top;
+  }
+
+  &-label {
+    color: $color-black;
+    font-weight: bolder;
+  }
+
+  &-information {
+    padding-top: 0;
+    padding-right: .75rem;
+    padding-bottom: .5rem;
+    padding-left: 0;
+    display: inline-block;
+  }
+}
+
 .vgr-search-card__information {
   margin-top: .625rem;
 
@@ -121,6 +156,10 @@
   margin: 0;
   width: 100%;
   font-size: 14px;
+
+  &--compact {
+    line-height: 1.4em;
+  }
 
   &__title {
     color: #727272;
@@ -139,6 +178,11 @@
   &__link {
     color: #3796d7;
     text-decoration: none;
+
+    &--multi-employee {
+      color: $text-color;
+      text-decoration: underline;
+    }
   }
 
   &__group {
