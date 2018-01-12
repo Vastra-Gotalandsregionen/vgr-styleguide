@@ -350,11 +350,32 @@
     }
 
     svg {
+      margin: 0 6px -2px 0;
+    }
+
+    svg.rotate90 {
       margin-right: 10px;
       -webkit-transform: rotate(-90deg);
       -moz-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);
       transform: rotate(-90deg);
+      margin: 0 10px 2px 0;
+    }
+
+    span {
+      background: #999;
+      margin-right: 6px;
+      margin-bottom: 4px;
+      vertical-align: middle;
+      border-radius: 100%;
+      width: 14px;
+      height: 14px;
+      display: inline-block;
+
+      svg {
+        margin: 0;
+        vertical-align: top;
+      }
     }
   }
 
