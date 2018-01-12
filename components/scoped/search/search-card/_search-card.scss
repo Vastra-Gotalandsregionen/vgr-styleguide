@@ -23,7 +23,7 @@
 
   &__folded {
     display: none;
-    padding-top: 1rem; //.625rem;
+    padding-top: 0.825rem; //.625rem;
     border-top: 1px solid $color-gray-lighter;
   }
 
@@ -156,6 +156,11 @@
 
 .vgr-search-card__information {
   margin-top: 0.825rem; //.625rem;
+  margin-bottom: 0.825rem;
+
+  &--slim {
+    margin-bottom: 0rem;
+  }
 
   &[aria-hidden="true"] {
     display: none;
@@ -248,7 +253,7 @@
 
   &__link {
     display: block;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #e3e3e3;
     background: #f6f6f6;
     line-height: 1;
@@ -305,7 +310,7 @@
     white-space: nowrap;
 
     &--margin-top {
-      margin-top: 1rem;
+      margin-top: 0.825rem;
     }
   }
 
@@ -319,6 +324,35 @@
 
     b {
       display: block;
+    }
+  }
+
+  svg {
+    margin: 0 10px 2px 0;
+  }
+
+  &__link {
+    font-size: 14px;
+    color: #3796d7;
+    text-decoration: none;
+    display: block;
+    // margin: .5rem 0 0;
+    padding: 0.5rem 0 0.5rem 0;
+    // margin: 0;
+    border-top: 1px solid $color-gray-lighter;
+    width: 100%;
+
+    &:hover {
+      color: #3796d7;
+      text-decoration: underline;
+    }
+
+    svg {
+      margin-right: 10px;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      transform: rotate(-90deg);
     }
   }
 
@@ -339,16 +373,13 @@
       }
     }
   }
-
-  svg {
-    margin: 0 10px 2px 0;
-  }
 }
 
 .vgr-search-card__expand-button {
   display: block;
-  margin: .75rem -.75rem -1rem;
-  padding: 1rem;
+  // margin: .75rem -.75rem -1rem;
+  margin: 0 -.75rem -1rem;
+  padding: 0.8rem;
   width: calc(100% + 1.5rem);
   border: 0;
   background: #EBEBEB;
