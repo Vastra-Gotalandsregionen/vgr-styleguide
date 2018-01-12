@@ -46,7 +46,18 @@
         "datetime": "2015-08-19",
         "date": "19 augusti 2015",
         "source": "Västra Götalandsregionen",
-        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…",
+        "multiEmployee": true,
+        "additionalEmployments": [
+          {
+            "title": "Teamledare",
+            "section": "Närhälsan Älvängens vårdcentral"
+          },
+          {
+            "title": "Sjuksköterska Sjukvårdsrådgivare",
+            "section": "117 Vårdguiden på telefon VGR Alingsås"
+          }
+        ]
       }
     },
     {
