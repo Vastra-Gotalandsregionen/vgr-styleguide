@@ -155,7 +155,7 @@
 }
 
 .vgr-search-card__information {
-  margin-top: 1rem; //.625rem;
+  margin-top: 0.825rem; //.625rem;
 
   &[aria-hidden="true"] {
     display: none;
@@ -325,8 +325,7 @@
   .vgr-link-list__heading {
     cursor: pointer;
 
-    &:hover,
-    &:focus {
+    &:hover {
       // background: #efefef;
       text-decoration: underline;
     }
@@ -364,8 +363,7 @@
     vertical-align: middle;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     background: #efefef;
     text-decoration: underline;
   }
