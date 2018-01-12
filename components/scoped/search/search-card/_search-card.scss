@@ -93,6 +93,12 @@
     font-size: $meta-size-smaller;
     color: #3796d7;
 
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+      color: lighten( #3796d7, 5% );
+    }
+
     &__expand-button__close { display: none; }
 
     svg { fill: #EBEBEB;}
@@ -122,6 +128,7 @@
 }
 
 .vgr-search-card__multi-employee {
+  display: none;
   margin: 0 -.75rem;
   background-color: $color-info;
   font-size: 14px;
