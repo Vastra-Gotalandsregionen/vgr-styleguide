@@ -33,7 +33,33 @@
 //     }
 // }
 
-// MODIFIED VERSION
+/*
+
+MODIFIED VERSION
+
+How to use:
+- Add the two following attributes to the element/button responsible for the toggling: 
+
+    1) aria-controls="CLASS_NAME_OF_ELEMENT_WITH_THE_HIDDEN_CONTENT"
+    2) data-module="toggle"
+
+- Add the following styling to the element with the hidden content:
+
+    .CLASS_NAME_OF_ELEMENT_WITH_THE_HIDDEN_CONTENT {
+        display: none;
+
+        [aria-expanded=true] {
+          display: block;
+        }
+
+        [aria-expanded=false] {
+          display: none;
+        }
+    }
+
+- Done!
+
+*/
 export default class toggle {
     constructor(element) {
         // Get the name of the element/container to be shown or hidden
