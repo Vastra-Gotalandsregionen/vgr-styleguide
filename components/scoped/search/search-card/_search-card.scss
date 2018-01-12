@@ -5,6 +5,7 @@
 
   $headline-size: 1.125rem;
   $meta-size: 14px;
+  $meta-size-smaller: 12px;
   $meta-color: #0c6725;
   $excerpt-size: 14px;
 
@@ -83,6 +84,14 @@
     margin: 0;
     font-size: $meta-size;
     line-height: 140%;
+  }
+
+  &__meta-toggle-btn {
+    margin-left: 4px;
+    font-size: $meta-size-smaller;
+    color: #3796d7;
+
+    svg { fill: #EBEBEB;}
   }
 }
 
