@@ -72,6 +72,12 @@ export default class toggle {
             // No element with that ID was found. Look for class instead
             container = element.parentNode.getElementsByClassName(containerID);
             container = container ? container[0] : null;
+
+            if(!container) {
+                // No element with that ID was found. Look for class instead
+                container = element.parentNode.parentNode.getElementsByClassName(containerID);
+                container = container ? container[0] : null;
+            }
         }
 
         if(container) {
