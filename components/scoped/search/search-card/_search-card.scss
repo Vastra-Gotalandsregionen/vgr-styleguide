@@ -215,6 +215,8 @@
     &--multi-employee {
       color: $text-color;
       text-decoration: underline;
+
+      &:hover { text-decoration: underline; }
     }
   }
 
