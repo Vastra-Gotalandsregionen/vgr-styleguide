@@ -12,5 +12,7 @@ html {
 
 p {
   font-family: $primary-font-stack;
+  font-size: $large-font-size;
   margin: 0 0 1.25rem;
+  max-width: 35em;
 }
