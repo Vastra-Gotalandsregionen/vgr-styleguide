@@ -1,5 +1,41 @@
 {% import "macros/status.nunj" as status %}
 
-  <h2>Stilguiden VGR</h2>
+<h3>Designa och producera gränssnitt baserat på komponenter och riktlinjer från Stilguiden VGR.</h3>
 
-  <p>TODO / sätt upp en landning här för VGR stilguide</p>
+<h3>Komponenters status</h3>
+<p>Stilguiden VGR är levande och utveckling sker kontinuerligt, komponenter ges status utifrån deras stadie i utvecklingsprocessen. Möjlig status listas nedan.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <th>Status</th>
+      <th>Beskrivning</th>
+    </tr>
+    <tr>
+      <td>
+        <div class="Status Status--tag">
+          <label class="Status-label" style="background-color: #FF3333; background-color: #FF3333;">Prototype</label>
+        </div>
+      </td>
+      <td>Ej redo för produktion.</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Status Status--tag">
+          <label class="Status-label" style="background-color: #FF9233; background-color: #FF9233;">WIP</label>
+        </div>
+      </td>
+      <td>Work in progress. Feedback och/eller utveckling pågår.</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="Status Status--tag">
+          <label class="Status-label" style="background-color: #29CC29; background-color: #29CC29;">Ready</label>
+        </div>
+      </td>
+      <td>Färdig för produktion.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Navigera komponenter och dokumentation från menyn till vänster.</p>

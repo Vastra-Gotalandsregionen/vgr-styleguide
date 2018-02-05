@@ -10,7 +10,7 @@
   },
   "fractal": {
     "project": {
-      "title": "VGR Styleguide"
+      "title": "Stilguiden VGR"
     },
     "templateEngine": "nunjucks",
     "templateSettings":{},
