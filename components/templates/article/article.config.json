@@ -1,6 +1,7 @@
 {
   "title": "Article",
   "status": "prototype",
+  "hidden": true,
   "context": {
     "modifier": "default",
     "title": "Page headline",

@@ -1,6 +1,7 @@
 {
   "title": "Article Template",
-  "status": "ready",
+  "status": "prototype",
+  "hidden": true,
   "context": {
     "article": {
       "title": "Headline",
