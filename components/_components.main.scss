@@ -41,9 +41,9 @@
    ========================================================================== */
 
 @import "common/forms/forms";
-@import "common/buttons/button";
-// @import "components/block/block";
+@import "common/button/button";
 @import "common/badges/badge";
+// @import "components/block/block";
 // @import "components/share-links/share-links";
 // @import "components/toggle/toggle";
 
@@ -58,9 +58,9 @@
 /* Quick search
    ========================================================================== */
 
-// @import "components/search/quick-search/quick-search";
-// @import "components/search/quick-search/awesomplete";
-// @import "components/search/search-block/search-block";
-// @import "components/search/quick-search-item/quick-search-item";
-// @import "components/search/quick-search-more/quick-search-more";
+@import "search/quick-search/quick-search";
+@import "search/quick-search/awesomplete";
+@import "search/search-block/search-block";
+@import "search/quick-search-item/quick-search-item";
+@import "search/quick-search-more/quick-search-more";
 
