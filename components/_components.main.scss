@@ -1,0 +1,66 @@
+/* ==========================================================================
+   Components styles
+   ========================================================================== */
+
+
+/* Global
+   ========================================================================== */
+
+@import "global/alerts/alerts";
+@import "global/cookie-consent/cookie-consent";
+@import "global/header/header";
+@import "global/footer/footer";
+
+
+/* Brand
+   ========================================================================== */
+
+@import "brand/logo/logo";
+
+
+/* Navigation
+   ========================================================================== */
+
+@import "navigation/navbar/navbar";
+@import "navigation/skip-link/skip-link";
+@import "navigation/tabs/tabs";
+@import "navigation/pagination/standard-pagination/standard-pagination";
+// @import "components/navigation/breadcrumbs/breadcrumbs";
+// @import "components/navigation/pagination/wizard/wizard";
+// @import "components/navigation/primary-navigation/primary-navigation";
+// @import "components/navigation/secondary-navigation/secondary-navigation";
+
+
+/* Cards
+   ========================================================================== */
+
+@import "cards/search-card/search-card";
+
+
+/* Common
+   ========================================================================== */
+
+@import "common/forms/forms";
+@import "common/buttons/button";
+// @import "components/block/block";
+@import "common/badges/badge";
+// @import "components/share-links/share-links";
+// @import "components/toggle/toggle";
+
+
+
+/* Templates
+   ========================================================================== */
+
+@import "templates/hitta-medarbetare/hitta-medarbetare";
+
+
+/* Quick search
+   ========================================================================== */
+
+// @import "components/search/quick-search/quick-search";
+// @import "components/search/quick-search/awesomplete";
+// @import "components/search/search-block/search-block";
+// @import "components/search/quick-search-item/quick-search-item";
+// @import "components/search/quick-search-more/quick-search-more";
+
