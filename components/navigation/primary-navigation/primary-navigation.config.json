@@ -2,5 +2,82 @@
   "title": "primary navigation",
   "status": "prototype",
   "context": {
+    "items":
+    [
+      {
+        "text": "Startsida",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Jobba i VGR",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Hälsa och vård",
+        "url": "#",
+        "attr": "data-selected"
+      },
+      {
+        "text": "Regional utveckling",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Kollektivtrafik",
+        "url": "#",
+        "attr": "",
+        "state": "open",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
+      },
+      {
+        "text": "Politik",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Om VGR",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Aktuellt",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      },
+      {
+        "text": "Kontakt",
+        "url": "#",
+        "attr": "",
+        "state": ""
+      }
+    ]
   }
 }

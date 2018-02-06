@@ -8,6 +8,9 @@ html {
   line-height: $base-line-height;
   color: $text-color;
   background: $color-gray-light;
+
+  @media screen and (max-width: 1560px) and (min-width: 1024px) { font-size: 1.125rem; }
+  @media screen and (min-width: 1560px) { font-size: 1.25rem; }
 }
 
 p {

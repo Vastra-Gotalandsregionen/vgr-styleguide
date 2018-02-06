@@ -2,18 +2,22 @@
   <div class="vgr-container">
     <nav role="navigation">
       <ul class="vgr-unstyled-list vgr-clearfix">
-        <li class="vgr-primary-navigation__item">
-          <a href="/" class="vgr-primary-navigation__link" data-selected>Link 1</a>
-        </li>
-        <li class="vgr-primary-navigation__item">
-          <a href="/" class="vgr-primary-navigation__link">Link 2</a>
-        </li>
-        <li class="vgr-primary-navigation__item">
-          <a href="/" class="vgr-primary-navigation__link">Link 3</a>
-        </li>
-        <li class="vgr-primary-navigation__item">
-          <a href="/" class="vgr-primary-navigation__link">Link 4</a>
-        </li>
+        {% for item in items %}
+          <li class="vgr-primary-navigation__item">
+            <a href="{{item.url}}" class="vgr-primary-navigation__link {{item.state}}" {{item.attr}} aria-expanded="false" aria-hidden="true">{{ item.text }}</a>
+            {% if item.items%}
+              <div class="sub-nav open" role="group" aria-expanded="false" aria-hidden="true">
+                <ul class="sub-nav-group">
+                  {% for subitem in item.items %}
+                    <li class="vgr-primary-navigation__item">
+                      <a href="{{subitem.url}}" class="vgr-primary-navigation__link" {{subitem.attr}}>{{ subitem.text }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            {% endif %}
+          </li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
