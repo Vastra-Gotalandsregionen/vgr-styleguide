@@ -1,6 +1,6 @@
 {
   "title": "Buttons",
-  "status": "prototype",
+  "status": "ready",
   "context": {
     "buttonText": "Button",
     "modifier": "primary"

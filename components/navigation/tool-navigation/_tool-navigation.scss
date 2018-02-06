@@ -1,0 +1,57 @@
+.vgr-tool-navigation {
+  position: absolute;
+  right: 15px;
+  top: -6.9rem;
+  max-height: inherit;
+  display: block;
+
+  .vgr-tool-navigation ul {
+    margin-left: 0;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0;
+    display: block;
+  }
+
+  .vgr-tool-navigation__li {
+    margin-left: .5625rem;
+    margin-right: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+    text-align: center;
+    display: inline-block;
+    float: left;
+  }
+
+  .vgr-tool-navigation__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 .1875rem;
+    display: inline-block;
+    font-size: .7rem;
+    height: auto;
+  }
+
+  .vgr-tool-navigation__btn {
+    background: 0 0;
+    border: none;
+  }
+
+  .vgr-tool-navigation__icon {
+    margin: 0 0 -1.0625rem;
+    fill: #fff;
+    margin-bottom: -18px;
+  }
+
+  .language-block {
+    color: #494746;
+    text-align: left;
+    font-size: .8rem;
+    display: none;
+    line-height: 140%;
+    outline: 0;
+  }
+}
