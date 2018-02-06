@@ -1,7 +1,4 @@
 node_modules
 .vscode
 production
-build/*
-# Track css and js to display them in styleguide
-!build/css
-!build/js
+build
