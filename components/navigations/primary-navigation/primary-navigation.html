@@ -4,9 +4,9 @@
       <ul class="vgr-unstyled-list vgr-clearfix">
         {% for item in items %}
           <li class="vgr-primary-navigation__item">
-            <a href="{{item.url}}" class="vgr-primary-navigation__link vgr-primary-navigation__link--js {{item.state}}" {{item.attr}} aria-expanded="false" aria-hidden="true">{{ item.text }}</a>
+            <a href="{{item.url}}" class="vgr-primary-navigation__link vgr-primary-navigation__link--js {{item.state}}" {{item.attr}} aria-haspopup="true" aria-expanded="false" aria-hidden="true">{{ item.text }}</a>
             {% if item.items%}
-              <div class="sub-nav open" role="group" aria-expanded="false" aria-hidden="true">
+              <div class="sub-nav" role="group" aria-expanded="false" aria-hidden="true">
                 <ul class="sub-nav-group">
                   {% for subitem in item.items %}
                     <li class="vgr-primary-navigation__item">

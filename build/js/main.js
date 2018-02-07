@@ -117,35 +117,35 @@ var PrimaryNav = function () {
 
     for (var i = 0; i < this.toggleBtn.length; i++) {
       this.toggleBtn[i].addEventListener('mouseover', function () {
-        that.toggle(this);
+        that.open(this);
+      });
+      this.toggleBtn[i].addEventListener('mouseout', function () {
+        that.close(this);
       });
     }
   }
 
   _createClass(PrimaryNav, [{
-    key: 'toggle',
-    value: function toggle(btn) {
-
-      var target = btn.nextElementSibling;
-      console.log(target);
-
-      if (!target.classList.contains(this.toggleClassName)) {
-
-        if (link = this.previousElementSibling || link == 'A') {
-          link.classList.add(toggleClassName);
-        }
+    key: 'open',
+    value: function open(btn) {
+      if (btn.nextElementSibling) {
+        var target = btn.nextElementSibling;
         target.classList.add(this.toggleClassName);
-        btn.classList.add(this.toggleClassName);
-        btn.removeAttribute('aria-hidden');
-      } else {
-
-        if (this.link = this.previousElementSibling || this.link == 'A') {
-          this.link.classList.remove(this.toggleClassName);
-        }
-        target.classList.remove(this.toggleClassName);
-        btn.classList.remove(this.toggleClassName);
-        btn.setAttribute('aria-hidden', true);
       }
+      btn.classList.add(this.toggleClassName);
+      btn.setAttribute('aria-expanded', true);
+      btn.setAttribute('aria-hidden', false);
+    }
+  }, {
+    key: 'close',
+    value: function close(btn) {
+      if (btn.nextElementSibling) {
+        var target = btn.nextElementSibling;
+        target.classList.remove(this.toggleClassName);
+      }
+      btn.classList.remove(this.toggleClassName);
+      btn.setAttribute('aria-expanded', false);
+      btn.setAttribute('aria-hidden', true);
     }
   }]);
 

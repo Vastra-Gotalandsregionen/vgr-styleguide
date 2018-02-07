@@ -8,24 +8,109 @@
         "text": "Startsida",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Jobba i VGR",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Hälsa och vård",
         "url": "#",
-        "attr": "data-selected"
+        "attr": "data-selected",
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Regional utveckling",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Kollektivtrafik",
@@ -58,25 +143,109 @@
         "text": "Politik",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Om VGR",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Aktuellt",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       },
       {
         "text": "Kontakt",
         "url": "#",
         "attr": "",
-        "state": ""
+        "state": "",
+        "items":
+        [
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          },
+          {
+            "text": "Sub menu item",
+            "url": "#",
+            "attr": "",
+            "state": ""
+          }
+        ]
       }
     ]
   }
