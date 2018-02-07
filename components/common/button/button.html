@@ -1,8 +1,11 @@
-{% if modifier == 'icon' %}
+<div class="preview">
+  <h1 class="preview__title">vgr-button--{{ modifier }}</h1>
+
+  {% if modifier == 'icon' %}
   <button class="vgr-button" type="submit">
-    {% render "@icon", iconData %}
-    {% if iconWithText %}{{ buttonText }}{% endif %}
+    {% render "@icon", iconData %} {% if iconWithText %}{{ buttonText }}{% endif %}
   </button>
-{% else %}
+  {% else %}
   <button class="vgr-button vgr-button--{{ modifier }}" {{disabled}}>{{ buttonText }}</button>
-{% endif %}
+  {% endif %}
+</div>

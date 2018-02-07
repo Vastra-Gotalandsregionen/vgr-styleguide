@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html class="no-js" lang="sv">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{ _target.label }} - {{ _config.project.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
+
+    </script>
+    <link rel="stylesheet" href="{{ '/css/main.css' | path }}">
+    <link rel="mask-icon" href="{{ '/mask-icon.svg' | path }}" color="#990000">
+    <script src="{{ '/js/main.js' | path }}" defer=""></script>
+    <link rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
+    <!-- Highlight JS + Tidy -->
+    <link rel="stylesheet" href="{{ '/theme/js/lib/highlightjs/styles/github.css' | path }}">
+    <script src="{{ '/theme/js/lib/highlightjs/highlight.pack.js' | path }}"></script>
+    <script src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
+    <script>
+    // hljs.configure({ useBR: true });
+    // hljs.initHighlightingOnLoad();
+    window.onload = function() {
+      var previewTags = document.getElementsByClassName('preview');
+      var i = 0;
+      var l = previewTags.length;
+      for (i; i < l; i++) {
+        var block = previewTags[i];
+
+        var blockClone = block.cloneNode(true);
+        var headlines = blockClone.getElementsByClassName("preview__title");
+        var j = 0;
+        var k = headlines.length;
+        for(j; j < k; j++)
+        {
+        	blockClone.removeChild(headlines[j]);
+        }
+
+        var preTag = document.createElement("pre");
+        preTag.className = "preview__html html";
+        preTag.innerHTML = blockClone.innerHTML;
+        block.appendChild(preTag);
+
+        var content = preTag.innerHTML;
+        content = content.trim();
+        content = tidy_html5(content, {
+          "indent": "auto",
+          "indent-spaces": 2,
+          "wrap": 80,
+          "markup": true,
+          "output-xml": false,
+          "numeric-entities": true,
+          "quote-marks": true,
+          "quote-nbsp": false,
+          "show-body-only": true,
+          "quote-ampersand": false,
+          "break-before-br": true,
+          "uppercase-tags": false,
+          "uppercase-attributes": false,
+          "drop-font-tags": true,
+          "tidy-mark": false
+        });
+        content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        preTag.innerHTML = content;
+        hljs.highlightBlock(preTag);
+      }
+
+      // var preTags = document.getElementsByTagName('pre');
+      // var i = 0;
+      // var l = preTags.length;
+      // for (i; i < l; i++) {
+      //   var block = preTags[i];
+      //   var content = block.innerHTML;
+      //   content = content.trim();
+      //   content = tidy_html5(content, {
+      //     "indent": "auto",
+      //     "indent-spaces": 2,
+      //     "wrap": 80,
+      //     "markup": true,
+      //     "output-xml": false,
+      //     "numeric-entities": true,
+      //     "quote-marks": true,
+      //     "quote-nbsp": false,
+      //     "show-body-only": true,
+      //     "quote-ampersand": false,
+      //     "break-before-br": true,
+      //     "uppercase-tags": false,
+      //     "uppercase-attributes": false,
+      //     "drop-font-tags": true,
+      //     "tidy-mark": false
+      //   });
+      //   content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      //   block.innerHTML = content;
+      //   hljs.highlightBlock(block);
+      // }
+    };
+
+    </script>
+    <!-- End Highlight JS + Tidy -->
+  </head>
+
+  <body>
+    {{ yield }}
+  </body>
+
+</html>
