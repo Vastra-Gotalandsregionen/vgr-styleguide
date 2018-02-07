@@ -8,28 +8,28 @@
 
 @import "components/alerts/alerts";
 @import "components/cookie-consent/cookie-consent";
-@import "global/header/header";
-@import "global/footer/footer";
+@import "navigations/header/header";
+@import "navigations/footer/footer";
 
 
 /* Brand
    ========================================================================== */
 
-@import "brand/logo/logo";
+@import "assets/logo/logo";
 
 
 /* Navigation
    ========================================================================== */
 
-@import "navigation/navbar/navbar";
-@import "navigation/skip-link/skip-link";
-@import "navigation/tabs/tabs";
-@import "navigation/paginations/standard-pagination/standard-pagination";
-@import "navigation/breadcrumbs/breadcrumbs";
-@import "navigation/paginations/wizard-pagination/wizard-pagination";
-@import "navigation/primary-navigation/primary-navigation";
-@import "navigation/secondary-navigation/secondary-navigation";
-@import "navigation/tool-navigation/tool-navigation";
+@import "navigations/navbar/navbar";
+@import "navigations/skip-link/skip-link";
+@import "navigations/tabs/tabs";
+@import "navigations/paginations/standard-pagination/standard-pagination";
+@import "navigations/breadcrumbs/breadcrumbs";
+@import "navigations/paginations/wizard-pagination/wizard-pagination";
+@import "navigations/primary-navigation/primary-navigation";
+@import "navigations/secondary-navigation/secondary-navigation";
+@import "navigations/tool-navigation/tool-navigation";
 
 
 /* Cards
