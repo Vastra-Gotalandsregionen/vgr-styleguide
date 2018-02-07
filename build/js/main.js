@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -80,7 +80,7 @@ var moduleElements = document.querySelectorAll('[data-module]');
 for (var i = 0; i < moduleElements.length; i++) {
   var el = moduleElements[i];
   var name = el.getAttribute('data-module');
-  var Module = __webpack_require__(5)("./" + name).default;
+  var Module = __webpack_require__(6)("./" + name).default;
   new Module(el);
 }
 
@@ -97,7 +97,77 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _awesomplete = __webpack_require__(6);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var PrimaryNav = function () {
+  function PrimaryNav(element) {
+    _classCallCheck(this, PrimaryNav);
+
+    var that = this;
+
+    var toggleClassName = element.getAttribute('data-toggle-class');
+    var toggleBtnClassName = element.getAttribute('data-trigger');
+
+    this.toggleClassName = toggleClassName;
+    this.toggleBtn = element.getElementsByClassName(toggleBtnClassName);
+
+    if (!this.toggleClassName || !this.toggleBtn) {
+      return;
+    }
+
+    for (var i = 0; i < this.toggleBtn.length; i++) {
+      this.toggleBtn[i].addEventListener('mouseover', function () {
+        that.toggle(this);
+      });
+    }
+  }
+
+  _createClass(PrimaryNav, [{
+    key: 'toggle',
+    value: function toggle(btn) {
+
+      var target = btn.nextElementSibling;
+      console.log(target);
+
+      if (!target.classList.contains(this.toggleClassName)) {
+
+        if (link = this.previousElementSibling || link == 'A') {
+          link.classList.add(toggleClassName);
+        }
+        target.classList.add(this.toggleClassName);
+        btn.classList.add(this.toggleClassName);
+        btn.removeAttribute('aria-hidden');
+      } else {
+
+        if (this.link = this.previousElementSibling || this.link == 'A') {
+          this.link.classList.remove(this.toggleClassName);
+        }
+        target.classList.remove(this.toggleClassName);
+        btn.classList.remove(this.toggleClassName);
+        btn.setAttribute('aria-hidden', true);
+      }
+    }
+  }]);
+
+  return PrimaryNav;
+}();
+
+exports.default = PrimaryNav;
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _awesomplete = __webpack_require__(7);
 
 var _awesomplete2 = _interopRequireDefault(_awesomplete);
 
@@ -208,7 +278,7 @@ var quicksearch = function () {
 exports.default = quicksearch;
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -367,17 +437,18 @@ var toggle = function () {
 exports.default = toggle;
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(4);
+__webpack_require__(5);
 __webpack_require__(0);
 __webpack_require__(1);
-module.exports = __webpack_require__(2);
+__webpack_require__(2);
+module.exports = __webpack_require__(3);
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -385,24 +456,26 @@ module.exports = __webpack_require__(2);
 
 __webpack_require__(0);
 
-var _whatInput = __webpack_require__(7);
+var _whatInput = __webpack_require__(8);
 
 var _whatInput2 = _interopRequireDefault(_whatInput);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"./": 0,
 	"./index": 0,
 	"./index.js": 0,
-	"./quicksearch": 1,
-	"./quicksearch.js": 1,
-	"./toggle": 2,
-	"./toggle.js": 2
+	"./primarynav": 1,
+	"./primarynav.js": 1,
+	"./quicksearch": 2,
+	"./quicksearch.js": 2,
+	"./toggle": 3,
+	"./toggle.js": 3
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -418,10 +491,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 5;
+webpackContext.id = 6;
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 /**
@@ -924,7 +997,7 @@ return _;
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**

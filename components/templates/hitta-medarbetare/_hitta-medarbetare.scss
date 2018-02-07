@@ -8,6 +8,26 @@
     justify-content: center;
   }
 
+  .vgr-search-utilities__list {
+    padding-right: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    & .vgr-search-utilities__item {
+      padding: 0.5em 0.25em 0;
+    }
+
+    & .vgr-search-utilities__link {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 14px;
+
+      &:hover { text-decoration: underline; }
+    }
+  }
+
   .search__form .vgr-button { padding: 1.5rem; }
 }
 
