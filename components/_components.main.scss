@@ -7,7 +7,7 @@
    ========================================================================== */
 
 @import "components/alerts/alerts";
-@import "components/cookie-consents/cookie-consent";
+@import "components/cookie-consent/cookie-consent";
 @import "global/header/header";
 @import "global/footer/footer";
 
@@ -24,9 +24,9 @@
 @import "navigation/navbar/navbar";
 @import "navigation/skip-link/skip-link";
 @import "navigation/tabs/tabs";
-@import "navigation/pagination/standard-pagination/standard-pagination";
+@import "navigation/paginations/standard-pagination/standard-pagination";
 @import "navigation/breadcrumbs/breadcrumbs";
-@import "navigation/pagination/wizard-pagination/wizard-pagination";
+@import "navigation/paginations/wizard-pagination/wizard-pagination";
 @import "navigation/primary-navigation/primary-navigation";
 @import "navigation/secondary-navigation/secondary-navigation";
 @import "navigation/tool-navigation/tool-navigation";
@@ -42,11 +42,11 @@
    ========================================================================== */
 
 @import "forms/forms";
-@import "components/buttons/button";
-@import "components/badges/badge";
-@import "components/blocks/block";
+@import "components/button/button";
+@import "components/badge/badge";
+@import "components/block/block";
 @import "components/share-links/share-links";
-@import "components/toggles/toggle";
+@import "components/toggle/toggle";
 
 
 
