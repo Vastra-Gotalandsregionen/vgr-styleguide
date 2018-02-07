@@ -6,42 +6,46 @@
 /* Global
    ========================================================================== */
 
-@import "components/alerts/alerts";
-@import "components/cookie-consent/cookie-consent";
-@import "navigations/header/header";
-@import "navigations/footer/footer";
 
-
-/* Brand
+/* Assets
    ========================================================================== */
 
 @import "assets/logo/logo";
 
 
-/* Navigation
+
+
+/* Navigations
    ========================================================================== */
 
 @import "navigations/navbar/navbar";
 @import "navigations/skip-link/skip-link";
 @import "navigations/tabs/tabs";
-@import "navigations/paginations/standard-pagination/standard-pagination";
+@import "navigations/standard-pagination/standard-pagination";
+@import "navigations/wizard-pagination/wizard-pagination";
 @import "navigations/breadcrumbs/breadcrumbs";
-@import "navigations/paginations/wizard-pagination/wizard-pagination";
 @import "navigations/primary-navigation/primary-navigation";
 @import "navigations/secondary-navigation/secondary-navigation";
 @import "navigations/tool-navigation/tool-navigation";
+@import "navigations/header/header";
+@import "navigations/footer/footer";
 
 
-/* Cards
-   ========================================================================== */
-
-@import "components/search/search-card/search-card";
 
 
-/* Common
+/* Forms
    ========================================================================== */
 
 @import "forms/forms";
+
+
+
+
+/* Components
+   ========================================================================== */
+
+@import "components/alert/alert";
+@import "components/cookie-consent/cookie-consent";
 @import "components/button/button";
 @import "components/badge/badge";
 @import "components/block/block";
@@ -50,13 +54,8 @@
 
 
 
-/* Templates
-   ========================================================================== */
 
-@import "templates/hitta-medarbetare/hitta-medarbetare";
-
-
-/* Search
+/* Components: Search
    ========================================================================== */
 
 @import "components/search/search-bar/search-bar";
@@ -65,4 +64,12 @@
 @import "components/search/search-block/search-block";
 @import "components/search/quick-search-item/quick-search-item";
 @import "components/search/quick-search-more/quick-search-more";
+@import "components/search/search-card/search-card";
 
+
+
+
+/* Templates
+   ========================================================================== */
+
+@import "templates/hitta-medarbetare/hitta-medarbetare";

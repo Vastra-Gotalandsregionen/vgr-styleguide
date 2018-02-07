@@ -1,14 +1,76 @@
-Brand ▼
+Assets ▼
 	Colors
 	Logos
+	Icons
 
 
-Icons ▼
-	XXX
+Components ▼
+	Alert
+	Audio
+	Badge
+	Block
+	Button
+	Cookie Consent
+	Figure
+	Image
+	Search
+	Share Links
+	Table
+	Toggle
+	Video
+	Vimeo
+	Youtube
+	----------------------
+	Dropdown
+	Container
+	Button
+	Accordion
+	Alert
+	Breadcrumb
+	Card
+	Divider
+	Label
+	List
+	Modal
+	Notification
+	Progress
+	Slider
+	Slideshow
+	Tooltip
+	Message
+	Tabs
+	#Pagination
+	Popover
 
 
-Grid ▼
-	XXX
+Forms ▼
+	Input Icon
+	Text Input
+
+
+Layout ▼
+	Container
+	Row
+	----------------------
+	Grid
+
+
+Navigations ▼
+	Breadcrumbs
+	Footer
+	Header
+	Navbar
+	Standard Pagination
+	Wizard Pagination
+	Primary Navigation
+	Skip Link
+	Tabs
+	Tool Navigation
+
+
+Templates ▼
+	Hitta Medarbetare
+	Server Error Template
 
 
 Typography ▼
@@ -17,62 +79,25 @@ Typography ▼
 	Lead
 	Article Meta
 	Link
+	Extended Links
+	Click To Action
+	Abbreviations
 	Blockquote
-	Abbreviation
 	Inline Text Elements
+	Lists
+	Subhead
+	Thematic Break
+	----------------------
+	Abbreviation
 	Time
 
 
-Forms ▼
-	XX
-
-
-Components ▼
-	Tables
-	Grids
-	Dropdowns
-	Containers
-	Buttons
-	Accordions
-	Alerts
-	Breadcrumbs
-	Cards
-	Dividers
-	Labels
-	Lists
-	Modals
-	Notifications
-	Progresss
-	Sliders
-	Slideshows
-	Tooltips
-	Messages
-	Tabss
-	Paginations
-	Popovers
-	Toggles
-	Cookie Consents
-
-
-Media ▼
-	Image
-	Figure
-	Audio
-	Video
-	YouTube
-	Vimeo
-
-
-Navigations ▼
-	Header
-	Footer
-
-
-Animations ▼
-	XXX
-
-
 Utilities ▼
+	Aligment
+	Clearfix
+	Scrollable
+	Visually Hidden
+	----------------------
 	Borders
 	Clearfix
 	Flex
@@ -89,7 +114,7 @@ Utilities ▼
 	Scrollable
 
 
-Templates ▼
+Animations ▼
 	XXX
 
 
