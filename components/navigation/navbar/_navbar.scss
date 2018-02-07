@@ -5,7 +5,7 @@
   $list-default-space: .75rem .75rem !default;
 
   /* Colors */
-  $list-background: #004674 !default;
+  $list-background: #004E7D !default;
   $list-link-color: #c1e1f6 !default;
 
   /* Current */
@@ -25,7 +25,9 @@
   }
 
   &__list-item {
+    text-align: center;
     display: flex;
+    flex-grow: 1;
 
     &--current {
       box-shadow: inset 0 -2px 0 $list-current-color;

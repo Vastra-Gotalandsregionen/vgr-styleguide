@@ -1,10 +1,23 @@
 .vgr-header-search {
   padding: 1rem 0;
   background: #005B97;
+
+  .vgr-logo {
+    padding-right: 15px;
+    padding-left: 15px;
+    justify-content: center;
+  }
+
+  .search__form .vgr-button { padding: 1.5rem; }
 }
+
 .vgr-search-information {
-  padding: 0 .75rem;
+  padding: .75rem;
 }
 
 .vgr-search-information p,
-.vgr-search-results p { font-family: $secondary-font-stack; }
+.vgr-search-results p {
+  font-size: 14px;
+  font-family: $secondary-font-stack;
+  margin: 0;
+}
