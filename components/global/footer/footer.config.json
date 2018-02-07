@@ -1,56 +1,28 @@
 {
   "title": "Footer",
-  "status": "prototype",
+  "status": "ready",
   "context": {
-    "items":[
+    "items": [
       {
-        "blockData": {
-          "title": "För dig som är",
-          "modifier": "list",
-          "list": [
-            {
-              "url": "/",
-              "linkText": "Fåtal platser kvar!",
-              "description": "Vi har nu endast ett fåtal platser kvar på vår fina sommarkurs i silversmide. Passa på att söka!"
-            },
-            {
-              "url": "/",
-              "linkText": "Sommarkurser släppta för sommaren 2017",
-              "description": "Välkommen att söka till sommarens kurser!"
-            },
-            {
-              "url": "/",
-              "linkText": "Öppet hus",
-              "description": "Lördag 8 april 2017"
-            },
-            {
-              "url": "/",
-              "linkText": "Ny distanskurs i textil",
-              "description": "Välkommen till distanskurs med LIN-garner på Grebbestads folkhögskola."
-            },
-            {
-              "url": "/",
-              "linkText": "Vad är en folkhögskola",
-              "description": "En film om folkhögskolan"
-            }
-          ]
-        }
+        "title": "Kontakta oss",
+        "content": "<p>Västra Götalandsregionen<br>Regionens Hus<br>SE 462 80&nbsp; Vänersborg</p><p>Växel:&nbsp;010-441 00 00<br>E-post:&nbsp;<a href='mailto:post@vgregion.se' title='E-postadress'>post@vgregion.se</a>&nbsp;<br>Org nr: 232100-0131</p><p><a href='mailto:webbredaktion.vgr@vgregion.se' title='E-postadress'>Kontakta webbredaktionen&nbsp;</a></p><p id='ctl00_PageFooter_VGRFooter_GetContactLI'><a id='ctl00_PageFooter_VGRFooter_GetContactLink' href='/kontakt/'>Mer kontaktinformation</a></p><p><a href='/politik/kontaktuppgifter-till-politiker/'>Kontaktuppgifter till politiker</a></p>",
+        "icon": "file-type--mail",
+        "image": "/temp/block-image.jpg",
+        "imageAlt": "Alternative text"
       },
       {
-        "blockData": {
-          "title": "Om Folktandvården",
-          "modifier": "teaser",
-          "title": "Sök till våra kurser",
-          "text": "På Grebbestads folkhögskola har vi många olika kurser att välja bland!",
-          "image": "/temp/block-image.jpg",
-          "imageAlt": "Alternative text"
-        }
+        "title": "Social media och bloggar",
+        "content": "<p>Vi finns huvudsakligen&nbsp;i de här sociala medierna:</p><p><a href='https://www.facebook.com/vastragotalandsregionen'>Facebook</a>&nbsp;|&nbsp;<a href='https://twitter.com/vgregion'>Twitter</a>&nbsp;|&nbsp;<a href='https://www.linkedin.com/company/vastra-gotalandsregionen'>LinkedIn</a>&nbsp;|&nbsp;<a href='https://www.youtube.com/user/VGregionen'>Youtube</a></p><p>Här finns <a href='/om-vgr/organisation-och-verksamhet/kommunikation/social-media/'>fler sociala medier</a>.</p>",
+        "icon": "",
+        "image": "/temp/block-image.jpg",
+        "imageAlt": "Alternative text"
       },
       {
-        "blockData": {
-          "title": "HejKontakta våra kliniker",
-          "modifier": "default"
-        }
+        "title": "Om Västra Götalandsregionen",
+        "content": "<p>Vi ansvarar för att du har tillgång till en bra sjukvård och vi skapar förutsättningar för en god hälsa för alla i Västra Götaland.&nbsp;Våra andra uppdrag är att arbeta med kultur, kollektivtrafik, tillväxt och en hållbar utveckling i Västra Götaland. Västra Götalandsregionen är en politiskt styrd organisation.</p><div><a href='/'><img src='/img/logotype-white.svg' alt='VGR Logo'</a></div>",
+        "icon": "",
+        "image": "/temp/block-image.jpg",
+        "imageAlt": "Alternative text"
       }
     ]
   }

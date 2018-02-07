@@ -33,6 +33,11 @@
     display: inline-block;
     font-size: .7rem;
     height: auto;
+
+    span {
+      display: block;
+      margin-top: .3125rem;
+    }
   }
 
   .vgr-tool-navigation__btn {
