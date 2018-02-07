@@ -29,6 +29,7 @@
 @import "navigation/pagination/wizard-pagination/wizard-pagination";
 @import "navigation/primary-navigation/primary-navigation";
 @import "navigation/secondary-navigation/secondary-navigation";
+@import "navigation/tool-navigation/tool-navigation";
 
 
 /* Cards
@@ -55,9 +56,10 @@
 @import "templates/hitta-medarbetare/hitta-medarbetare";
 
 
-/* Quick search
+/* Search
    ========================================================================== */
 
+@import "search/search-bar/search-bar";
 @import "search/quick-search/quick-search";
 @import "search/quick-search/awesomplete";
 @import "search/search-block/search-block";

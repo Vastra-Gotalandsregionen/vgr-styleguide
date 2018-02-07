@@ -1,7 +1,7 @@
 {
   "collated": true,
   "title": "Share Links",
-  "status": "wip",
+  "status": "ready",
   "context": {
     "label": "Dela sidan via:",
     "id": "sharelabel",
