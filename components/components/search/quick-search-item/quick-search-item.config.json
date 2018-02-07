@@ -1,0 +1,19 @@
+{
+  "label": "Quick Search - Item",
+  "context": {
+    "headline": "Title",
+    "url": "#",
+    "photo": "http://via.placeholder.com/48x48",
+    "multipleBestallaridText": "Flera",
+    "multipleAnsvarsnummerText": "Flera",
+    "multipleInummerText": "Flera",
+    "vgrid": "VGR-id",
+    "bestallarid": "Beställar-id",
+    "ansvarsnummer": "Ansvarsnummer",
+    "inummer": "I-nummer",
+    "vgridResult": "VGR-id",
+    "bestallaridResult": "X",
+    "ansvarsnummerResult": "X",
+    "inummerResult": "X"
+  }
+}

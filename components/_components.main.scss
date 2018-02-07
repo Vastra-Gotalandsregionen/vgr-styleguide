@@ -6,8 +6,8 @@
 /* Global
    ========================================================================== */
 
-@import "global/alerts/alerts";
-@import "global/cookie-consent/cookie-consent";
+@import "components/alerts/alerts";
+@import "components/cookie-consents/cookie-consent";
 @import "global/header/header";
 @import "global/footer/footer";
 
@@ -35,18 +35,18 @@
 /* Cards
    ========================================================================== */
 
-@import "cards/search-card/search-card";
+@import "components/search/search-card/search-card";
 
 
 /* Common
    ========================================================================== */
 
-@import "common/forms/forms";
-@import "common/button/button";
-@import "common/badges/badge";
-@import "cards/block/block";
-@import "common/share-links/share-links";
-@import "common/toggle/toggle";
+@import "forms/forms";
+@import "components/buttons/button";
+@import "components/badges/badge";
+@import "components/blocks/block";
+@import "components/share-links/share-links";
+@import "components/toggles/toggle";
 
 
 
@@ -59,10 +59,10 @@
 /* Search
    ========================================================================== */
 
-@import "search/search-bar/search-bar";
-@import "search/quick-search/quick-search";
-@import "search/quick-search/awesomplete";
-@import "search/search-block/search-block";
-@import "search/quick-search-item/quick-search-item";
-@import "search/quick-search-more/quick-search-more";
+@import "components/search/search-bar/search-bar";
+@import "components/search/quick-search/quick-search";
+@import "components/search/quick-search/awesomplete";
+@import "components/search/search-block/search-block";
+@import "components/search/quick-search-item/quick-search-item";
+@import "components/search/quick-search-more/quick-search-more";
 

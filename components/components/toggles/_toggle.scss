@@ -1,0 +1,82 @@
+.toggle {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  + .edu-toggle {
+    margin-top: 0;
+  }
+
+  [aria-expanded=true] {
+    display: block;
+  }
+
+  [aria-expanded=false] {
+    display: none;
+  }
+
+  &__button {
+    display: block;
+    margin: 0;
+    padding: 1rem 3rem 1rem 1rem;
+    border: 1px solid $color-gray-600;
+    background: $color-white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all .2s ease-in-out;
+
+    &[data-expanded] {
+      background-image: url(../icons/chevron-up-red.svg);
+      box-shadow: none;
+    }
+
+    &:hover {
+      background-color: rgba($color-gray-600, .5);
+      text-decoration: none;
+    }
+  }
+
+  &__headline {
+    position: relative;
+    display: block;
+    padding-left: 28px;
+    background-position: 0 50%;
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &[data-expanded] {
+
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 1rem 3rem 1rem 1rem;
+    border: 1px solid $color-gray-600;
+    border-top: 0;
+    background: $color-gray-600;
+    font-size: .875rem;
+    line-height: 1.5;
+
+    &--simple {
+      padding-right: 0;
+      padding-left: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

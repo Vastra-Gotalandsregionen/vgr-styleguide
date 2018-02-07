@@ -1,0 +1,10 @@
+<div class="vgr-quick-search">
+  <ul class="vgr-quick-search-list">
+    {% for item in items %}
+    <li class="vgr-quick-search-list-item">
+       {% render "@quick-search-item--aligned", item.itemData, true %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% render "@quick-search-more" %}
+</div>

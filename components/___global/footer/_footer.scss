@@ -1,0 +1,38 @@
+.vgr-footer {
+  padding: 1em 0;
+  background: $theme-color;
+  font-family: $secondary-font-stack;
+  color: $color-white;
+
+  .vgr-block {
+    float: none;
+    padding: 0;
+  }
+
+  .vgr-block__header {
+    position: relative;
+    padding: .7rem 0;
+    border-bottom: 2px solid $color-white;
+  }
+
+  .vgr-block__header-heading {
+    font-size: 1.2rem;
+  }
+
+  .vgr-block__container {
+    border: none;
+    background: transparent;
+  }
+
+  .vgr-block__text {
+    padding: .7em 0;
+
+    img { margin-top: 1rem; }
+  }
+
+  div, p, a {
+    font-family: $secondary-font-stack;
+    color: $color-white;
+    font-size: .9rem;
+  }
+}

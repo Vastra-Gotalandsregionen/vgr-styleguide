@@ -1,0 +1,26 @@
+<header class="vgr-header" role="banner">
+  <div class="vgr-container">
+    <div class="header__inner-wrapper">
+      <div class="logotype-section">
+        <div class="logotype-section__wrapper logotype-section__wrapper--site" data-onlyimage="">
+          <a class="logotype-section__link logotype-section__link--imagelink" href="/">
+            {% render "@logo--svg--white" %}
+          </a>
+        </div>
+      </div>
+      <div class="header-btn-wrapper">
+      </div>
+    </div>
+    <div id="main-search">
+      <div class="search" data-isexpanded="false">
+        {% render "@search-bar" %}
+      </div>
+    </div>
+  </div>
+  <div class="main-navigation" id="vgr-main-navigation">
+    <div class="main-navigation__wrapper">
+      {% render "@primary-navigation" %}
+      {% render "@tool-navigation" %}
+    </div>
+  </div>
+</header>

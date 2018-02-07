@@ -1,0 +1,52 @@
+<div class="vgr-block vgr-block--{{ modifier }}">
+  <div class="vgr-block__container">
+    {% if image %}
+    <div class="vgr-block__image-container">
+      <img class="vgr-block__image" src="{{ image | path }}" alt="{{ imageAlt }}">
+    </div>
+    {% endif %}
+    {% if title %}
+    <div class="vgr-block__header">
+      {% if title %}
+      <h2 class="vgr-block__header-heading">
+        {% if icon %}
+            {% render "@icon", iconData %}
+        {% endif %}
+        {{ title }}
+      </h2>
+      {% endif %}
+
+      {% if subtitle %}
+      <span class="vgr-block__header-subtitle">{{ subtitle }}</span>
+      {% endif %}
+
+    </div>
+    {% endif %}
+    <div class="vgr-block__content">
+
+      {% if list %}
+      <div class="vgr-block__list-container">
+        <ul  class="vgr-block__list">
+
+          {% for item in list %}
+          <li class="vgr-block__list-item">
+            {% if item.linkText %}
+            <a href="{{ item.url }}">{{ item.linkText }}</a>
+            {% endif %}
+
+            {% if item.description %}
+            <p>{{ item.description }}</p>
+            {% endif %}
+
+          </li>
+          {% endfor %}
+
+        </ul>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+
+
+</div>

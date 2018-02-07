@@ -1,0 +1,32 @@
+.vgr-form-field {
+  position: relative;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: .625rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    transform: translateY(-50%);
+    fill: #002842;
+    z-index: 2;
+  }
+
+  &__input {
+    padding: .625rem .75rem;
+    width: 100%;
+    border: 1px solid;
+    border-color: darken( $color-white, 20% );
+    border-radius: 2px;
+    // box-shadow: 0 2px 3px rgba($color-black, .2);
+
+    &--icon { padding: 1em 1em 1em 2.5em; }
+  }
+}
+
+.vgr-form__label {
+  display: block;
+  font-weight: 700;
+  font-size: 87.5%;
+  font-family: $secondary-font-stack;
+}

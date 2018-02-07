@@ -1,0 +1,81 @@
+{
+  "title": "Search card",
+  "status": "ready",
+  "context": {
+    "headline": "Lorem ipsum",
+    "url": "/",
+    "datetime": "2015-08-19",
+    "date": "19 augusti 2015",
+    "source": "Västra Götalandsregionen",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+  },
+  "variants": [
+    {
+      "name": "panel",
+      "context": {
+        "modifier": "panel"
+      }
+    },
+    {
+      "name": "person",
+      "context": {
+        "modifier": "person",
+        "expandable": true,
+        "bestbet": false,
+        "statusOnline": true,
+        "statusOffline": false,
+        "statusUnavailable": false,
+        "image": "/temp/profile-photo.png",
+        "mapAddress": "/temp/map.png",
+        "imageAlt": "alt text",
+        "imageHeight": "66",
+        "imageWidth": "66",
+        "title": "Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "emailLabel": "Epost",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landlinelabel": "Telefon",
+        "landline": "073 - 688 93 53",
+        "mobileLabel": "Mobiltelefon",
+        "mobile": "073 - 688 93 53",
+        "switchedTelephoneLabel": "Växeltelefon",
+        "switchedTelephone": "010 - 441 00 00",
+        "faxNumberLabel": "Faxnummer",
+        "faxNumber": "010 - 441 00 00",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "19 augusti 2015",
+        "source": "Västra Götalandsregionen",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…",
+        "multiEmployee": true,
+        "additionalEmployments": [
+          {
+            "title": "Teamledare",
+            "section": "Närhälsan Älvängens vårdcentral"
+          },
+          {
+            "title": "Sjuksköterska Sjukvårdsrådgivare",
+            "section": "117 Vårdguiden på telefon VGR Alingsås"
+          }
+        ]
+      }
+    },
+    {
+      "name": "organisation",
+      "context": {
+        "modifier": "organisation",
+        "bestbet": true,
+        "title": "Applikationsspecialist",
+        "placement": "Digitala medier & Dokumenthantering",
+        "email": "evelyn.stolfer@vgregion.se",
+        "landline": "073 - 688 93 53",
+        "mobile": "073 - 688 93 53",
+        "url": "/",
+        "datetime": "2015-08-19",
+        "date": "19 augusti 2015",
+        "source": "Västra Götalandsregionen",
+        "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet tristique erat a tincidunt. Morbi eleifend augue sit amet nunc vulputate finibus…"
+      }
+    }
+  ]
+}

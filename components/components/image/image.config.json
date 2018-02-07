@@ -1,0 +1,10 @@
+{
+  "title": "Image",
+  "status": "ready",
+  "context": {
+    "src": "/temp/photo-640x425.jpg",
+    "alt": "Photo of a sunset over the ocean with a cliff",
+    "width": "640",
+    "height": "425"
+  }
+}
