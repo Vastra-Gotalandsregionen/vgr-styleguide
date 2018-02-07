@@ -1,4 +1,5 @@
 {
+  "collated": true,
   "title": "Block",
   "status": "prototype",
   "context": {
@@ -44,12 +45,12 @@
     {
       "name": "List",
       "context": {
+        "modifier": "list",
         "title": "Aktuellt",
         "icon": true,
         "iconData": {
           "id": "content-paste"
         },
-        "modifier": "list",
         "list": [
           {
             "url": "/",

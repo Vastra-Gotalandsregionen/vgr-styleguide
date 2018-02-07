@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="{{ '/css/main.css' | path }}">
     <link rel="mask-icon" href="{{ '/mask-icon.svg' | path }}" color="#990000">
     <script src="{{ '/js/main.js' | path }}" defer=""></script>
-    <link rel="stylesheet" href="{{ '/theme/css/preview.css' | path }}">
+    <link rel="stylesheet" href="{{ '/css/preview.css' }}">
     <!-- Highlight JS + Tidy -->
-    <link rel="stylesheet" href="{{ '/theme/js/lib/highlightjs/styles/github.css' | path }}">
-    <script src="{{ '/theme/js/lib/highlightjs/highlight.pack.js' | path }}"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <!-- <link rel="stylesheet" href="{{ '/theme/js/lib/highlightjs/styles/github.css' | path }}">
+    <script src="{{ '/theme/js/lib/highlightjs/highlight.pack.js' | path }}"></script> -->
     <script src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
     <script>
-    // hljs.configure({ useBR: true });
-    // hljs.initHighlightingOnLoad();
     window.onload = function() {
       var previewTags = document.getElementsByClassName('preview');
       var i = 0;
@@ -28,22 +28,29 @@
       for (i; i < l; i++) {
         var block = previewTags[i];
 
-        var blockClone = block.cloneNode(true);
-        var headlines = blockClone.getElementsByClassName("preview__title");
-        var j = 0;
-        var k = headlines.length;
-        for(j; j < k; j++)
-        {
-        	blockClone.removeChild(headlines[j]);
-        }
+        var newPreTag = document.createElement("pre");
+        newPreTag.className = "preview__html html";
+        newPreTag.innerHTML = block.innerHTML;
+        block.appendChild(newPreTag);
 
-        var preTag = document.createElement("pre");
-        preTag.className = "preview__html html";
-        preTag.innerHTML = blockClone.innerHTML;
-        block.appendChild(preTag);
+        var newTitle = document.createElement("h1");
+        newTitle.className = "preview__title";
+        newTitle.innerHTML = block.getAttribute("data-title");
+        block.insertBefore(newTitle, block.firstChild);
 
-        var content = preTag.innerHTML;
+        var content = newPreTag.innerHTML;
         content = content.trim();
+        // // content = content.replace(/\n\n/g, "\n");
+        // // content = content.replace(/\n\n\n/g, "\n");
+        // // content = content.replace(/\n\n\n\n/g, "\n");
+        // // content = content.replace( /\s\s+/g, ' ' );
+        // // content = content.replace(/\s{2,}/g, ' ');
+        // content = content.replace(/\n\s*\n/g, '\n');
+        // content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+        // content = content.replace(/(\n\s*?\n)\s*\n/, '$1');
+        // // content = content.replace(/\n{2,}/g, '\n');​​​​​​​
+        // // content = content.replace(/[\r\n]+/g, '\n\n'); //double
+
         content = tidy_html5(content, {
           "indent": "auto",
           "indent-spaces": 2,
@@ -61,39 +68,15 @@
           "drop-font-tags": true,
           "tidy-mark": false
         });
-        content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-        preTag.innerHTML = content;
-        hljs.highlightBlock(preTag);
-      }
 
-      // var preTags = document.getElementsByTagName('pre');
-      // var i = 0;
-      // var l = preTags.length;
-      // for (i; i < l; i++) {
-      //   var block = preTags[i];
-      //   var content = block.innerHTML;
-      //   content = content.trim();
-      //   content = tidy_html5(content, {
-      //     "indent": "auto",
-      //     "indent-spaces": 2,
-      //     "wrap": 80,
-      //     "markup": true,
-      //     "output-xml": false,
-      //     "numeric-entities": true,
-      //     "quote-marks": true,
-      //     "quote-nbsp": false,
-      //     "show-body-only": true,
-      //     "quote-ampersand": false,
-      //     "break-before-br": true,
-      //     "uppercase-tags": false,
-      //     "uppercase-attributes": false,
-      //     "drop-font-tags": true,
-      //     "tidy-mark": false
-      //   });
-      //   content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;");
-      //   block.innerHTML = content;
-      //   hljs.highlightBlock(block);
-      // }
+        content = content.replace(/\n\s*\n/g, '\n');
+        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+        content = content.replace(/[\r\n]+/g, '\n');
+
+        content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); //encodeHTML
+        newPreTag.innerHTML = content;
+        hljs.highlightBlock(newPreTag);
+      }
     };
 
     </script>
