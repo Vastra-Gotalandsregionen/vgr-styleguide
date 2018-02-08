@@ -4,30 +4,52 @@ body {
 }
 
 .preview {
-  margin: 20px 20px 80px 20px;
-  padding: 20px;
+  position: relative;
+  margin: 20px 20px 50px 20px;
+  padding: 0 20px 10px 20px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.01);
 
   &__title {
-    // font-weight: 100;
-    letter-spacing: 0.5px;
+    // letter-spacing: 0.5px;
+    font-weight: 100;
     font-size: 20px;
     line-height: 20px;
-    margin: -5px -20px 20px -20px;
-    padding: 0 20px 15px 20px;
+    margin: 0px -20px 20px -20px;
+    padding: 16px 20px 14px 20px;
+    // border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: rgba(0,0,0,0.5);
+  }
+
+  &__nodeType {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    background: transparent;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   &__html {
     font-size: 12px;
     line-height: 16px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px 0px 0px 0px;
     display: block;
     clear: both;
-    white-space: pre-wrap;
+    // border: 1px solid rgba(0, 0, 0, 0.1);
+    // border-radius: 5px;
+    // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    // padding: 20px 20px 20px 20px !important;
+    background: transparent !important;
+    white-space: pre-wrap !important;
   }
 }

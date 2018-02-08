@@ -22,34 +22,50 @@
     <script src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
     <script>
     window.onload = function() {
+      var body = document.getElementById("body");
+
+      var i = 0;
+      var l = body.children.length;
+      for (i; i < l; i++) {
+        var child = body.children[i];
+
+        if (child.nodeName !== "SCRIPT" && child.id !== "__bs_notify__") {
+          var nodeType = child.nodeName.toLowerCase();
+          var title = child.className || child.id || nodeType;
+
+          var newPreviewDiv = document.createElement("div");
+          newPreviewDiv.className = "preview";
+          newPreviewDiv.setAttribute("data-title", title);
+          newPreviewDiv.setAttribute("data-nodeType", nodeType);
+          newPreviewDiv.appendChild(child.cloneNode(true));
+
+          body.replaceChild(newPreviewDiv, child);
+        }
+      }
+
       var previewTags = document.getElementsByClassName('preview');
       var i = 0;
       var l = previewTags.length;
       for (i; i < l; i++) {
         var block = previewTags[i];
 
-        var newPreTag = document.createElement("pre");
-        newPreTag.className = "preview__html html";
-        newPreTag.innerHTML = block.innerHTML;
-        block.appendChild(newPreTag);
-
         var newTitle = document.createElement("h1");
         newTitle.className = "preview__title";
         newTitle.innerHTML = block.getAttribute("data-title");
         block.insertBefore(newTitle, block.firstChild);
 
+        var nodeType = document.createElement("span");
+        nodeType.className = "preview__nodeType";
+        nodeType.innerHTML = block.getAttribute("data-nodeType");
+        newTitle.appendChild(nodeType);
+
+        var newPreTag = document.createElement("pre");
+        newPreTag.className = "preview__html html";
+        newPreTag.innerHTML = block.innerHTML;
+        block.appendChild(newPreTag);
+
         var content = newPreTag.innerHTML;
         content = content.trim();
-        // // content = content.replace(/\n\n/g, "\n");
-        // // content = content.replace(/\n\n\n/g, "\n");
-        // // content = content.replace(/\n\n\n\n/g, "\n");
-        // // content = content.replace( /\s\s+/g, ' ' );
-        // // content = content.replace(/\s{2,}/g, ' ');
-        // content = content.replace(/\n\s*\n/g, '\n');
-        // content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        // content = content.replace(/(\n\s*?\n)\s*\n/, '$1');
-        // // content = content.replace(/\n{2,}/g, '\n');​​​​​​​
-        // // content = content.replace(/[\r\n]+/g, '\n\n'); //double
 
         content = tidy_html5(content, {
           "indent": "auto",
@@ -83,7 +99,7 @@
     <!-- End Highlight JS + Tidy -->
   </head>
 
-  <body>
+  <body id="body">
     {{ yield }}
   </body>
 
