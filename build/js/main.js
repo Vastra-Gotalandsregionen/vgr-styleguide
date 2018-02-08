@@ -116,7 +116,7 @@ var PrimaryNav = function () {
     }
 
     for (var i = 0; i < this.toggleBtn.length; i++) {
-      this.toggleBtn[i].addEventListener('mouseover', function () {
+      this.toggleBtn[i].addEventListener('mouseenter', function () {
         that.open(this);
       });
       this.toggleBtn[i].addEventListener('mouseout', function () {
@@ -292,68 +292,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// export default class toggleButton {
-//     constructor(element) {
-
-//         let menuId = element.getAttribute('aria-controls');
-//         if (!menuId) {
-//             return;
-//         }
-
-//         let menu = document.getElementById(menuId);
-//         if (!menu) {
-//             return;
-//         }
-
-//         element.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             e.stopImmediatePropagation();
-
-//             let transitionTime = element.getAttribute('data-transition-time');
-//             if (transitionTime) {
-//                 menu.classList.add('animating');
-//                 setTimeout(() => menu.classList.remove('animating'), parseInt(transitionTime));
-//             }
-
-//             let expanded = menu.getAttribute('aria-expanded');
-//             if (expanded === 'true') {
-//                 menu.setAttribute('aria-expanded', 'false');
-//                 element.removeAttribute('data-expanded');
-//             } else {
-//                 menu.setAttribute('aria-expanded', 'true');
-//                 element.setAttribute('data-expanded', '');
-//             }
-//         });
-//     }
-// }
-
-/*
-
-MODIFIED VERSION
-
-How to use:
-- Add the two following attributes to the element/button responsible for the toggling: 
-
-    1) aria-controls="CLASS_NAME_OF_ELEMENT_WITH_THE_HIDDEN_CONTENT"
-    2) data-module="toggle"
-
-- Add the following styling to the element with the hidden content:
-
-    .CLASS_NAME_OF_ELEMENT_WITH_THE_HIDDEN_CONTENT {
-        display: none;
-
-        [aria-expanded=true] {
-          display: block;
-        }
-
-        [aria-expanded=false] {
-          display: none;
-        }
-    }
-
-- Done!
-
-*/
 var toggle = function () {
     function toggle(element) {
         _classCallCheck(this, toggle);

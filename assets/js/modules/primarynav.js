@@ -12,7 +12,7 @@ export default class PrimaryNav {
     if (!this.toggleClassName || !this.toggleBtn) { return }
 
     for (var i = 0; i < this.toggleBtn.length; i++) {
-      this.toggleBtn[i].addEventListener('mouseover', function() {
+      this.toggleBtn[i].addEventListener('mouseenter', function() {
         that.open(this)
       })
       this.toggleBtn[i].addEventListener('mouseout', function() {
