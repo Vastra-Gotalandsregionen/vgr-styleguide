@@ -3,27 +3,54 @@ body {
   background: #fff;
 }
 
+h1 {
+  margin: 20px 0 20px 20px;
+  padding: 0;
+}
+
 .preview {
   position: relative;
-  margin: 20px 20px 50px 20px;
+  margin: 20px 20px 60px 20px;
   padding: 0 20px 10px 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.01);
+  box-shadow: 0 1px 2px 0 rgba(102,102,96,0.1);
 
   &__title {
     // letter-spacing: 0.5px;
     font-weight: 100;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     margin: 0px -20px 20px -20px;
     padding: 16px 20px 14px 20px;
     // border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
     background: #fff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     color: rgba(0,0,0,0.5);
+    // opacity: 0.4;
+
+    b {
+      // font-weight: 700;
+      color: rgba(0,0,0,0.65);
+    }
+  }
+
+  &__details {
+    display:block;
+    font-size: 12px;
+    line-height: 12px;
+    color: rgba(0,0,0,0.85);
+    margin-top: 10px;
+    // font-weight: 700;
+
+    b {
+      // font-weight: 700;
+      font-weight: 100;
+      color: rgba(0,0,0,0.5);
+    }
   }
 
   &__nodeType {
@@ -34,9 +61,10 @@ body {
     font-size: 10px;
     line-height: 10px;
     font-weight: 700;
-    padding: 5px 10px 5px 10px;
+    padding: 4px 8px 4px 8px;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.6px;
   }
 
   &__html {
@@ -51,5 +79,108 @@ body {
     // padding: 20px 20px 20px 20px !important;
     background: transparent !important;
     white-space: pre-wrap !important;
+    opacity: 0.4;
+    transition: opacity 0.3s ease-out;
+
+    &:hover {
+      opacity: 1;
+      // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &__copyToClipboard {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    // background: transparent;
+    font-size: 10px;
+    line-height: 10px;
+    font-weight: 700;
+    // padding: 4px 8px 4px 8px;
+    // border-radius: 5px;
+    // border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .copied {
+    -webkit-animation: blink 0.4s ease-out;
+    -moz-animation: blink 0.4s ease-out;
+    -o-animation: blink 0.4s ease-out;
+    animation: blink 0.4s ease-out;
+
+    @-webkit-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        20% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        20% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @-o-keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        20% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        20% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
   }
 }

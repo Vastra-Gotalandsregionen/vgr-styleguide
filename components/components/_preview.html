@@ -6,101 +6,150 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ _target.label }} - {{ _config.project.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script>
-    document.documentElement.className = document.documentElement.className.replace(/(\s|^)no-js(\s|$)/, '$1js$2');
-
-    </script>
     <link rel="stylesheet" href="{{ '/css/main.css' | path }}">
+    <link rel="stylesheet" href="{{ '/css/preview.css' }}">
     <link rel="mask-icon" href="{{ '/mask-icon.svg' | path }}" color="#990000">
     <script src="{{ '/js/main.js' | path }}" defer=""></script>
-    <link rel="stylesheet" href="{{ '/css/preview.css' }}">
-    <!-- Highlight JS + Tidy -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <!-- Highlight JS -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <!-- <link rel="stylesheet" href="{{ '/theme/js/lib/highlightjs/styles/github.css' | path }}">
-    <script src="{{ '/theme/js/lib/highlightjs/highlight.pack.js' | path }}"></script> -->
-    <script src='http://lovasoa.github.io/tidy-html5/tidy.js'></script>
-    <script>
-    window.onload = function() {
-      var body = document.getElementById("body");
-
-      var i = 0;
-      var l = body.children.length;
-      for (i; i < l; i++) {
-        var child = body.children[i];
-
-        if (child.nodeName !== "SCRIPT" && child.id !== "__bs_notify__") {
-          var nodeType = child.nodeName.toLowerCase();
-          var title = child.className || child.id || nodeType;
-
-          var newPreviewDiv = document.createElement("div");
-          newPreviewDiv.className = "preview";
-          newPreviewDiv.setAttribute("data-title", title);
-          newPreviewDiv.setAttribute("data-nodeType", nodeType);
-          newPreviewDiv.appendChild(child.cloneNode(true));
-
-          body.replaceChild(newPreviewDiv, child);
-        }
-      }
-
-      var previewTags = document.getElementsByClassName('preview');
-      var i = 0;
-      var l = previewTags.length;
-      for (i; i < l; i++) {
-        var block = previewTags[i];
-
-        var newTitle = document.createElement("h1");
-        newTitle.className = "preview__title";
-        newTitle.innerHTML = block.getAttribute("data-title");
-        block.insertBefore(newTitle, block.firstChild);
-
-        var nodeType = document.createElement("span");
-        nodeType.className = "preview__nodeType";
-        nodeType.innerHTML = block.getAttribute("data-nodeType");
-        newTitle.appendChild(nodeType);
-
-        var newPreTag = document.createElement("pre");
-        newPreTag.className = "preview__html html";
-        newPreTag.innerHTML = block.innerHTML;
-        block.appendChild(newPreTag);
-
-        var content = newPreTag.innerHTML;
-        content = content.trim();
-
-        content = tidy_html5(content, {
-          "indent": "auto",
-          "indent-spaces": 2,
-          "wrap": 80,
-          "markup": true,
-          "output-xml": false,
-          "numeric-entities": true,
-          "quote-marks": true,
-          "quote-nbsp": false,
-          "show-body-only": true,
-          "quote-ampersand": false,
-          "break-before-br": true,
-          "uppercase-tags": false,
-          "uppercase-attributes": false,
-          "drop-font-tags": true,
-          "tidy-mark": false
-        });
-
-        content = content.replace(/\n\s*\n/g, '\n');
-        content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-        content = content.replace(/[\r\n]+/g, '\n');
-
-        content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); //encodeHTML
-        newPreTag.innerHTML = content;
-        hljs.highlightBlock(newPreTag);
-      }
-    };
-
-    </script>
-    <!-- End Highlight JS + Tidy -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+    <!-- <link rel="stylesheet" href="{{ '/theme/js/lib/highlightjs/styles/github.css' | path }}"> -->
+    <!-- <script src="{{ '/theme/js/lib/highlightjs/highlight.pack.js' | path }}"></script> -->
+    <!-- End Highlight JS -->
   </head>
 
-  <body id="body">
-    {{ yield }}
+  <body style="display: none;">
+    <h1>{{ _target.title }}</h1>
+    <div id="body">{{ yield }}</div>
+    <script>
+    var h1 = document.getElementsByTagName("h1")[0];
+    if (h1.innerHTML.indexOf(":") !== -1) {
+      h1.innerHTML = h1.innerHTML.substring(0, h1.innerHTML.indexOf(":"));
+    }
+    var body = document.getElementById("body");
+
+    var i = 0;
+    var l = body.children.length;
+    for (i; i < l; i++) {
+      var child = body.children[i];
+      var isAllowed = child.nodeName !== "SCRIPT" && child.id !== "__bs_notify__";
+
+      if (isAllowed) {
+        var nodeType = child.nodeName.toLowerCase();
+        // var title = "<b>" + (child.className || child.id || nodeType) + "</b>";
+        var title = (child.className || child.id || nodeType);
+
+        if (child.className) {
+          var classNames = child.className.split(" ");
+          var count = classNames.length;
+
+          if (count) {
+            var baseClass = classNames[0];
+
+            if (baseClass && count > 1) {
+              title = baseClass;
+              var modifiers = "";
+              var utils = "";
+
+              var j = 1;
+              for (j; j < count; j++) {
+                var currClass = classNames[j];
+                var isModifier = currClass && currClass.indexOf(baseClass + "--") !== -1;
+
+                if (isModifier) {
+                  title += " <b>" + currClass + "</b>";
+                  modifiers += " " + currClass;
+                } else if (currClass) {
+                  title += " " + currClass;
+                  utils += " " + currClass;
+                }
+              }
+
+              if (baseClass || modifiers || utils) {
+                var details = "<span class='preview__details'>";
+                if (baseClass)
+                  details += " <b>Base:</b> " + baseClass.trim() + "&nbsp;&nbsp;";
+                if (modifiers)
+                  details += " <b>Modifier(s):</b> " + modifiers.trim() + "&nbsp;&nbsp;";
+                if (utils)
+                  details += " <b>Utils:</b> " + utils.trim();
+                details += "</span>";
+
+                title += details;
+              }
+            }
+          }
+        }
+
+        var newPreviewDiv = document.createElement("div");
+        newPreviewDiv.classList.add("preview");
+        newPreviewDiv.setAttribute("data-title", title);
+        newPreviewDiv.setAttribute("data-nodeType", nodeType);
+        newPreviewDiv.appendChild(child.cloneNode(true));
+
+        body.replaceChild(newPreviewDiv, child);
+      }
+    }
+
+    var previewTags = document.getElementsByClassName('preview');
+    i = 0;
+    l = previewTags.length;
+    for (i; i < l; i++) {
+      var block = previewTags[i];
+      var data = block.innerHTML;
+
+      var pre = document.createElement("pre");
+      pre.classList.add("preview__html", "html");
+      block.appendChild(pre);
+
+      var title = document.createElement("h4");
+      title.classList.add("preview__title");
+      title.innerHTML = block.getAttribute("data-title");
+      block.insertBefore(title, block.firstChild);
+
+      var nodeType = document.createElement("span");
+      nodeType.classList.add("preview__nodeType");
+      nodeType.innerHTML = block.getAttribute("data-nodeType");
+      title.appendChild(nodeType);
+
+      var copyToClipboard = document.createElement("span");
+      copyToClipboard._data = data;
+      copyToClipboard._pre = pre;
+      copyToClipboard.classList.add("preview__copyToClipboard");
+      copyToClipboard.innerHTML = "[Kopiera]";
+      copyToClipboard.addEventListener("click", function(e) {
+        var textarea = document.createElement("textarea");
+        textarea.innerHTML = this._data;
+
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // this.classList.remove("copied");
+        this._pre.classList.remove("copied");
+
+        setTimeout(function(el) {
+          // el.classList.add("copied");
+          el._pre.classList.add("copied");
+        }, 100, this);
+      });
+      pre.parentNode.appendChild(copyToClipboard);
+
+      var content = data;
+      // content = content.trim();
+      content = content.replace(/\n\s*\n/g, '\n');
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      content = content.replace(/[\r\n]+/g, '\n');
+      content = content.replace(/</g, "&lt;").replace(/>/g, "&gt;"); //encodeHTML
+
+      pre.innerHTML = content;
+      hljs.highlightBlock(pre);
+    }
+
+    document.body.style.display = "block";
+
+    </script>
   </body>
 
 </html>
