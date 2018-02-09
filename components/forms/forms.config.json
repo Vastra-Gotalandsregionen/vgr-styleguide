@@ -1,5 +1,7 @@
 {
+  "collated": true,
   "label": "Formulär ✎",
   "status": "ready",
-  "hidden": false
+  "hidden": false,
+  "preview" : "@preview"
 }

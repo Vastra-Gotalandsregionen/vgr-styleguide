@@ -1,5 +1,6 @@
 {
   "name": "Layouter ◱",
   "status": "ready",
-  "hidden": false
+  "hidden": false,
+  "preview" : "@preview"
 }

@@ -1,5 +1,6 @@
 {
   "name": "Navigationer ↹",
   "status": "ready",
-  "hidden": false
+  "hidden": false,
+  "preview" : "@preview"
 }

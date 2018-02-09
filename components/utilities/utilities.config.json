@@ -1,5 +1,6 @@
 {
   "name": "Verktyg ⏣",
   "status": "ready",
-  "hidden": false
+  "hidden": false,
+  "preview" : "@preview"
 }
