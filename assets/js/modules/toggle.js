@@ -9,14 +9,9 @@ export default class toggle {
 
         if(!container) {
             // No element with that ID was found. Look for a class inside immediate parent instead
-            container = element.parentNode.getElementsByClassName(containerID);
-            container = container ? container[0] : null;
-
-            if(!container) {
-                // No element with that ID was found. Look for a class outside of immediate parent instead
-                container = element.parentNode.parentNode.getElementsByClassName(containerID);
-                container = container ? container[0] : null;
-            }
+            container = container || this.findContainer(element.parentNode, containerID);
+            container = container || this.findContainer(element.parentNode.parentNode, containerID);
+            container = container || this.findContainer(element.parentNode.parentNode.parentNode, containerID);
         }
 
         if(container) {
@@ -28,6 +23,14 @@ export default class toggle {
         else {
             throw new NoElementException('Element must be available in DOM');
         }
+    }
+
+    findContainer(node, containerID)
+    {
+        let found = node.getElementsByClassName(containerID);
+        found = found ? found[0] : null;
+
+        return found;
     }
 
     addEvents()
