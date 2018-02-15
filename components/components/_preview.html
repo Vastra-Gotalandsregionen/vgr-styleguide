@@ -24,8 +24,13 @@
     <div id="body">{{ yield }}</div>
     <script>
     var h1 = document.getElementsByTagName("h1")[0];
-    if (h1.innerHTML.indexOf(":") !== -1) {
-      h1.innerHTML = h1.innerHTML.substring(0, h1.innerHTML.indexOf(":"));
+    if (h1 && h1.innerHTML) {
+      if (h1.innerHTML.indexOf(":") !== -1) {
+        h1.innerHTML = h1.innerHTML.substring(0, h1.innerHTML.indexOf(":"));
+      }
+      if (h1.innerHTML) {
+        h1.innerHTML = h1.innerHTML.replace(/\b\w/g, l => l.toUpperCase());
+      }
     }
     var body = document.getElementById("body");
 
@@ -86,7 +91,13 @@
         newPreviewDiv.classList.add("preview");
         newPreviewDiv.setAttribute("data-title", title);
         newPreviewDiv.setAttribute("data-nodeType", nodeType);
-        newPreviewDiv.appendChild(child.cloneNode(true));
+        // newPreviewDiv.appendChild(child.cloneNode(true));
+
+        var componentWrapper = document.createElement("div");
+        componentWrapper.classList.add("preview__componentWrapper");
+        componentWrapper.appendChild(child.cloneNode(true));
+
+        newPreviewDiv.appendChild(componentWrapper);
 
         body.replaceChild(newPreviewDiv, child);
       }
@@ -97,7 +108,7 @@
     l = previewTags.length;
     for (i; i < l; i++) {
       var block = previewTags[i];
-      var data = block.innerHTML;
+      var data = block.firstChild.innerHTML;
 
       var pre = document.createElement("pre");
       pre.classList.add("preview__html", "html");
