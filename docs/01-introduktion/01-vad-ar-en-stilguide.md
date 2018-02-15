@@ -5,7 +5,7 @@ label: Vad är en stilguide?
 
 <table>
 <tr><td>**Hem:**</td><td>[http://stilguiden.vgregion.se/](http://stilguiden.vgregion.se/)</td></tr>
-<tr><td>**Github:**</td><td>[https://github.com/Vastra-Gotalandsregionen/vgr-styleguide](https://github.com/Vastra-Gotalandsregionen/vgr-styleguide)</td></tr>
+<!-- <tr><td>**Github:**</td><td>[https://github.com/Vastra-Gotalandsregionen/vgr-styleguide](https://github.com/Vastra-Gotalandsregionen/vgr-styleguide)</td></tr> -->
 <tr><td>**Licens:**</td><td>[Creative Commons](https://creativecommons.org/licenses/by-sa/4.0/)<br>[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)</td></tr>
 </table>
 
