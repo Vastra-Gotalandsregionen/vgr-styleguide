@@ -1,6 +1,6 @@
 {
-  "hidden": true,
-  "status": "prototype",
+  "hidden": false,
+  "status": "ready",
   "context": {
     "title": "Praktisk information",
     "url": "/",

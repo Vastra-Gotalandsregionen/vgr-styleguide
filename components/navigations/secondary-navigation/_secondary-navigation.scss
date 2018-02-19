@@ -1,36 +1,92 @@
-
-.vgr-secondary-navigation {
-    display:none;
-    @media screen and (min-width: $medium) {
-        display:block;
-    }
-
-  &__header {
-    background: #005c95;
-    color: #fff;
-  }
+.secondary-navigation {
+    position: relative;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    word-wrap: break-word;
+    font-family: Helvetica,Arial,sans-serif;
 }
 
-.vgr-secondary-navigation__content a {
-    position:relative;
-    &:focus {
-        text-decoration:underline;
+.vgr-secondary-navigation {
+  position: relative;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  word-wrap: break-word;
+  font-family: Helvetica,Arial,sans-serif;
+  display:none;
+
+  @media screen and (min-width: $medium) {
+    display:block;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .vgr-secondary-navigation__header-title {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    line-height: 150%;
+    background: #005c95;
+    color: #fff;
+    text-decoration: none;
+
+    &:focus,
+    &:hover { text-decoration: underline; }
+  }
+
+  .vgr-secondary-navigation__content li {
+    margin: 0;
+    border-top: 1px solid #ddd;
+
+    &:first-child {
+      border-top: none;
     }
+
+    li a {
+      padding-left: 20px;
+    }
+  }
+
+  .vgr-secondary-navigation__content a {
+    position:relative;
+    display: block;
+    padding: .4em 2rem .4em .4em;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      text-decoration:underline;
+    }
+
     &[data-selected]:focus {
         color:#000;
     }
-}
+  }
 
-.vgr-secondary-navigation__content [data-hasChildren]:after,
-.vgr-secondary-navigation__content [data-isExpanded]:after {
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform:translateY(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: .35rem 0 .35rem .35rem;
-    border-color: transparent transparent transparent #222;
+  .vgr-secondary-navigation__content [data-hasChildren]:after,
+  .vgr-secondary-navigation__content [data-isExpanded]:after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform:translateY(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: .35rem 0 .35rem .35rem;
+      border-color: transparent transparent transparent #222;
+  }
+
+  .vgr-secondary-navigation__content [data-selected] {
+    background: #d7f0ff;
+  }
 }
