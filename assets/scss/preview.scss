@@ -10,11 +10,11 @@ h1 {
 
 .preview {
   position: relative;
-  margin: 20px 20px 60px 20px;
-  padding: 10px 10px 6px 10px;
+  margin: 20px 20px 50px 20px;
+  padding: 10px 10px 10px 10px;
   // border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
   border-radius: 5px;
-  background: #F4F5F7; //rgba(0, 0, 0, 0.01);
+  background: #F5F5F5; //#F4F5F7; //rgba(0, 0, 0, 0.01);
   // box-shadow: 0 1px 2px 0 rgba(102,102,96,0.1);
 
   &__title {
@@ -29,11 +29,17 @@ h1 {
     // border-top: 1px solid rgba(0, 0, 0, 0.1);
     // border-bottom: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
     // background: #fff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
     color: rgba(0,0,0,0.5);
     // opacity: 0.4;
     // background: blue;
+    cursor: pointer;
+    // transition: opacity 0.3s ease-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
 
     b {
       // font-weight: 700;
@@ -58,15 +64,15 @@ h1 {
 
   &__nodeType {
     position: absolute;
-    right: 4px;
-    top: 4px;
+    right: 10px;
+    top: 10px;
     background: transparent;
     font-size: 10px;
     line-height: 10px;
-    font-weight: 700;
+    font-weight: 100; //700;
     padding: 4px 8px 4px 8px;
-    border-radius: 5px;
-    border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
+    border-radius: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1); //#F0F0F0; //rgba(0, 0, 0, 0.1);
     letter-spacing: 0.6px;
   }
 
@@ -99,13 +105,14 @@ h1 {
     // padding: 20px 20px 20px 20px !important;
     background: transparent !important;
     white-space: pre-wrap !important;
-    opacity: 0.2;
-    transition: opacity 0.3s ease-out;
+    // opacity: 0.2;
+    // transition: opacity 0.3s ease-out;
+    // // max-height: 200px;
 
-    &:hover {
-      opacity: 1;
-      // border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
+    // &:hover {
+    //   opacity: 1;
+    //   // border-top: 1px solid rgba(0, 0, 0, 0.1);
+    // }
   }
 
   &__copyToClipboard {
@@ -121,7 +128,21 @@ h1 {
     // border: 1px solid #F0F0F0; //rgba(0, 0, 0, 0.1);
     letter-spacing: 0.6px;
     cursor: pointer;
-    transition: opacity 0.3s ease-out;
+    // transition: opacity 0.3s ease-out;
+    display: none;
+
+
+    // position: absolute;
+    // right: 10px;
+    // top: 10px;
+    background: transparent;
+    // font-size: 10px;
+    line-height: 10px;
+    font-weight: 100; //700;
+    padding: 4px 8px 4px 8px;
+    border-radius: inherit;
+    border: 1px solid rgba(0, 0, 0, 0.1); //#F0F0F0; //rgba(0, 0, 0, 0.1);
+    // letter-spacing: 0.6px;
 
     &:hover {
       opacity: 0.5;

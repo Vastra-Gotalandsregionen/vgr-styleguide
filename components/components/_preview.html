@@ -46,7 +46,7 @@
         var title = (child.className || child.id || nodeType);
         var details = "<span class='preview__details'>";
         if (nodeType)
-          details += " <b>Node:</b> " + nodeType.trim() + "&nbsp;&nbsp;";
+          details += " <b>Nod:</b> " + nodeType.trim() + "&nbsp;&nbsp;";
 
         if (child.className) {
           var classNames = child.className.split(" ");
@@ -114,6 +114,7 @@
 
       var pre = document.createElement("pre");
       pre.classList.add("preview__html", "html");
+      pre.style.display = "none";
       block.appendChild(pre);
 
       var title = document.createElement("h4");
@@ -121,16 +122,16 @@
       title.innerHTML = block.getAttribute("data-title");
       block.insertBefore(title, block.firstChild);
 
-      // var nodeType = document.createElement("span");
-      // nodeType.classList.add("preview__nodeType");
-      // nodeType.innerHTML = block.getAttribute("data-nodeType");
-      // title.appendChild(nodeType);
+      var nodeType = document.createElement("span");
+      nodeType.classList.add("preview__nodeType");
+      nodeType.innerHTML = "Visa/dölj HTML"; // block.getAttribute("data-nodeType");
+      title.appendChild(nodeType);
 
       var copyToClipboard = document.createElement("span");
       copyToClipboard._data = data;
       copyToClipboard._pre = pre;
       copyToClipboard.classList.add("preview__copyToClipboard");
-      copyToClipboard.innerHTML = "[Kopiera]";
+      copyToClipboard.innerHTML = "Kopiera HTML";
       copyToClipboard.addEventListener("click", function(e) {
         var textarea = document.createElement("textarea");
         textarea.innerHTML = this._data;
@@ -149,6 +150,13 @@
         }, 100, this);
       });
       pre.parentNode.appendChild(copyToClipboard);
+
+      title._pre = pre;
+      title._copyToClipboard = copyToClipboard;
+      title.addEventListener("click", function(e) {
+        var display = this._pre.style.display === "none" ? "block" : "none";
+        this._pre.style.display = this._copyToClipboard.style.display = display;
+      });
 
       var content = data;
       // content = content.trim();
