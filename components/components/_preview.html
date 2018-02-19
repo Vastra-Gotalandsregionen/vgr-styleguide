@@ -44,6 +44,9 @@
         var nodeType = child.nodeName.toLowerCase();
         // var title = "<b>" + (child.className || child.id || nodeType) + "</b>";
         var title = (child.className || child.id || nodeType);
+        var details = "<span class='preview__details'>";
+        if (nodeType)
+          details += " <b>Node:</b> " + nodeType.trim() + "&nbsp;&nbsp;";
 
         if (child.className) {
           var classNames = child.className.split(" ");
@@ -63,16 +66,15 @@
                 var isModifier = currClass && currClass.indexOf(baseClass + "--") !== -1;
 
                 if (isModifier) {
-                  title += " <b>" + currClass + "</b>";
+                  // title += " <b>" + currClass + "</b>";
                   modifiers += " " + currClass;
                 } else if (currClass) {
-                  title += " " + currClass;
+                  // title += " " + currClass;
                   utils += " " + currClass;
                 }
               }
 
               if (baseClass || modifiers || utils) {
-                var details = "<span class='preview__details'>";
                 if (baseClass)
                   details += " <b>Base:</b> " + baseClass.trim() + "&nbsp;&nbsp;";
                 if (modifiers)
@@ -80,12 +82,12 @@
                 if (utils)
                   details += " <b>Utils:</b> " + utils.trim();
                 details += "</span>";
-
-                title += details;
               }
             }
           }
         }
+
+        title += details;
 
         var newPreviewDiv = document.createElement("div");
         newPreviewDiv.classList.add("preview");
@@ -119,10 +121,10 @@
       title.innerHTML = block.getAttribute("data-title");
       block.insertBefore(title, block.firstChild);
 
-      var nodeType = document.createElement("span");
-      nodeType.classList.add("preview__nodeType");
-      nodeType.innerHTML = block.getAttribute("data-nodeType");
-      title.appendChild(nodeType);
+      // var nodeType = document.createElement("span");
+      // nodeType.classList.add("preview__nodeType");
+      // nodeType.innerHTML = block.getAttribute("data-nodeType");
+      // title.appendChild(nodeType);
 
       var copyToClipboard = document.createElement("span");
       copyToClipboard._data = data;
