@@ -11,7 +11,7 @@
             <ul>
             {% for item2 in item.items %}
               <li>
-                <a href="{{ item2.url }}">{{ item2.title }}</a>
+                <a href="{{ item2.url }}"{% if item2.selected %} data-selected{% endif %}>{{ item2.title }}</a>
               </li>
             {% endfor %}
             </ul>
